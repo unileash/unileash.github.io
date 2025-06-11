@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unileash | Cosmic Microwave Background</title>
+  <meta charset="UTF-8">
+  <title>Cosmic Microwave Background | Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,97 +13,120 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #0ff;
     }
-    nav {
-      background: rgba(16, 16, 16, 0.85);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #00ffff44;
+
+    .highlight {
+      color: yellow;
     }
-    nav a {
-      color: #00ffff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 12px;
-    }
-    h1 {
-      color: #00ffff;
-      font-size: 2.8rem;
-      margin-bottom: 1.5rem;
+
+    .navbar {
+      background: #111;
+      padding: 10px;
       text-align: center;
     }
-    p {
-      font-size: 1.15rem;
-      color: #ccc;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-    ul {
-      color: #ccc;
-      font-size: 1.1rem;
-      margin-left: 1.5rem;
-    }
-    a.btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.7rem 1.6rem;
-      background: #00ffff;
-      color: #000;
-      border-radius: 6px;
+
+    .navbar a {
+      color: #0ff;
       text-decoration: none;
+      margin: 0 12px;
       font-weight: bold;
     }
-    a.btn:hover {
-      background: #00cccc;
-      color: #fff;
+
+    .navbar a:hover {
+      color: #ff0;
+    }
+
+    .content {
+      padding: 40px;
+      max-width: 950px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    h1, h2 {
+      color: #0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
     }
   </style>
 </head>
 <body>
+  <header class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="space.html">🌌 Space</a>
+    <a href="antimatter.html">⚛️ Antimatter</a>
+    <a href="wormholes.html">🌀 Wormholes</a>
+    <a href="darkenergy.html">🌑 Dark Energy</a>
+    <a href="multiverse.html">🌐 Multiverse</a>
+    <a href="voyager1.html">🛰️ Voyager 1</a>
+    <a href="cmb.html">📡 CMB</a>
+    <a href="exoplanet.html">🪐 Exoplanets</a>
+    <a href="greatattractor.html">🌠 Great Attractor</a>
+    <a href="whiteholes.html">⚪ White Holes</a>
+    <a href="blog.html">📝 Blog</a>
+  </header>
 
-  <nav>
-    <div><a href="index.html">Unileash</a></div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="space.html">Space</a>
-    </div>
-  </nav>
+  <div class="content">
+    <h1>📡 Cosmic Microwave Background</h1>
+    <p>
+      The <span class="highlight">Cosmic Microwave Background (CMB)</span> is the afterglow of the <span class="highlight">Big Bang</span>. It’s the oldest light in the universe, stretching back over <span class="highlight">13.8 billion years</span>, and provides a snapshot of the universe when it was just 380,000 years old.
+    </p>
 
-  <div class="container">
-    <h1>Cosmic Microwave Background (CMB)</h1>
-    <p>The CMB is the oldest light in the universe — a faint glow left over from the Big Bang, now cooled to just 2.7K. It’s like a baby photo of the cosmos.</p>
-    <ul>
-      <li><strong>Discovered:</strong> Accidentally by Penzias and Wilson in 1965.</li>
-      <li><strong>Proof of the Big Bang:</strong> It supports the theory that the universe began in a hot, dense state.</li>
-      <li><strong>Uniformity:</strong> The temperature is nearly the same in every direction, with tiny fluctuations that seeded galaxy formation.</li>
-      <li><strong>Observed By:</strong> COBE, WMAP, and Planck satellites mapped the CMB in extreme detail.</li>
-    </ul>
-    <p>Studying the CMB helps scientists understand the early universe, its age, and how matter began to form into the structures we see today.</p>
-    <a href="space.html" class="btn">Back to Space</a>
+    <h2>🌍 What Is It?</h2>
+    <p>
+      The CMB is faint microwave radiation that fills the entire universe. It was first discovered accidentally in 1965 by <span class="highlight">Arno Penzias</span> and <span class="highlight">Robert Wilson</span>, who won the Nobel Prize for this ground-breaking observation. It’s a crucial evidence for the <span class="highlight">Big Bang Theory</span>.
+    </p>
+
+    <h2>🌡️ Temperature and Fluctuations</h2>
+    <p>
+      The average temperature of the CMB is about <span class="highlight">2.725 Kelvin</span> — just above absolute zero. But more important are the <span class="highlight">tiny fluctuations</span> in this temperature. These ripples are the seeds of galaxies and large-scale structures we see today.
+    </p>
+
+    <h2>🔭 Observations</h2>
+    <p>
+      Several missions have mapped the CMB with high precision:
+      <ul>
+        <li><span class="highlight">COBE</span> (1992): First detected temperature variations</li>
+        <li><span class="highlight">WMAP</span> (2001): Mapped the universe's age and composition</li>
+        <li><span class="highlight">Planck</span> (2009): Most detailed CMB map to date</li>
+      </ul>
+    </p>
+
+    <h2>🧠 What It Tells Us</h2>
+    <p>
+      The CMB tells us:
+      <ul>
+        <li>The <span class="highlight">age of the universe</span></li>
+        <li>The universe is <span class="highlight">flat</span> (not curved)</li>
+        <li>It’s composed of about 5% ordinary matter, 27% <span class="highlight">dark matter</span>, and 68% <span class="highlight">dark energy</span></li>
+        <li>There were tiny quantum fluctuations that expanded during <span class="highlight">inflation</span></li>
+      </ul>
+    </p>
+
+    <h2>🔬 Why It Matters</h2>
+    <p>
+      Without the CMB, we wouldn’t have solid proof of the universe’s hot, dense origin. It's like the universe's baby photo, revealing its early conditions and helping us understand how everything formed — from <span class="highlight">galaxies</span> to <span class="highlight">planets</span> to <span class="highlight">life</span>.
+    </p>
+
+    <h2>🌀 CMB and the Future</h2>
+    <p>
+      New instruments are being developed to detect even smaller patterns in the CMB. Scientists hope to find traces of <span class="highlight">gravitational waves</span> from the Big Bang and better understand the role of <span class="highlight">inflation</span> and <span class="highlight">quantum gravity</span>.
+    </p>
   </div>
 
-<footer style="background-color: #0d0d0d; color: #ccc; text-align: center; padding: 20px; margin-top: 50px; font-family: 'Segoe UI', sans-serif; font-size: 14px; border-top: 1px solid #333;">
-  <p>© 2025 Unileash. All rights reserved.</p>
-  <p>Built to protect space knowledge with digital integrity.</p>
-</footer>
+  <footer>
+    © 2025 Unileash | Echoes of the beginning still whisper across the stars.
+  </footer>
 </body>
 </html>

@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unileash | Space</title>
 
 <!-- Google tag (gtag.js) -->
@@ -15,93 +16,147 @@
 
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #000;
+      color: #00FFFF;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
     }
-    nav {
-      background: rgba(16, 16, 16, 0.85);
+
+    .navbar {
+      background-color: #111;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #00ffff44;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #444;
     }
-    nav a {
-      color: #00ffff;
+
+    .navbar a {
+      color: #1E90FF;
       text-decoration: none;
-      margin: 0 1rem;
       font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #222;
+      border: 1px solid #00FFFF;
+      border-radius: 10px;
+      transition: 0.3s;
     }
-    nav a:hover {
-      color: #ffffff;
+
+    .navbar a:hover {
+      background-color: #00FFFF;
+      color: #000;
     }
-    .section {
-      padding: 3rem 2rem;
+
+    .container {
       max-width: 1000px;
       margin: auto;
-      text-align: center;
+      padding: 3rem 2rem;
     }
-    h1 {
-      color: #00ffff;
-      font-size: 3rem;
-      margin-bottom: 2rem;
-    }
-    .btn-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
+
+    h1, h2 {
+      color: #9400D3;
       margin-top: 2rem;
     }
-    a.btn {
-      display: block;
-      padding: 1rem;
-      background: #00ffff;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+
+    p {
+      color: #B0E0E6;
     }
-    a.btn:hover {
-      background: #00cccc;
-      color: #fff;
-    }
+
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
       background: #111;
-      border-top: 1px solid #222;
-      margin-top: 2rem;
+      padding: 1rem;
+      color: #9400D3;
+      margin-top: 4rem;
+    }
+
+    .highlight {
+      color: #FFD700;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div><a href="index.html">Unileash</a></div>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="space.html">Space</a>
-    </div>
-  </nav> <section class="section">
-    <h1>Explore the Universe</h1>
-    <div class="btn-grid">
-      <a class="btn" href="wormhole.html">Wormhole</a>
-      <a class="btn" href="voyager1.html">Voyager 1</a>
-      <a class="btn" href="multiverse.html">Multiverse Theory</a>
-      <a class="btn" href="cmb.html">Cosmic Microwave Background</a>
-      <a class="btn" href="antimatter.html">Antimatter</a>
-      <a class="btn" href="exoplanet.html">Exoplanet</a>
-      <a class="btn" href="darkenergy.html">Dark Energy</a>
-      <a class="btn" href="whiteholes.html">White Holes</a>
-      <a class="btn" href="greatattractor.html">The Great Attractor</a>
-    </div>
-  </section> <footer>
-    &copy; 2025 Unileash. Infinite Curiosity. Cosmic Truths.
+
+  <header class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="space.html">🌌 Space</a>
+    <a href="antimatter.html">⚛️ Antimatter</a>
+    <a href="wormholes.html">🌀 Wormholes</a>
+    <a href="darkenergy.html">🌑 Dark Energy</a>
+    <a href="multiverse.html">🌐 Multiverse</a>
+    <a href="voyager1.html">🛰️ Voyager 1</a>
+    <a href="cmb.html">📡 CMB</a>
+    <a href="exoplanet.html">🪐 Exoplanets</a>
+    <a href="greatattractor.html">🌠 Great Attractor</a>
+    <a href="whiteholes.html">⚪ White Holes</a>
+    <a href="blog.html">📝 Blog</a>
+  </header>
+
+  <main class="container">
+    <h1>Welcome to the Vastness of Space</h1>
+    <p>
+      The universe is an endless ocean of mysteries, filled with billions of galaxies, stars, planets, and phenomena we have yet to understand. Here at Unileash, we go beyond Earth to explore what lies beyond.
+    </p>
+
+    <h2>🌌 1. The Observable Universe</h2>
+    <p>
+      The <span class="highlight">observable universe</span> stretches over 93 billion light-years in diameter. This includes everything we can currently see — galaxies, quasars, black holes, cosmic microwave background, and more.
+    </p>
+
+    <h2>🪐 2. Exoplanets</h2>
+    <p>
+      These are planets beyond our solar system. Thousands have been discovered, and many lie in the habitable zone of their stars — the right conditions for water, and maybe life.
+    </p>
+
+    <h2>💥 3. Black Holes and White Holes</h2>
+    <p>
+      Black holes consume matter and energy, while <span class="highlight">white holes</span> — though still theoretical — might eject matter. They could even be connected via wormholes, forming shortcuts through space.
+    </p>
+
+    <h2>📡 4. Cosmic Microwave Background</h2>
+    <p>
+      A glow left from the Big Bang. The <span class="highlight">CMB</span> is a map of the infant universe and gives clues about its age, expansion, and even its fate.
+    </p>
+
+    <h2>🌀 5. Wormholes</h2>
+    <p>
+      These hypothetical tunnels might link distant parts of space instantly. If stable ones exist, they could make interstellar travel possible.
+    </p>
+
+    <h2>🌑 6. Dark Matter & Dark Energy</h2>
+    <p>
+      Most of the universe is invisible. <span class="highlight">Dark matter</span> holds galaxies together, while <span class="highlight">dark energy</span> pushes the universe apart — faster and faster.
+    </p>
+
+    <h2>🛰️ 7. Voyager 1</h2>
+    <p>
+      Launched in 1977, Voyager 1 is now over 24 billion km away — the farthest human-made object. It carries the <span class="highlight">Golden Record</span> — a message to alien civilizations.
+    </p>
+
+    <h2>🚀 8. The Future of Exploration</h2>
+    <p>
+      SpaceX, ISRO, NASA, and others are pushing boundaries. Moon bases, Mars missions, asteroid mining, and even warp drives are no longer just science fiction.
+    </p>
+
+    <h2>🧠 Bonus Facts</h2>
+    <ul>
+      <li>The Sun takes ~225 million years to orbit the Milky Way once.</li>
+      <li>There may be more stars in the universe than grains of sand on Earth.</li>
+      <li>The largest known galaxy, IC 1101, spans 6 million light-years.</li>
+      <li>In space, no one can hear you scream — because there's no air to carry sound.</li>
+      <li>Saturn could float in water — it's less dense than H₂O!</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Unileash. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
