@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antimatter | Unileash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Antimatter - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,114 +16,128 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    .highlight {
-      color: yellow;
+    body {
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 950px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>⚛️ Antimatter</h1>
+  <div class="container">
+    <h2>The Antimatter Enigma: Mirror Opposite of the Universe</h2>
     <p>
-      <span class="highlight">Antimatter</span> is the mirror image of matter. Every particle has an opposite twin — the electron has the <span class="highlight">positron</span>, the proton has the <span class="highlight">antiproton</span>. When these two meet, they annihilate, releasing pure <span class="highlight">energy</span>.
+      <span class="highlight">Antimatter</span> is the exotic counterpart of regular matter, where every particle has an identical twin with opposite charge. While electrons are negative, <span class="highlight">positrons</span> — their antimatter versions — are positive.
     </p>
-
-    <h2>💡 What Is Antimatter?</h2>
+    <ul>
+      <li>Each matter particle has an <span class="highlight">antiparticle</span>: proton ↔ antiproton, electron ↔ positron.</li>
+      <li>When matter and antimatter meet, they <span class="highlight">annihilate</span>, releasing pure energy (E = mc²).</li>
+      <li>Despite the Big Bang producing equal amounts of both, the universe is dominated by matter — a <span class="highlight">cosmic mystery</span>.</li>
+      <li>Antimatter is real: it's used in <span class="highlight">PET scans</span> and created in particle accelerators like CERN.</li>
+      <li>Scientists theorize that entire <span class="highlight">antimatter galaxies</span> could exist in distant space.</li>
+    </ul>
     <p>
-      Antimatter is made of particles with the same mass as normal matter but opposite charge. This isn't science fiction — we’ve created and detected antimatter in labs like CERN.
+      Antimatter challenges our understanding of <span class="highlight">symmetry</span> and physics itself. Experiments like those at the <span class="highlight">Large Hadron Collider</span> are exploring why the observable universe is made of matter, despite quantum laws predicting perfect balance.
     </p>
-
-    <h2>🌌 The Big Bang Mystery</h2>
     <p>
-      The <span class="highlight">Big Bang</span> should have created equal amounts of matter and antimatter. But today, our universe is mostly matter. Why? This is one of the biggest <span class="highlight">cosmological mysteries</span>.
+      Harnessing antimatter for energy could be revolutionary. A single gram could release as much energy as an atomic bomb. However, storing and producing it is currently <span class="highlight">extremely expensive and unstable</span>.
     </p>
-
-    <h2>🚀 Antimatter as Energy</h2>
     <p>
-      Since antimatter annihilates matter into energy, it could be the most powerful fuel. Just one gram could release energy equivalent to a <span class="highlight">nuclear bomb</span>. But storing it is a huge challenge.
-    </p>
-
-    <h2>🔬 Applications in Science</h2>
-    <p>
-      Antimatter is already used in medicine — for example, in <span class="highlight">PET scans</span> (Positron Emission Tomography). It helps doctors see what's happening inside the body in real-time.
-    </p>
-
-    <h2>🛡️ Why It's Rare</h2>
-    <p>
-      Antimatter instantly annihilates when it touches matter. Since our universe is made of matter, antimatter can't survive in large quantities naturally.
-    </p>
-
-    <h2>🧬 Future Potential</h2>
-    <p>
-      Scientists dream of using antimatter for interstellar travel or new forms of energy, but right now, even producing **a few atoms** takes years and billions.
-    </p>
-
-    <h2>🔥 The Ultimate Power?</h2>
-    <p>
-      Controlled antimatter reactions could one day lead to breakthroughs in <span class="highlight">space propulsion</span> and quantum tech. The key lies in mastering creation and containment.
+      In science fiction, antimatter fuels spacecraft and powers weapons, but in real science, it's a key to unlocking the secrets of <span class="highlight">our universe’s origin</span>.
     </p>
   </div>
-
-  <footer>
-    © 2025 Unileash | Beyond Particles, Into Power
-  </footer>
 </body>
 </html>

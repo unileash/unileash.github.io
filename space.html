@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unileash | Space</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNILEASH - Space</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,148 +15,137 @@
 </script>
 
   <style>
-    body {
+    * {
       margin: 0;
-      background-color: #000;
-      color: #00FFFF;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
+      padding-left: 250px;
     }
-
-    .navbar {
-      background-color: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      position: sticky;
+    header {
+      background-color: black;
+      color: #00ffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
       top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #444;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
     }
-
-    .navbar a {
-      color: #1E90FF;
+    nav a {
+      padding: 12px 20px;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      background-color: #222;
-      border: 1px solid #00FFFF;
-      border-radius: 10px;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
       transition: 0.3s;
     }
-
-    .navbar a:hover {
-      background-color: #00FFFF;
-      color: #000;
+    nav a:hover {
+      background-color: #333;
     }
-
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 2rem;
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
     }
-
-    h1, h2 {
-      color: #9400D3;
-      margin-top: 2rem;
+    ul {
+      margin-left: 20px;
     }
-
-    p {
-      color: #B0E0E6;
+    ul li {
+      margin: 10px 0;
     }
-
-    footer {
-      text-align: center;
-      background: #111;
-      padding: 1rem;
-      color: #9400D3;
-      margin-top: 4rem;
-    }
-
     .highlight {
-      color: #FFD700;
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
 
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <main class="container">
-    <h1>Welcome to the Vastness of Space</h1>
+  <div class="container">
+    <h2>Welcome to the Vast Cosmos</h2>
     <p>
-      The universe is an endless ocean of mysteries, filled with billions of galaxies, stars, planets, and phenomena we have yet to understand. Here at Unileash, we go beyond Earth to explore what lies beyond.
+      <span class="highlight">Unileash</span> is your ultimate gateway to understanding the most <span class="highlight">mind-blowing</span> aspects of the universe. Our mission is to present the mysteries of space in a form that's easy to understand, yet deeply profound.
     </p>
-
-    <h2>🌌 1. The Observable Universe</h2>
-    <p>
-      The <span class="highlight">observable universe</span> stretches over 93 billion light-years in diameter. This includes everything we can currently see — galaxies, quasars, black holes, cosmic microwave background, and more.
-    </p>
-
-    <h2>🪐 2. Exoplanets</h2>
-    <p>
-      These are planets beyond our solar system. Thousands have been discovered, and many lie in the habitable zone of their stars — the right conditions for water, and maybe life.
-    </p>
-
-    <h2>💥 3. Black Holes and White Holes</h2>
-    <p>
-      Black holes consume matter and energy, while <span class="highlight">white holes</span> — though still theoretical — might eject matter. They could even be connected via wormholes, forming shortcuts through space.
-    </p>
-
-    <h2>📡 4. Cosmic Microwave Background</h2>
-    <p>
-      A glow left from the Big Bang. The <span class="highlight">CMB</span> is a map of the infant universe and gives clues about its age, expansion, and even its fate.
-    </p>
-
-    <h2>🌀 5. Wormholes</h2>
-    <p>
-      These hypothetical tunnels might link distant parts of space instantly. If stable ones exist, they could make interstellar travel possible.
-    </p>
-
-    <h2>🌑 6. Dark Matter & Dark Energy</h2>
-    <p>
-      Most of the universe is invisible. <span class="highlight">Dark matter</span> holds galaxies together, while <span class="highlight">dark energy</span> pushes the universe apart — faster and faster.
-    </p>
-
-    <h2>🛰️ 7. Voyager 1</h2>
-    <p>
-      Launched in 1977, Voyager 1 is now over 24 billion km away — the farthest human-made object. It carries the <span class="highlight">Golden Record</span> — a message to alien civilizations.
-    </p>
-
-    <h2>🚀 8. The Future of Exploration</h2>
-    <p>
-      SpaceX, ISRO, NASA, and others are pushing boundaries. Moon bases, Mars missions, asteroid mining, and even warp drives are no longer just science fiction.
-    </p>
-
-    <h2>🧠 Bonus Facts</h2>
     <ul>
-      <li>The Sun takes ~225 million years to orbit the Milky Way once.</li>
-      <li>There may be more stars in the universe than grains of sand on Earth.</li>
-      <li>The largest known galaxy, IC 1101, spans 6 million light-years.</li>
-      <li>In space, no one can hear you scream — because there's no air to carry sound.</li>
-      <li>Saturn could float in water — it's less dense than H₂O!</li>
+      <li>Explore the <span class="highlight">boundless energy</span> that makes up most of the cosmos.</li>
+      <li>Understand the paradox of <span class="highlight">white holes</span> and time reversal.</li>
+      <li>Go beyond imagination with <span class="highlight">multiverse theory</span>.</li>
+      <li>Dive into data from <span class="highlight">Voyager 1</span>, humanity’s farthest journey.</li>
+      <li>Look at the ancient echoes of the universe through <span class="highlight">CMB</span>.</li>
     </ul>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Unileash. All Rights Reserved.</p>
-  </footer>
+    <p>
+      The goal of Unileash is to bring forth the wonders of the <span class="highlight">cosmic landscape</span> to young minds who seek knowledge and are driven by curiosity. Prepare to dive into wormholes, explore <span class="highlight">exoplanets</span> with life potential, and encounter mysteries beyond time and space.
+    </p>
+    <button class="space-button" onclick="location.href='space.html'">Explore Space Section</button>
+  </div>
 
 </body>
 </html>

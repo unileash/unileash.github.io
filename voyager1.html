@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voyager 1 | Unileash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voyager 1 - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,103 +15,146 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .highlight {
-      color: yellow;
-    }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>🚀 Voyager 1 – Humanity's Deepest Explorer</h1>
+  <div class="container">
+    <h2>Voyager 1: Humanity’s Deepest Journey</h2>
     <p>
-      Launched in <span class="highlight">1977</span>, <span class="highlight">Voyager 1</span> is the farthest human-made object from Earth. It has crossed into <span class="highlight">interstellar space</span>, over <span class="highlight">14 billion miles</span> away, continuing to send back data to Earth!
+      <span class="highlight">Voyager 1</span> is a space probe launched by NASA in 1977 to study the outer Solar System and interstellar space beyond the Sun's influence. 
+      It remains the farthest man-made object from Earth, pushing the boundaries of what humanity can reach.
     </p>
-
-    <h2>🛰️ What Is Voyager 1 Doing Now?</h2>
     <p>
-      Voyager 1 is currently traveling at over <span class="highlight">61,000 km/h</span> and still transmitting data about <span class="highlight">cosmic rays</span>, <span class="highlight">magnetic fields</span>, and <span class="highlight">solar wind</span> from outside the solar system.
+      After a historic flyby of <span class="highlight">Jupiter</span> and <span class="highlight">Saturn</span>, Voyager 1 took a sharp turn and began its journey out of the heliosphere. 
+      In 2012, it officially entered <span class="highlight">interstellar space</span>, a feat unmatched by any other spacecraft.
     </p>
-
-    <h2>📀 The Golden Record</h2>
-    <p>
-      The spacecraft carries the legendary <span class="highlight">Golden Record</span> — a time capsule of Earth sounds, music, and greetings in 55 languages. It's designed to tell alien civilizations who we are... just in case they find it.
-    </p>
-
-    <h2>🌌 Why Is It Important?</h2>
     <ul>
-      <li>📡 First human probe in <span class="highlight">interstellar space</span></li>
-      <li>🧠 Gave us crucial data about the outer planets and heliosphere</li>
-      <li>🛸 Represents Earth's legacy to the <span class="highlight">cosmos</span></li>
+      <li>It carries the famous <span class="highlight">Golden Record</span> with sounds and images representing Earth's diversity.</li>
+      <li>Its mission is powered by <span class="highlight">radioisotope thermoelectric generators</span> (RTGs), allowing it to operate decades after launch.</li>
+      <li>As of now, it continues to transmit data back to Earth, although contact will eventually cease.</li>
     </ul>
-
-    <h2>📊 Fun Facts</h2>
-    <ul>
-      <li>It takes signals from Voyager 1 around <span class="highlight">22 hours</span> to reach Earth.</li>
-      <li>The power source is a <span class="highlight">Plutonium-238 RTG</span>, still functioning after nearly 50 years.</li>
-      <li>It will keep drifting in space for <span class="highlight">billions of years</span>.</li>
-    </ul>
+    <p>
+      The Voyager mission is not only a scientific triumph but a poetic statement of our species’ desire to reach into the <span class="highlight">unknown</span>. 
+      It is the beacon of human curiosity and endurance, floating in the vast ocean of the cosmos, carrying our message to the stars.
+    </p>
+    <p>
+      Even though its instruments are aging, Voyager 1 still provides valuable insights into <span class="highlight">cosmic radiation</span>, 
+      <span class="highlight">magnetic fields</span>, and the interstellar environment far beyond the planets.
+    </p>
+    <p>
+      It teaches us that no boundary is final, and the universe is not a barrier but an open sea for exploration.
+      As Carl Sagan once said, “The spacecraft will be encountered and the record played only if there are advanced space-faring civilizations in interstellar space. 
+      But the launching of this ‘bottle’ into the cosmic ocean says something very hopeful about life on this planet.”
+    </p>
+    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
-
-  <footer>
-    © 2025 Unileash | Voyager 1 still flying...
-  </footer>
 </body>
 </html>

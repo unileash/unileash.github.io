@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unileash | Wormholes</title>
+  <title>Wormholes - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,144 +16,155 @@
 </script>
 
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      background-color: #000;
-      color: #00FFFF;
+      background-color: black;
+      color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
+      padding-left: 250px;
     }
-    .navbar {
-      background-color: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      position: sticky;
+    header {
+      background-color: black;
+      color: #00ffff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
       top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #444;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
     }
-    .navbar a {
-      color: #1E90FF;
+    nav a {
+      padding: 12px 20px;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      background-color: #222;
-      border: 1px solid #00FFFF;
-      border-radius: 10px;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
       transition: 0.3s;
     }
-    .navbar a:hover {
-      background-color: #00FFFF;
-      color: #000;
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
     }
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 2rem;
-    }
-    h1, h2 {
-      color: #9400D3;
-      margin-top: 2rem;
-    }
-    p {
-      color: #B0E0E6;
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
     }
     ul {
-      color: #B0E0E6;
-      padding-left: 1.5rem;
+      margin-left: 20px;
     }
-    footer {
-      text-align: center;
-      background: #111;
-      padding: 1rem;
-      color: #9400D3;
-      margin-top: 4rem;
+    ul li {
+      margin: 10px 0;
     }
     .highlight {
-      color: #FFD700;
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
 
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <main class="container">
-    <h1>🌀 Wormholes: Portals Through the Universe</h1>
+  <div class="container">
+    <h2>Wormholes: Gateways Through Space and Time</h2>
+
     <p>
-      Imagine bending space itself and stepping through a tunnel that leads to another part of the universe instantly. This is the concept of a <span class="highlight">wormhole</span> — one of the most thrilling possibilities in physics.
+      <span class="highlight">Wormholes</span>, also known as Einstein-Rosen bridges, are theoretical tunnels through spacetime. They could connect two distant points in space or even allow for time travel.
     </p>
 
-    <h2>What Are Wormholes?</h2>
     <p>
-      A <span class="highlight">wormhole</span> is a hypothetical passage through space-time, predicted by the equations of <span class="highlight">Einstein's General Relativity</span>. Also known as an Einstein-Rosen Bridge, it could connect two distant points in the cosmos.
+      General relativity allows the existence of such structures, though none have been observed. Still, wormholes remain a fascinating solution to Einstein’s field equations, inspiring science and science fiction alike.
     </p>
 
-    <h2>How Do They Work?</h2>
-    <p>
-      Think of space as a sheet of paper. If you fold it and poke a hole through, you create a shortcut between two points. A <span class="highlight">wormhole</span> might work the same way — creating a bridge through a higher dimension.
-    </p>
-
-    <h2>Are Wormholes Real?</h2>
-    <p>
-      So far, <span class="highlight">no wormholes have been observed</span> in real space. But mathematically, they are possible. Scientists believe that if they exist, they would collapse instantly without some form of <span class="highlight">exotic matter</span> to stabilize them.
-    </p>
-
-    <h2>Exotic Matter</h2>
-    <p>
-      This isn't alien goo 😄 — it’s theoretical material with <span class="highlight">negative energy density</span>. It's what might be needed to keep a wormhole open, making stable passage possible.
-    </p>
-
-    <h2>Wormholes and Time Travel</h2>
-    <p>
-      Some theories suggest that wormholes could allow <span class="highlight">time travel</span>. If one mouth of a wormhole is moved close to the speed of light and then brought back, time inside could differ — creating a time loop.
-    </p>
-
-    <h2>In Sci-Fi and Pop Culture</h2>
-    <p>
-      Wormholes are famous in science fiction — from <span class="highlight">Interstellar</span> and <span class="highlight">Stargate</span> to <span class="highlight">Doctor Who</span>. They offer an exciting way to explore space without breaking the laws of physics.
-    </p>
-
-    <h2>Challenges</h2>
-    <p>
-      Creating or finding a stable <span class="highlight">wormhole</span> would require technology far beyond anything we currently have. But it drives real research in theoretical physics, cosmology, and quantum mechanics.
-    </p>
-
-    <h2>What If We Could Use Them?</h2>
     <ul>
-      <li>Connect galaxies in seconds</li>
-      <li>Make faster-than-light travel possible</li>
-      <li>Allow communication across universes</li>
-      <li>Even make time tourism a reality</li>
+      <li>A wormhole could act like a shortcut through space, possibly allowing <span class="highlight">faster-than-light travel</span>.</li>
+      <li>They may link two different points in time or two separate universes entirely.</li>
+      <li>Stabilizing a wormhole may require <span class="highlight">exotic matter</span> with negative energy.</li>
     </ul>
 
-    <h2>Final Thought</h2>
     <p>
-      Wormholes remain one of the most mysterious ideas in astrophysics. Whether they're real or just mathematical fantasies, they remind us of the universe’s endless possibilities.
+      In simple terms, imagine folding a paper and poking a hole from one side to the other — the wormhole skips the space between. If real, this concept could revolutionize travel and communication across the galaxy.
     </p>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Unileash. All Rights Reserved.</p>
-  </footer>
+    <p>
+      Theoretical physicists like Kip Thorne have explored whether humans could ever traverse such a bridge. His work inspired the movie <span class="highlight">Interstellar</span>, where a wormhole near Saturn opens up distant star systems.
+    </p>
+
+    <p>
+      But there are challenges: the wormhole might collapse, radiate dangerous particles, or demand impossible energy. Plus, any trip through time introduces paradoxes we don't yet understand.
+    </p>
+
+    <p>
+      Despite the uncertainties, wormholes remain a cornerstone in futuristic physics. They're a symbol of our desire to go further, break limits, and <span class="highlight">leap across the universe</span>.
+    </p>
+
+    <p>
+      Whether wormholes exist or not, they teach us to think beyond — reminding us that the cosmos is far stranger than we can imagine.
+    </p>
+
+    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
+  </div>
 
 </body>
 </html>
-

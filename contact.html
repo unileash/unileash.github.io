@@ -1,87 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us | Unileash</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MDY4XF90ZF');
-</script>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - UNILEASH</title>
   <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-    h1 {
+    header {
+      background-color: black;
+      padding: 20px;
       text-align: center;
-      color: #FFD700; /* Yellow */
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
     }
-    form {
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      box-shadow: 0 0 10px white;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      height: 100%;
+      width: 250px;
       background-color: #111;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #FFD700;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    .form-box {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
     input, textarea {
-      width: 100%;
       padding: 10px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #222;
-      color: #fff;
+      border: 2px solid #00ffff;
+      background-color: black;
+      color: #00ffff;
+      font-size: 16px;
+      width: 100%;
+      box-shadow: 0 0 5px white;
     }
-    input::placeholder, textarea::placeholder {
-      color: #aaa;
-    }
-    button {
-      background-color: #FFD700;
-      color: #000;
-      border: none;
-      padding: 10px 15px;
-      margin-top: 15px;
-      border-radius: 5px;
-      cursor: pointer;
+    label {
       font-weight: bold;
     }
-    a {
-      color: #FFD700;
-      text-decoration: none;
+    button {
+      padding: 10px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px white;
     }
-    a:hover {
-      text-decoration: underline;
+    button:hover {
+      background-color: #00cccc;
     }
-    .nav {
-      text-align: center;
-      margin-top: 30px;
+    @media (max-width: 768px) {
+      body {
+        padding-left: 0;
+      }
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+      .container {
+        margin: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Contact Unileash</h1>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
 
-  <form action= "https://formspree.io/f/xdkzgagn" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <header>
+    <h1>UNILEASH</h1>
+  </header>
 
-  <div class="nav">
-    <a href="index.html">← Back to Home</a>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feedback, or just want to say hi — fill out the form below. We'll get back to you soon!</p>
+    
+    <div class="form-box">
+      <form action= ''https://formspree.io/f/xdkzgagn" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
 
 </body>
 </html>
+
+

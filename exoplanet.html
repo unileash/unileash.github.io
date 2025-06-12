@@ -1,10 +1,12 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exoplanets | Unileash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exoplanets - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,125 +17,162 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .highlight {
-      color: yellow;
-    }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 950px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>🪐 Exoplanets</h1>
+  <div class="container">
+    <h2>Exoplanets: Worlds Beyond Our Solar System</h2>
+
     <p>
-      <span class="highlight">Exoplanets</span> are planets that orbit stars **outside** our solar system. The first confirmed detection came in 1992, and since then, over <span class="highlight">5,000 exoplanets</span> have been discovered, many of which could be habitable.
+      <span class="highlight">Exoplanets</span> are planets that orbit stars beyond our own Sun. Since the first confirmed discovery in 1992, thousands of these alien worlds have been catalogued. They come in all shapes and sizes — from scorching hot gas giants to rocky Earth-like bodies.
     </p>
 
-    <h2>🔭 How Are Exoplanets Found?</h2>
     <p>
-      Astronomers use several methods to find these distant worlds:
-      <ul>
-        <li><span class="highlight">Transit Method</span>: Observing dips in a star's brightness as a planet crosses in front of it</li>
-        <li><span class="highlight">Radial Velocity</span>: Detecting tiny wobbles in a star's movement due to gravitational pull of orbiting planets</li>
-        <li><span class="highlight">Direct Imaging</span>: Rare, but involves capturing actual pictures of exoplanets</li>
-        <li><span class="highlight">Gravitational Microlensing</span>: Using the bending of light from a distant star to detect a planet's presence</li>
-      </ul>
+      The most exciting fact? Many lie within their star's <span class="highlight">habitable zone</span>, meaning temperatures could support liquid water — a key ingredient for life.
     </p>
 
-    <h2>🌍 Earth-like Worlds</h2>
+    <ul>
+      <li>Over 5,000 confirmed exoplanets have been found so far.</li>
+      <li>The closest known exoplanet is <span class="highlight">Proxima Centauri b</span>, just 4.2 light years away.</li>
+      <li>Some planets orbit two stars, like Tatooine in Star Wars!</li>
+    </ul>
+
     <p>
-      Some exoplanets lie in their star’s <span class="highlight">habitable zone</span>—the right distance for liquid water. Famous ones include:
-      <ul>
-        <li><span class="highlight">Kepler-186f</span>: Similar size to Earth, potentially habitable</li>
-        <li><span class="highlight">TRAPPIST-1 System</span>: 7 Earth-sized planets orbiting a red dwarf star</li>
-        <li><span class="highlight">Proxima Centauri b</span>: Closest known exoplanet, 4.2 light-years away</li>
-      </ul>
+      There are different types of exoplanets:  
+      <span class="highlight">Gas giants</span> like Jupiter, <span class="highlight">super-Earths</span> that are rocky but bigger than Earth, and <span class="highlight">mini-Neptunes</span> with thick atmospheres. Some are so close to their stars that a year lasts only days.
     </p>
 
-    <h2>🧪 What They Tell Us</h2>
     <p>
-      Studying exoplanets helps us understand:
-      <ul>
-        <li>The <span class="highlight">formation of planetary systems</span></li>
-        <li>Whether <span class="highlight">life</span> could exist elsewhere</li>
-        <li>How common Earth-like planets are in the galaxy</li>
-      </ul>
+      NASA's Kepler and TESS missions have been crucial in this hunt. Kepler used the <span class="highlight">transit method</span> — watching a star’s light dim slightly when a planet passes in front. This has helped us learn about the size, orbit, and sometimes the atmosphere of distant worlds.
     </p>
 
-    <h2>🚀 Missions Searching for Life</h2>
     <p>
-      Space agencies have launched missions like:
-      <ul>
-        <li><span class="highlight">Kepler</span>: Discovered thousands of exoplanet candidates</li>
-        <li><span class="highlight">TESS</span>: Currently scanning the sky for nearby exoplanets</li>
-        <li><span class="highlight">James Webb Space Telescope</span>: Can detect atmospheres and look for signs of <span class="highlight">biosignatures</span></li>
-      </ul>
+      Recently, scientists have even begun detecting exoplanet <span class="highlight">atmospheres</span> and potential signs of water vapor, clouds, and other gases. With future telescopes like the James Webb Space Telescope and beyond, we might soon identify biosignatures — molecules made by life.
     </p>
 
-    <h2>💭 Could We Ever Visit?</h2>
     <p>
-      Currently, exoplanets are too far for human travel. The closest one would take over 70,000 years to reach with today’s technology. But concepts like <span class="highlight">light sails</span> and <span class="highlight">warp drives</span> are being explored for the future.
+      The study of exoplanets isn’t just science — it’s a quest. A quest to answer one of the oldest and deepest human questions:  
+      <span class="highlight">Are we alone?</span>
     </p>
+
+    <p>
+      Every planet we find adds a new piece to the cosmic puzzle. And with billions of stars in our galaxy alone, it’s likely the universe is teeming with planets — some of which may even host civilizations more advanced than ours.
+    </p>
+
+    <p>
+      We are at the edge of a new era. One where we may finally find an <span class="highlight">Earth 2.0</span> — and maybe even reach it someday.
+    </p>
+
+    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
 
-  <footer>
-    © 2025 Unileash | Exploring infinite worlds beyond our own 🌌
-  </footer>
 </body>
 </html>

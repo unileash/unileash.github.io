@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark Energy | Unileash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Energy - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,115 +15,125 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    .highlight {
-      color: yellow;
+    body {
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>🌑 Dark Energy — The Mysterious Force of Expansion</h1>
+  <div class="container">
+    <h2>Dark Energy: The Mysterious Force Accelerating the Universe</h2>
     <p>
-      <span class="highlight">Dark Energy</span> is the unknown force causing the universe to expand faster and faster. It's invisible, undetectable directly, and it makes up about <span class="highlight">68% of the universe</span>!
+      Dark energy is one of the most <span class="highlight">profound mysteries</span> in modern cosmology. It is a hypothetical form of energy that permeates all of space and tends to accelerate the expansion of the universe.
     </p>
-
-    <h2>💡 What Do We Know?</h2>
-    <p>
-      In 1998, scientists discovered that the universe isn’t just expanding — it’s accelerating. This unexpected finding led to the birth of the concept of <span class="highlight">Dark Energy</span>. It works against gravity, pushing galaxies apart.
-    </p>
-
-    <h2>🔬 What Could It Be?</h2>
     <ul>
-      <li><span class="highlight">Cosmological Constant</span> — a value added by Einstein to equations, later thought to be his biggest mistake... but now maybe right.</li>
-      <li><span class="highlight">Quintessence</span> — a dynamic, evolving energy field that fills space.</li>
-      <li><span class="highlight">Vacuum Energy</span> — energy that exists even in 'empty' space.</li>
+      <li>It accounts for nearly <span class="highlight">70% of the universe</span>'s total energy.</li>
+      <li>Its presence was first discovered in 1998 during studies of <span class="highlight">supernovae</span>.</li>
+      <li>Unlike gravity, dark energy causes a <span class="highlight">repulsive effect</span> on cosmic structures.</li>
+      <li>It is uniformly distributed and does not clump like matter does.</li>
+      <li>We detect its effects indirectly, through the observation of <span class="highlight">cosmic expansion rates</span>.</li>
     </ul>
-
-    <h2>🌀 Why It Matters</h2>
     <p>
-      Understanding dark energy helps us answer the ultimate questions:
-      <ul>
-        <li>Will the universe end in a <span class="highlight">Big Freeze</span>?</li>
-        <li>Could it be a <span class="highlight">false vacuum</span> that collapses reality?</li>
-        <li>Is it linked to other dimensions or the <span class="highlight">Multiverse</span>?</li>
-      </ul>
+      Scientists are still unsure whether dark energy is a constant, like Einstein’s <span class="highlight">cosmological constant (Λ)</span>, or whether it varies over time and space. This energy shapes the ultimate fate of the universe, possibly leading to a scenario known as the <span class="highlight">Big Freeze</span> or even a <span class="highlight">Big Rip</span>.
     </p>
-
-    <h2>📈 The Evidence</h2>
     <p>
-      <ul>
-        <li>📷 <span class="highlight">Supernova Observations</span> — explosions of stars helped detect acceleration.</li>
-        <li>📡 <span class="highlight">Cosmic Microwave Background (CMB)</span> — shows the universe’s shape and fate.</li>
-        <li>🔭 <span class="highlight">Galaxy Clusters</span> — their distribution shows dark energy’s influence.</li>
-      </ul>
-    </p>
-
-    <h2>🚀 Future Missions</h2>
-    <p>
-      Projects like <span class="highlight">Euclid</span>, <span class="highlight">WFIRST</span>, and the <span class="highlight">James Webb Space Telescope</span> aim to uncover more about this mystery. The more we know, the closer we get to the <span class="highlight">ultimate truth</span> about the universe.
+      The study of dark energy is pushing the boundaries of theoretical physics, and new missions like <span class="highlight">Euclid</span> and <span class="highlight">Roman Space Telescope</span> are being prepared to solve this cosmic puzzle.
     </p>
   </div>
-
-  <footer>
-    © 2025 Unileash | Dark Energy will never let us rest...
-  </footer>
 </body>
 </html>

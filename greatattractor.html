@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Great Attractor | Unileash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Great Attractor - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,119 +16,159 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .highlight {
-      color: yellow;
-    }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 950px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>🌠 The Great Attractor</h1>
+  <div class="container">
+    <h2>The Great Attractor</h2>
+
     <p>
-      The <span class="highlight">Great Attractor</span> is a mysterious gravitational anomaly in the universe. It lies roughly 150–250 million light-years away from Earth, in the direction of the <span class="highlight">Centaurus and Norma clusters</span>.
+      The <span class="highlight">Great Attractor</span> is a mysterious gravitational anomaly in intergalactic space that is pulling entire galaxies, including our own Milky Way, toward it with incredible force. Located roughly 250 million light-years away in the direction of the Centaurus constellation, it's hidden behind the plane of the Milky Way, making it hard to observe directly.
     </p>
 
-    <h2>💫 What Is It?</h2>
     <p>
-      Astronomers discovered that our entire region of the universe, including the <span class="highlight">Milky Way</span>, is being pulled toward a specific point in space. This unseen force is what's called the **Great Attractor**.
+      Discovered in the 1970s by astronomers observing the motions of galaxies, it became clear that something massive — but unseen — was influencing galactic movements. The anomaly causes a peculiar motion that pulls galaxies at speeds exceeding 600 km/s toward a hidden center.
     </p>
 
-    <h2>🔍 Why Can’t We See It?</h2>
+    <ul>
+      <li>It lies within the <span class="highlight">Laniakea Supercluster</span>, our local galactic supercluster.</li>
+      <li>Despite being partially blocked by the Milky Way’s dust, X-ray and radio waves give us clues about its presence.</li>
+      <li>Its true nature is still unknown — it may not be a single object, but a dense region filled with galaxies, dark matter, and energy.</li>
+    </ul>
+
     <p>
-      The Great Attractor is hidden behind the **Zone of Avoidance**, a part of the sky obscured by the dust and stars of our own galaxy. Because of this, it's extremely hard to observe directly.
+      One of the most compelling real-world events related to the Great Attractor came from NASA’s Hubble Space Telescope, which captured multiple high-velocity galaxies moving in directions not explained by any local gravitational sources — all pointing toward the Centaurus direction.
     </p>
 
-    <h2>🌀 What's Pulling Us?</h2>
     <p>
-      The force pulling us could be:
-      <ul>
-        <li>A huge <span class="highlight">supercluster of galaxies</span> we can’t fully see</li>
-        <li>A concentration of <span class="highlight">dark matter</span></li>
-        <li>Part of a larger gravitational structure known as the <span class="highlight">Laniakea Supercluster</span></li>
-      </ul>
+      Another important contribution came from the Parkes Radio Telescope in Australia, which used 21 cm radio waves to peer through the Milky Way’s dust and map thousands of hidden galaxies near the attractor’s location.
     </p>
 
-    <h2>🚀 Speed of Movement</h2>
     <p>
-      Our galaxy is moving at nearly <span class="highlight">600 km/s</span> in the direction of the Great Attractor. That’s over **2 million kilometers per hour**!
+      What makes the <span class="highlight">Great Attractor</span> even more fascinating is that it might not be the final destination. Some researchers suggest it is just a midpoint, and all galaxies are actually moving toward an even more massive structure: the <span class="highlight">Shapley Supercluster</span>.
     </p>
 
-    <h2>👀 Is It Dangerous?</h2>
     <p>
-      No immediate threat, Bhakt. The Great Attractor isn’t going to “suck” us in. It just influences the **large-scale motion** of galaxy clusters in the universe.
+      Could this be evidence of a gravitational hierarchy in the universe? Is there something even more mysterious guiding the flow of galactic traffic? These questions remain unanswered but drive the deepest curiosity among cosmologists.
     </p>
 
-    <h2>🔭 Related Structures</h2>
     <p>
-      Some scientists believe it may be just one node of a far more massive gravitational anomaly called the <span class="highlight">Shapley Supercluster</span>.
+      While it's mostly invisible, the impact of the Great Attractor is real. It reshapes our understanding of mass distribution in the universe and pushes us to search in blind spots, both literal and theoretical.
     </p>
 
-    <h2>🧠 Why It Matters</h2>
     <p>
-      The Great Attractor challenges our understanding of **cosmic structure** and the distribution of **dark matter** and **mass** across the universe. It's a massive clue in the puzzle of how the cosmos flows.
+      As telescopes become more advanced, the veil covering the Great Attractor may one day be lifted — revealing whether it’s a monstrous galaxy cluster, an unknown physical phenomenon, or the visible fingerprint of deeper cosmic forces.
     </p>
+
+    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
-
-  <footer>
-    © 2025 Unileash | Revealing the unseen forces of our universe 🌌
-  </footer>
 </body>
 </html>

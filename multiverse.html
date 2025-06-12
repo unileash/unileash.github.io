@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiverse | Unileash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiverse Theory - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,119 +16,155 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #0ff;
+      background-color: black;
+      color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-left: 250px;
     }
-
-    .highlight {
-      color: yellow;
-    }
-
-    .navbar {
-      background: #111;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #0ff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    .navbar a:hover {
-      color: #ff0;
-    }
-
-    .content {
-      padding: 40px;
-      max-width: 950px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #0ff;
-    }
-
-    footer {
-      text-align: center;
+    header {
+      background-color: black;
+      color: #00ffff;
       padding: 20px;
-      color: #666;
+      text-align: center;
+      border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    header h1 {
+      background-color: #001f3f;
+      padding: 10px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      background-color: #111;
+      padding-top: 60px;
+      box-shadow: 0 0 10px white;
+    }
+    nav a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #00ffff;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #333;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+    }
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .container {
+      padding: 30px;
+      border: 2px solid white;
+      margin: 30px;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .highlight {
+      text-decoration: underline;
+      color: white;
+    }
+    .space-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px white;
+    }
+    .space-button:hover {
+      background-color: #00cccc;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html">🏠 Home</a>
-    <a href="space.html">🌌 Space</a>
-    <a href="antimatter.html">⚛️ Antimatter</a>
-    <a href="wormholes.html">🌀 Wormholes</a>
-    <a href="darkenergy.html">🌑 Dark Energy</a>
-    <a href="multiverse.html">🌐 Multiverse</a>
-    <a href="voyager1.html">🛰️ Voyager 1</a>
-    <a href="cmb.html">📡 CMB</a>
-    <a href="exoplanet.html">🪐 Exoplanets</a>
-    <a href="greatattractor.html">🌠 Great Attractor</a>
-    <a href="whiteholes.html">⚪ White Holes</a>
-    <a href="blog.html">📝 Blog</a>
+  <nav>
+    <a href="index.html">HOME</a>
+    <div class="dropdown">
+      <a href="#">SPACE ▾</a>
+      <div class="submenu">
+        <a href="space.html">Overview</a>
+        <a href="darkenergy.html">Dark Energy</a>
+        <a href="antimatter.html">Antimatter</a>
+        <a href="wormholes.html">Wormholes</a>
+        <a href="whiteholes.html">White Holes</a>
+        <a href="cmb.html">CMB</a>
+        <a href="exoplanet.html">Exoplanets</a>
+        <a href="voyager1.html">Voyager 1</a>
+        <a href="multiverse.html">Multiverse</a>
+        <a href="greatattractor.html">Great Attractor</a>
+      </div>
+    </div>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <header>
+    <h1>UNILEASH</h1>
   </header>
 
-  <div class="content">
-    <h1>🌐 Welcome to the Multiverse</h1>
+  <div class="container">
+    <h2>Multiverse Theory</h2>
+
     <p>
-      The <span class="highlight">Multiverse</span> is not just science fiction anymore. It's a serious scientific hypothesis that suggests our universe might be just one of many — possibly infinite — universes out there. Each one could have different <span class="highlight">laws of physics</span>, <span class="highlight">dimensions</span>, and even <span class="highlight">versions of you</span>.
+      The concept of the <span class="highlight">Multiverse</span> proposes something astonishing — that our universe is just one of many. This idea challenges the notion that our cosmos is all there is and suggests an infinite number of parallel realms, each governed by its own unique physical laws.
     </p>
 
-    <h2>🧠 Types of Multiverse Theories</h2>
+    <p>
+      In some of these universes, gravity may be stronger or weaker. In others, stars might never form. And in some, <span class="highlight">you may exist but have made entirely different choices</span>. These are not just wild speculations but logical extensions of theories like quantum mechanics and cosmic inflation.
+    </p>
+
     <ul>
-      <li><span class="highlight">Level I:</span> Same laws of physics, different initial conditions. Think distant regions of space beyond our cosmic horizon.</li>
-      <li><span class="highlight">Level II:</span> Other universes with different constants, particles, and forces due to cosmic inflation.</li>
-      <li><span class="highlight">Level III:</span> Quantum Multiverse — Every decision splits reality into different timelines. Based on <span class="highlight">Many-Worlds Interpretation</span>.</li>
-      <li><span class="highlight">Level IV:</span> Ultimate multiverse of all mathematically possible structures. Literally every reality you can imagine exists.</li>
+      <li><span class="highlight">Quantum Multiverse:</span> Every time a particle moves or a decision is made, the universe could split, creating multiple realities.</li>
+      <li><span class="highlight">Inflationary Multiverse:</span> Rapid expansion after the Big Bang could have created bubble universes, each isolated from the others.</li>
+      <li><span class="highlight">Brane Theory:</span> According to string theory, our universe could be a membrane (“brane”) floating in a higher-dimensional space with many other branes.</li>
     </ul>
 
-    <h2>🔍 Scientific Support</h2>
     <p>
-      <span class="highlight">String theory</span> and <span class="highlight">quantum mechanics</span> hint at the idea of multiple dimensions and realities. The <span class="highlight">cosmic inflation model</span> suggests that as the universe expands, bubble universes could form, each isolated with its own physical rules.
+      Scientists use the term "<span class="highlight">Level I to IV multiverses</span>" to classify these ideas. Level I includes universes like ours but far away. Level II involves universes with different constants. Level III is from quantum interpretations. Level IV includes every mathematically possible universe.
     </p>
 
-    <h2>🪞 Alternate Versions of You</h2>
     <p>
-      In a multiverse, there may exist a version of you who took different choices. One where you're a billionaire, another where you're an astronaut. Every possibility gets its own timeline. These are called <span class="highlight">parallel universes</span> or <span class="highlight">alternate timelines</span>.
+      While we currently have no direct proof of other universes, some evidence may lie in anomalies of the <span class="highlight">Cosmic Microwave Background (CMB)</span>. If two universes collided, it could leave a subtle imprint in the sky — a telltale fingerprint of a neighboring reality.
     </p>
 
-    <h2>🎬 Pop Culture vs. Science</h2>
     <p>
-      Shows like <span class="highlight">Rick and Morty</span>, movies like <span class="highlight">Doctor Strange: Multiverse of Madness</span>, and anime like <span class="highlight">Steins;Gate</span> have popularized the concept. But science is not far behind — researchers at CERN and astrophysicists are exploring these ideas seriously.
+      The idea of multiple universes forces us to rethink everything — from our origins to our purpose. What if we're just a tiny fragment in an eternal multiverse? What if every choice we make spawns a new world?
     </p>
 
-    <h2>🌀 Could We Visit One?</h2>
     <p>
-      Theoretically, if a <span class="highlight">wormhole</span> or <span class="highlight">quantum tunnel</span> connects two universes, we might be able to jump between them. But it’s far beyond our current technology — and possibly forbidden by physics itself.
+      <span class="highlight">Multiverse theory</span> has become deeply embedded in science fiction, literature, and now, even mainstream physics. Though still debated, it's a symbol of how boundless and wild the universe might be.
     </p>
 
-    <h2>🔮 Philosophical Questions</h2>
-    <ul>
-      <li>If infinite versions of reality exist, what does it mean to make a choice?</li>
-      <li>Is our universe “special,” or just one of many random outcomes?</li>
-      <li>Could the <span class="highlight">Mandela Effect</span> be a sign of crossing timelines?</li>
-    </ul>
-
-    <h2>🚀 What's Next?</h2>
     <p>
-      New discoveries in <span class="highlight">cosmology</span>, <span class="highlight">quantum computing</span>, and <span class="highlight">gravitational waves</span> might help us find indirect evidence for other universes. Until then, the <span class="highlight">Multiverse</span> remains one of the most fascinating possibilities in all of science.
+      Whether or not we ever detect another universe, the very possibility reminds us that <span class="highlight">our understanding of existence is still very limited</span>. The multiverse inspires us to keep pushing boundaries and seeking the unknown.
     </p>
+
+    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
-
-  <footer>
-    © 2025 Unileash | Somewhere out there... another you is reading this too.
-  </footer>
 </body>
 </html>
