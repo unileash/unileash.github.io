@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,92 +15,122 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <link rel="stylesheet" href="style.css" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #fff;
       background: #000;
-      position: relative;
-      overflow-x: hidden;
+      color: #fff;
     }
 
     video.bg-video {
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
       object-fit: cover;
       z-index: -1;
-      filter: brightness(0.2) blur(2px);
+      filter: brightness(0.2) blur(3px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: yellow;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
+      background: rgba(255, 255, 0, 0.1);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 0, 0.3);
     }
 
     .content {
-      position: relative;
-      z-index: 2;
-      padding: 3rem;
-      backdrop-filter: blur(4px);
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
       background: rgba(0, 0, 0, 0.6);
-      box-shadow: 0 0 20px #fffb00aa;
       border-radius: 20px;
-      margin: 3rem;
+      box-shadow: 0 0 25px #ffff00a4;
     }
 
     h1, h2 {
       color: #ffff00;
-      text-shadow: 0 0 10px #ffff00aa;
+      text-shadow: 0 0 10px #ffff00;
     }
 
     p {
-      line-height: 1.8;
-      font-size: 1.1rem;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #f0f0f0;
     }
 
-    nav a {
-      color: #ff0;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+      }
 
-    nav {
-      text-align: center;
-      margin-bottom: 2rem;
+      .content {
+        margin: 1rem;
+        padding: 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔥 Cosmic Background Video -->
+  <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline>
     <source src="https://cdn.pixabay.com/vimeo/239016823/Space%20Flight%20-%203624.mp4?width=640&hash=6ee2ecf2f99b2b68ae0e5293b2dcd0c43072a625" type="video/mp4">
+    Your browser does not support the video tag.
   </video>
 
-  <!-- 🔗 Navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="space.html">Space</a>
     <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- 💡 Blog Content -->
+  <!-- Blog content -->
   <div class="content">
-    <h1>Unileash Cosmic Blog</h1>
-    <h2>🌠 Journey Through the Universe</h2>
+    <h1>Unileash Blog</h1>
+    <h2>🚀 Explore the Cosmos</h2>
     <p>
-      Welcome to the official Unileash Blog! Here we explore deep questions of existence, light-speed mysteries, black hole madness, and the stunning silence of space. Get ready to dive into facts that will blow your mind harder than a gamma-ray burst.
+      Welcome to the official Unileash Blog. We bring you insights, theories, and discoveries from across the universe. Stay tuned as we uncover the secrets of time, space, and everything between.
     </p>
 
-    <h2>🧠 Did You Know?</h2>
+    <h2>🌌 Did You Know?</h2>
     <p>
-      The **observable universe** is around <span style="color: yellow;">93 billion light-years</span> in diameter. That means what we see is just a tiny piece of an even bigger mystery.
+      The universe is expanding faster than light in some regions, due to <span style="color: yellow;">dark energy</span>. That means some galaxies will forever move out of our reach.
     </p>
 
-    <h2>💭 Our Thoughts</h2>
+    <h2>🧠 Thought of the Day</h2>
     <p>
-      Every galaxy you see might be just one leaf in an infinite cosmic forest. The more we uncover, the more we realize how little we know.
+      "We are a way for the cosmos to know itself." — Carl Sagan. Let your curiosity expand as fast as space.
     </p>
   </div>
 </body>
