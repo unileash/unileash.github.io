@@ -13,157 +13,167 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Space | Unileash</title>
+  <title>Unileash - Space</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background-color: black;
       color: #00ffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     header {
       background-color: black;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       border-bottom: 2px solid white;
+      box-shadow: 0 0 10px white;
     }
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #00ffff;
-      border: 2px solid #00ffff;
-      display: inline-block;
-      padding: 10px 20px;
-      box-shadow: 0 0 10px #00ffff;
-    }
-    .menu-toggle {
-      display: none;
-      background-color: #00ffff;
-      color: black;
-      border: none;
-      width: 100%;
+    header h1 {
+      background-color: #001f3f;
       padding: 10px;
-      font-size: 18px;
+      display: inline-block;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px white;
+      color: #00ffff;
     }
     nav {
       background-color: #111;
-      width: 250px;
-      padding: 20px;
-      box-shadow: 2px 0 5px white;
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    nav li {
-      margin: 15px 0;
-    }
-    nav a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    nav .submenu {
-      margin-left: 15px;
-    }
-    .container {
-      display: flex;
-    }
-    .main-content {
-      flex: 1;
-      padding: 30px;
-      border-left: 2px solid white;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .card {
-      flex: 1 1 250px;
-      background-color: #111;
-      border: 2px solid white;
-      padding: 20px;
+      padding: 10px;
+      border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
     }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #00ffff;
+    .nav-links {
+      display: none;
+      flex-direction: column;
     }
-    .card a {
-      text-decoration: none;
+    .nav-links a {
       color: #00ffff;
-      font-size: 18px;
+      text-decoration: none;
+      padding: 10px;
+      border-bottom: 1px solid #333;
+    }
+    .nav-links a:hover {
+      background-color: #333;
+    }
+    .menu-btn {
+      background-color: #00ffff;
+      color: black;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    .dropdown {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #222;
+      color: #00ffff;
+      border: none;
+      text-align: left;
       font-weight: bold;
     }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
+    .submenu {
+      display: none;
+      flex-direction: column;
+      padding-left: 20px;
+    }
+    .submenu a {
+      padding: 8px 0;
+    }
+    .container {
+      padding: 20px;
+      margin: 20px;
+      border: 2px solid white;
+      box-shadow: 0 0 10px white;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media(min-width: 768px) {
+      .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
       }
-      nav {
+      .menu-btn, .dropdown {
         display: none;
-        width: 100%;
       }
-      nav.active {
-        display: block;
-      }
-      .container {
-        flex-direction: column;
-      }
-      .main-content {
-        border-left: none;
+      .submenu {
+        display: none !important;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">UNILEASH</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+    <h1>UNILEASH</h1>
   </header>
-  <div class="container">
-    <nav id="sidebar">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li>
-          <a href="#">SPACE</a>
-          <ul class="submenu">
-            <li><a href="darkenergy.html">- Dark Energy</a></li>
-            <li><a href="antimatter.html">- Antimatter</a></li>
-            <li><a href="wormholes.html">- Wormholes</a></li>
-            <li><a href="whiteholes.html">- White Holes</a></li>
-            <li><a href="cmb.html">- CMB</a></li>
-            <li><a href="exoplanet.html">- Exoplanets</a></li>
-            <li><a href="voyager1.html">- Voyager 1</a></li>
-            <li><a href="multiverse.html">- Multiverse</a></li>
-            <li><a href="greatattractor.html">- Great Attractor</a></li>
-          </ul>
-        </li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-    <div class="main-content">
-      <h1>Explore the Universe</h1>
-      <p>Welcome to the Unileash Space Hub. Discover mysteries of the cosmos through hand-picked topics:</p>
-      <div class="cards">
-        <div class="card"><a href="darkenergy.html">Dark Energy</a></div>
-        <div class="card"><a href="antimatter.html">Antimatter</a></div>
-        <div class="card"><a href="wormholes.html">Wormholes</a></div>
-        <div class="card"><a href="whiteholes.html">White Holes</a></div>
-        <div class="card"><a href="cmb.html">Cosmic Microwave Background</a></div>
-        <div class="card"><a href="exoplanet.html">Exoplanets</a></div>
-        <div class="card"><a href="voyager1.html">Voyager 1</a></div>
-        <div class="card"><a href="multiverse.html">Multiverse</a></div>
-        <div class="card"><a href="greatattractor.html">Great Attractor</a></div>
+
+  <nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <div>
+        <button class="dropdown" onclick="toggleSubmenu()">SPACE ▼</button>
+        <div class="submenu" id="spaceSubmenu">
+          <a href="space.html">Overview</a>
+          <a href="darkenergy.html">Dark Energy</a>
+          <a href="antimatter.html">Antimatter</a>
+          <a href="wormholes.html">Wormholes</a>
+          <a href="whiteholes.html">White Holes</a>
+          <a href="cmb.html">CMB</a>
+          <a href="exoplanet.html">Exoplanets</a>
+          <a href="voyager1.html">Voyager 1</a>
+          <a href="multiverse.html">Multiverse</a>
+          <a href="greatattractor.html">Great Attractor</a>
+        </div>
       </div>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
     </div>
+  </nav>
+
+  <div class="container">
+    <h2>SPACE: The Final Frontier</h2>
+    <p>
+      Welcome to the <span class="highlight">Space Section</span> of Unileash — where reality expands and the impossible becomes possible. 
+      Dive into the deepest realms of our universe and beyond, exploring secrets that challenge the limits of science and imagination.
+    </p>
+    <ul>
+      <li>The <span class="highlight">universe</span> is estimated to be 13.8 billion years old, yet we’ve only explored a fraction of it.</li>
+      <li><span class="highlight">Neutron stars</span> are so dense that a single teaspoon would weigh over a billion tons on Earth.</li>
+      <li><span class="highlight">Black holes</span> can warp time, space, and reality itself.</li>
+      <li>Light from the most distant galaxies takes <span class="highlight">billions of years</span> to reach us — we’re looking into the past.</li>
+      <li>The <span class="highlight">cosmic microwave background</span> is the oldest light we can detect, from just after the Big Bang.</li>
+      <li>New <span class="highlight">exoplanets</span> are being discovered constantly, many potentially habitable.</li>
+      <li>According to the <span class="highlight">multiverse theory</span>, this might be just one of infinite realities.</li>
+      <li>Our universe is expanding faster and faster due to a mysterious force: <span class="highlight">Dark Energy</span>.</li>
+      <li>Despite our efforts, <span class="highlight">95% of the universe</span> remains invisible and unexplained.</li>
+      <li>Wormholes, though hypothetical, could one day allow <span class="highlight">instant space travel</span> across galaxies.</li>
+    </ul>
+    <p>
+      This is not just space — it’s a vast, living mystery, waiting for explorers like you to unleash its secrets.
+    </p>
   </div>
+
   <script>
     function toggleMenu() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("active");
+      var nav = document.getElementById('navLinks');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+    function toggleSubmenu() {
+      var submenu = document.getElementById('spaceSubmenu');
+      submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
     }
   </script>
 </body>
