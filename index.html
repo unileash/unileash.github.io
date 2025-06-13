@@ -1,100 +1,124 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UNILEASH - Home</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MDY4XF90ZF');
-</script>
-
-  <link rel="stylesheet" href="style.css" />
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
+
     body {
-      background-color: black;
-      color: #00bfff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
+      background-color: black;
+      color: #00ffff;
+      padding-top: 60px;
+      transition: margin-left 0.3s ease;
     }
+
     header {
       background-color: black;
-      color: #00bfff;
-      padding: 20px;
+      color: #00ffff;
       text-align: center;
+      padding: 20px;
       border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
     }
+
     header h1 {
-      background-color: #000044;
-      padding: 10px;
+      background-color: #001f3f;
+      padding: 10px 20px;
       display: inline-block;
-      border: 2px solid #00bfff;
+      border: 2px solid #00ffff;
       box-shadow: 0 0 10px white;
-      color: #00bfff;
-      font-weight: bold;
     }
-    nav {
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
       position: fixed;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 250px;
       background-color: #111;
       padding-top: 60px;
+      overflow-x: hidden;
+      transition: transform 0.3s ease;
       box-shadow: 0 0 10px white;
     }
-    nav a {
-      padding: 12px 20px;
+
+    .sidebar a,
+    .sidebar button {
+      display: block;
+      color: #00ffff;
+      padding: 14px 20px;
       text-decoration: none;
       font-size: 18px;
-      color: #00bfff;
-      display: block;
-      transition: 0.3s;
+      border: none;
+      background: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
     }
-    nav a:hover {
+
+    .sidebar a:hover,
+    .sidebar button:hover {
       background-color: #333;
     }
+
     .submenu {
       display: none;
-      padding-left: 20px;
+      padding-left: 15px;
     }
-    .dropdown:hover .submenu {
+
+    .submenu.show {
       display: block;
     }
+
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background-color: #00ffff;
+      border: none;
+      color: black;
+      padding: 10px 15px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 0 10px white;
+    }
+
     .container {
+      margin-left: 260px;
       padding: 30px;
       border: 2px solid white;
-      margin: 30px;
+      margin-top: 20px;
+      margin-right: 20px;
       box-shadow: 0 0 15px white;
       background-color: black;
     }
+
     ul {
-      margin-left: 20px;
+      margin-left: 30px;
     }
+
     ul li {
       margin: 10px 0;
     }
+
     .highlight {
       text-decoration: underline;
       color: white;
     }
+
     .space-button {
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: #00bfff;
+      background-color: #00ffff;
       color: black;
       font-weight: bold;
       border: none;
@@ -102,47 +126,54 @@
       border-radius: 5px;
       box-shadow: 0 0 10px white;
     }
+
     .space-button:hover {
-      background-color: #0099cc;
+      background-color: #00cccc;
     }
-    @media (max-width: 768px) {
-      body {
-        padding-left: 0;
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
       }
-      nav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        box-shadow: none;
+
+      .sidebar.open {
+        transform: translateX(0);
       }
-      nav a {
-        display: inline-block;
-        padding: 10px;
-        font-size: 16px;
-      }
+
       .container {
-        margin: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
       }
     }
   </style>
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    function toggleSubmenu() {
+      document.getElementById("spaceSubmenu").classList.toggle("show");
+    }
+  </script>
 </head>
 <body>
-  <nav>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <nav id="sidebar" class="sidebar open">
     <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
+    <button onclick="toggleSubmenu()">SPACE ▾</button>
+    <div id="spaceSubmenu" class="submenu show">
+      <a href="space.html">Overview</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="whiteholes.html">White Holes</a>
+      <a href="cmb.html">CMB</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="greatattractor.html">Great Attractor</a>
     </div>
     <a href="blog.html">BLOG</a>
     <a href="contact.html">CONTACT</a>
@@ -152,22 +183,32 @@
     <h1>UNILEASH</h1>
   </header>
 
-  <div class="container">
-    <h2>Welcome to the Universe of Wonders</h2>
+  <main class="container">
+    <h2>Welcome to the Vast Cosmos</h2>
     <p>
-      <span class="highlight">UNILEASH</span> is a space dedicated to unlocking the unknown. Here you’ll discover the truth about <span class="highlight">dark energy</span>, fly through the realms of <span class="highlight">wormholes</span>, and understand the science of the <span class="highlight">cosmic microwave background</span>.
+      <span class="highlight">Unileash</span> is your ultimate destination for exploring the <span class="highlight">wonders of the universe</span>. From mind-bending phenomena like wormholes and white holes to the grand mysteries of dark energy, we bring you everything in one place.
     </p>
+
     <ul>
-      <li>Deep dive into cosmic expansion and <span class="highlight">dark energy</span>.</li>
-      <li>Learn about <span class="highlight">antimatter</span> and how it might revolutionize the universe.</li>
-      <li>Study the effects of <span class="highlight">gravitational anomalies</span> and <span class="highlight">time distortion</span>.</li>
-      <li>Explore <span class="highlight">space missions</span> that took humanity far beyond the Moon.</li>
-      <li>Know how <span class="highlight">CMB</span> reveals secrets from the universe’s birth.</li>
+      <li>Explore <span class="highlight">boundless energy</span> making up most of the cosmos.</li>
+      <li>Understand the paradox of <span class="highlight">white holes</span> and time reversal.</li>
+      <li>Go beyond imagination with <span class="highlight">multiverse theory</span>.</li>
+      <li>Dive into data from <span class="highlight">Voyager 1</span>, humanity’s farthest journey.</li>
+      <li>Look at the ancient echoes of the universe through <span class="highlight">CMB</span>.</li>
     </ul>
+
     <p>
-      Everything on this site is designed to spark your curiosity, enhance your knowledge, and connect you with the <span class="highlight">grandeur of space</span>.
+      Our team is dedicated to making cosmic knowledge <span class="highlight">accessible and thrilling</span>. Whether you’re a student, space lover, or curious mind, Unileash delivers insights with simplicity and depth. <br><br>
+      Every article is carefully crafted with updated facts and theories supported by scientific research. Our mission is to empower every individual with the understanding of the universe and to keep the fire of curiosity alive.
     </p>
+
+    <p>
+      Let’s uncover mysteries that lie beyond black holes, explore new planetary systems that might harbor life, and reveal the forces that govern our expanding universe. This is more than just a site — this is <span class="highlight">Unileash</span>.
+    </p>
+
     <button class="space-button" onclick="location.href='space.html'">Explore Space Section</button>
-  </div>
+  </main>
+
 </body>
 </html>
+
