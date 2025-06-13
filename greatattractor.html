@@ -1,11 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Great Attractor - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -16,159 +13,160 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Great Attractor | Unileash</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       background-color: black;
+      font-family: Arial, sans-serif;
       color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
     header {
       background-color: black;
       color: #00ffff;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
-    header h1 {
-      background-color: #001f3f;
-      padding: 10px;
-      display: inline-block;
+    .logo {
       border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
-      background-color: #111;
-      padding-top: 60px;
-      box-shadow: 0 0 10px white;
-    }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
+      display: inline-block;
       padding: 10px 20px;
+      font-weight: bold;
+      font-size: 24px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .menu-toggle {
+      display: none;
       background-color: #00ffff;
       color: black;
-      font-weight: bold;
       border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+    }
+    nav {
+      background-color: #111;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 2px 0 5px white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 15px 0;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    nav .submenu {
+      margin-left: 15px;
+    }
+    .container {
+      display: flex;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      border-left: 2px solid white;
+    }
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
       box-shadow: 0 0 10px white;
     }
-    .space-button:hover {
-      background-color: #00cccc;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        width: 100%;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .container {
+        flex-direction: column;
+      }
+      nav.active {
+        display: block;
+      }
+      .content {
+        border-left: none;
+      }
+    }
+    h1 {
+      color: #00ffff;
+    }
+    strong, u {
+      color: white;
+      text-decoration: underline;
+    }
+    li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
+  <header>
+    <div class="logo">UNILEASH</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+  </header>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">SPACE</a>
+          <ul class="submenu">
+            <li><a href="darkenergy.html">- Dark Energy</a></li>
+            <li><a href="antimatter.html">- Antimatter</a></li>
+            <li><a href="wormholes.html">- Wormholes</a></li>
+            <li><a href="whiteholes.html">- White Holes</a></li>
+            <li><a href="cmb.html">- CMB</a></li>
+            <li><a href="exoplanet.html">- Exoplanets</a></li>
+            <li><a href="voyager1.html">- Voyager 1</a></li>
+            <li><a href="multiverse.html">- Multiverse</a></li>
+            <li><a href="greatattractor.html">- Great Attractor</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="content-box">
+        <h1>What is the Great Attractor?</h1>
+        <p>
+          The <strong>Great Attractor</strong> is a mysterious gravitational anomaly in intergalactic space that reveals itself by its influence on the motion of galaxies and galaxy clusters over a region hundreds of millions of light-years across. The gravity of the Great Attractor is so immense that it is pulling our galaxy and many others toward it at over <u>600 kilometers per second</u>.
+        </p>
+        <p>
+          It lies in the direction of the constellations <u>Norma</u> and <u>Triangulum Australe</u>, which unfortunately fall within the "Zone of Avoidance" — an area obscured by the Milky Way’s plane, making it very difficult to observe.
+        </p>
+        <p>
+          Scientists believe that the Great Attractor is part of a much larger structure known as the <strong>Laniakea Supercluster</strong>, which encompasses our Milky Way, the Virgo Supercluster, and thousands of other galaxies. However, the exact nature of the Great Attractor remains unknown. It is not a single object, but a region rich with galaxy clusters and mass concentrations.
+        </p>
+        <p>
+          <strong>Interesting Facts:</strong>
+          <ul>
+            <li>Its gravitational pull affects entire galactic motions across the observable universe.</li>
+            <li>Despite its size, it cannot be seen in visible light due to the dust and stars of the Milky Way.</li>
+            <li>X-ray and radio telescopes help to study this hidden region.</li>
+            <li>It plays a critical role in mapping the large-scale structure of the cosmos.</li>
+          </ul>
+        </p>
       </div>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-
-  <header>
-    <h1>UNILEASH</h1>
-  </header>
-
-  <div class="container">
-    <h2>The Great Attractor</h2>
-
-    <p>
-      The <span class="highlight">Great Attractor</span> is a mysterious gravitational anomaly in intergalactic space that is pulling entire galaxies, including our own Milky Way, toward it with incredible force. Located roughly 250 million light-years away in the direction of the Centaurus constellation, it's hidden behind the plane of the Milky Way, making it hard to observe directly.
-    </p>
-
-    <p>
-      Discovered in the 1970s by astronomers observing the motions of galaxies, it became clear that something massive — but unseen — was influencing galactic movements. The anomaly causes a peculiar motion that pulls galaxies at speeds exceeding 600 km/s toward a hidden center.
-    </p>
-
-    <ul>
-      <li>It lies within the <span class="highlight">Laniakea Supercluster</span>, our local galactic supercluster.</li>
-      <li>Despite being partially blocked by the Milky Way’s dust, X-ray and radio waves give us clues about its presence.</li>
-      <li>Its true nature is still unknown — it may not be a single object, but a dense region filled with galaxies, dark matter, and energy.</li>
-    </ul>
-
-    <p>
-      One of the most compelling real-world events related to the Great Attractor came from NASA’s Hubble Space Telescope, which captured multiple high-velocity galaxies moving in directions not explained by any local gravitational sources — all pointing toward the Centaurus direction.
-    </p>
-
-    <p>
-      Another important contribution came from the Parkes Radio Telescope in Australia, which used 21 cm radio waves to peer through the Milky Way’s dust and map thousands of hidden galaxies near the attractor’s location.
-    </p>
-
-    <p>
-      What makes the <span class="highlight">Great Attractor</span> even more fascinating is that it might not be the final destination. Some researchers suggest it is just a midpoint, and all galaxies are actually moving toward an even more massive structure: the <span class="highlight">Shapley Supercluster</span>.
-    </p>
-
-    <p>
-      Could this be evidence of a gravitational hierarchy in the universe? Is there something even more mysterious guiding the flow of galactic traffic? These questions remain unanswered but drive the deepest curiosity among cosmologists.
-    </p>
-
-    <p>
-      While it's mostly invisible, the impact of the Great Attractor is real. It reshapes our understanding of mass distribution in the universe and pushes us to search in blind spots, both literal and theoretical.
-    </p>
-
-    <p>
-      As telescopes become more advanced, the veil covering the Great Attractor may one day be lifted — revealing whether it’s a monstrous galaxy cluster, an unknown physical phenomenon, or the visible fingerprint of deeper cosmic forces.
-    </p>
-
-    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
+
+
+

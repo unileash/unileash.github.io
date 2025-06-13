@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voyager 1 - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,146 +13,160 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Voyager 1 | Unileash</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       background-color: black;
+      font-family: Arial, sans-serif;
       color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
     header {
       background-color: black;
       color: #00ffff;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
-    header h1 {
-      background-color: #001f3f;
-      padding: 10px;
-      display: inline-block;
+    .logo {
       border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
-      background-color: #111;
-      padding-top: 60px;
-      box-shadow: 0 0 10px white;
-    }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
+      display: inline-block;
       padding: 10px 20px;
+      font-weight: bold;
+      font-size: 24px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .menu-toggle {
+      display: none;
       background-color: #00ffff;
       color: black;
-      font-weight: bold;
       border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+    }
+    nav {
+      background-color: #111;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 2px 0 5px white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 15px 0;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    nav .submenu {
+      margin-left: 15px;
+    }
+    .container {
+      display: flex;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      border-left: 2px solid white;
+    }
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
       box-shadow: 0 0 10px white;
     }
-    .space-button:hover {
-      background-color: #00cccc;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        width: 100%;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .container {
+        flex-direction: column;
+      }
+      nav.active {
+        display: block;
+      }
+      .content {
+        border-left: none;
+      }
+    }
+    h1 {
+      color: #00ffff;
+    }
+    strong, u {
+      color: white;
+      text-decoration: underline;
+    }
+    li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
+  <header>
+    <div class="logo">UNILEASH</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+  </header>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">SPACE</a>
+          <ul class="submenu">
+            <li><a href="darkenergy.html">- Dark Energy</a></li>
+            <li><a href="antimatter.html">- Antimatter</a></li>
+            <li><a href="wormholes.html">- Wormholes</a></li>
+            <li><a href="whiteholes.html">- White Holes</a></li>
+            <li><a href="cmb.html">- CMB</a></li>
+            <li><a href="exoplanet.html">- Exoplanets</a></li>
+            <li><a href="voyager1.html">- Voyager 1</a></li>
+            <li><a href="multiverse.html">- Multiverse</a></li>
+            <li><a href="greatattractor.html">- Great Attractor</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="content-box">
+        <h1>What is Voyager 1?</h1>
+        <p>
+          <strong>Voyager 1</strong> is a space probe launched by NASA on <u>September 5, 1977</u>, to explore the outer planets and eventually interstellar space. It is the farthest human-made object from Earth, traveling at over 61,000 km/h.
+        </p>
+        <p>
+          Voyager 1 has provided groundbreaking data about the gas giants and is now in the region of space beyond our solar system known as <u>interstellar space</u>.
+        </p>
+        <ul>
+          <li>Flew by Jupiter in 1979 and Saturn in 1980.</li>
+          <li>Captured the famous <u>“Pale Blue Dot”</u> image of Earth in 1990.</li>
+          <li>Entered interstellar space on <strong>August 25, 2012</strong>.</li>
+          <li>Currently over <u>24 billion kilometers</u> from Earth.</li>
+          <li>Still sending data back to NASA through the Deep Space Network.</li>
+        </ul>
+        <p>
+          Voyager 1 carries a <u>Golden Record</u> containing sounds, images, and greetings from Earth, intended for any extraterrestrial life that might find it. This makes Voyager 1 not just a scientific instrument, but a <strong>cultural ambassador of humanity</strong>.
+        </p>
+        <p>
+          It continues to operate on limited power and will eventually go silent around <u>2025–2030</u>, but it will keep drifting through the galaxy for billions of years.
+        </p>
       </div>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-
-  <header>
-    <h1>UNILEASH</h1>
-  </header>
-
-  <div class="container">
-    <h2>Voyager 1: Humanity’s Deepest Journey</h2>
-    <p>
-      <span class="highlight">Voyager 1</span> is a space probe launched by NASA in 1977 to study the outer Solar System and interstellar space beyond the Sun's influence. 
-      It remains the farthest man-made object from Earth, pushing the boundaries of what humanity can reach.
-    </p>
-    <p>
-      After a historic flyby of <span class="highlight">Jupiter</span> and <span class="highlight">Saturn</span>, Voyager 1 took a sharp turn and began its journey out of the heliosphere. 
-      In 2012, it officially entered <span class="highlight">interstellar space</span>, a feat unmatched by any other spacecraft.
-    </p>
-    <ul>
-      <li>It carries the famous <span class="highlight">Golden Record</span> with sounds and images representing Earth's diversity.</li>
-      <li>Its mission is powered by <span class="highlight">radioisotope thermoelectric generators</span> (RTGs), allowing it to operate decades after launch.</li>
-      <li>As of now, it continues to transmit data back to Earth, although contact will eventually cease.</li>
-    </ul>
-    <p>
-      The Voyager mission is not only a scientific triumph but a poetic statement of our species’ desire to reach into the <span class="highlight">unknown</span>. 
-      It is the beacon of human curiosity and endurance, floating in the vast ocean of the cosmos, carrying our message to the stars.
-    </p>
-    <p>
-      Even though its instruments are aging, Voyager 1 still provides valuable insights into <span class="highlight">cosmic radiation</span>, 
-      <span class="highlight">magnetic fields</span>, and the interstellar environment far beyond the planets.
-    </p>
-    <p>
-      It teaches us that no boundary is final, and the universe is not a barrier but an open sea for exploration.
-      As Carl Sagan once said, “The spacecraft will be encountered and the record played only if there are advanced space-faring civilizations in interstellar space. 
-      But the launching of this ‘bottle’ into the cosmic ocean says something very hopeful about life on this planet.”
-    </p>
-    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
+
+

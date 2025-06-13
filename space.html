@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNILEASH - Space</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,138 +13,159 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Space | Unileash</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       background-color: black;
       color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
     header {
       background-color: black;
-      color: #00ffff;
-      padding: 20px;
       text-align: center;
+      padding: 15px;
       border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
-    header h1 {
-      background-color: #001f3f;
-      padding: 10px;
-      display: inline-block;
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00ffff;
       border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
-      background-color: #111;
-      padding-top: 60px;
-      box-shadow: 0 0 10px white;
-    }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
+      display: inline-block;
       padding: 10px 20px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .menu-toggle {
+      display: none;
       background-color: #00ffff;
       color: black;
-      font-weight: bold;
       border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      box-shadow: 0 0 10px white;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
     }
-    .space-button:hover {
-      background-color: #00cccc;
+    nav {
+      background-color: #111;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 2px 0 5px white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 15px 0;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    nav .submenu {
+      margin-left: 15px;
+    }
+    .container {
+      display: flex;
+    }
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      border-left: 2px solid white;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1 1 250px;
+      background-color: #111;
+      border: 2px solid white;
+      padding: 20px;
+      box-shadow: 0 0 10px white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
+    .card a {
+      text-decoration: none;
+      color: #00ffff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+      }
+      nav.active {
+        display: block;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .main-content {
+        border-left: none;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
+  <header>
+    <div class="logo">UNILEASH</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+  </header>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">SPACE</a>
+          <ul class="submenu">
+            <li><a href="darkenergy.html">- Dark Energy</a></li>
+            <li><a href="antimatter.html">- Antimatter</a></li>
+            <li><a href="wormholes.html">- Wormholes</a></li>
+            <li><a href="whiteholes.html">- White Holes</a></li>
+            <li><a href="cmb.html">- CMB</a></li>
+            <li><a href="exoplanet.html">- Exoplanets</a></li>
+            <li><a href="voyager1.html">- Voyager 1</a></li>
+            <li><a href="multiverse.html">- Multiverse</a></li>
+            <li><a href="greatattractor.html">- Great Attractor</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <h1>Explore the Universe</h1>
+      <p>Welcome to the Unileash Space Hub. Discover mysteries of the cosmos through hand-picked topics:</p>
+      <div class="cards">
+        <div class="card"><a href="darkenergy.html">Dark Energy</a></div>
+        <div class="card"><a href="antimatter.html">Antimatter</a></div>
+        <div class="card"><a href="wormholes.html">Wormholes</a></div>
+        <div class="card"><a href="whiteholes.html">White Holes</a></div>
+        <div class="card"><a href="cmb.html">Cosmic Microwave Background</a></div>
+        <div class="card"><a href="exoplanet.html">Exoplanets</a></div>
+        <div class="card"><a href="voyager1.html">Voyager 1</a></div>
+        <div class="card"><a href="multiverse.html">Multiverse</a></div>
+        <div class="card"><a href="greatattractor.html">Great Attractor</a></div>
       </div>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-
-  <header>
-    <h1>UNILEASH</h1>
-  </header>
-
-  <div class="container">
-    <h2>Welcome to the Vast Cosmos</h2>
-    <p>
-      <span class="highlight">Unileash</span> is your ultimate gateway to understanding the most <span class="highlight">mind-blowing</span> aspects of the universe. Our mission is to present the mysteries of space in a form that's easy to understand, yet deeply profound.
-    </p>
-    <ul>
-      <li>Explore the <span class="highlight">boundless energy</span> that makes up most of the cosmos.</li>
-      <li>Understand the paradox of <span class="highlight">white holes</span> and time reversal.</li>
-      <li>Go beyond imagination with <span class="highlight">multiverse theory</span>.</li>
-      <li>Dive into data from <span class="highlight">Voyager 1</span>, humanity’s farthest journey.</li>
-      <li>Look at the ancient echoes of the universe through <span class="highlight">CMB</span>.</li>
-    </ul>
-    <p>
-      The goal of Unileash is to bring forth the wonders of the <span class="highlight">cosmic landscape</span> to young minds who seek knowledge and are driven by curiosity. Prepare to dive into wormholes, explore <span class="highlight">exoplanets</span> with life potential, and encounter mysteries beyond time and space.
-    </p>
-    <button class="space-button" onclick="location.href='space.html'">Explore Space Section</button>
   </div>
-
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
+

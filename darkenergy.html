@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dark Energy - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,125 +13,178 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Dark Energy - UNILEASH</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       background-color: black;
       color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      background-color: black;
       border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
     }
+
     header h1 {
-      background-color: #001f3f;
-      padding: 10px;
       display: inline-block;
+      background-color: #001f3f;
+      padding: 10px 20px;
+      color: #00ffff;
       border: 2px solid #00ffff;
       box-shadow: 0 0 10px white;
-      color: #00ffff;
     }
+
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
       background-color: #111;
-      padding-top: 60px;
+      width: 100%;
+      overflow: hidden;
       box-shadow: 0 0 10px white;
     }
+
+    .sidebar {
+      display: none;
+      flex-direction: column;
+      padding-left: 20px;
+      background-color: #000;
+    }
+
+    .menu-button {
+      background-color: #00ffff;
+      color: black;
+      padding: 10px 15px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .menu-button:hover {
+      background-color: #00cccc;
+    }
+
     nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
       display: block;
+      padding: 10px 20px;
+      color: #00ffff;
+      text-decoration: none;
       transition: 0.3s;
     }
+
     nav a:hover {
       background-color: #333;
     }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
+
     .container {
-      padding: 30px;
+      padding: 25px;
+      margin: 20px;
       border: 2px solid white;
-      margin: 30px;
       box-shadow: 0 0 15px white;
       background-color: black;
     }
+
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
     }
-    ul li {
-      margin: 10px 0;
+
+    li {
+      margin: 8px 0;
     }
+
     .highlight {
-      text-decoration: underline;
       color: white;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        display: block !important;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      .container {
+        margin-left: 270px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
-    </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
 
   <header>
     <h1>UNILEASH</h1>
   </header>
 
+  <nav>
+    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
+    <div id="sidebar" class="sidebar">
+      <a href="index.html">HOME</a>
+      <a href="space.html">SPACE</a>
+      <div style="padding-left: 20px;">
+        <a href="darkenergy.html">- Dark Energy</a>
+        <a href="antimatter.html">- Antimatter</a>
+        <a href="wormholes.html">- Wormholes</a>
+        <a href="whiteholes.html">- White Holes</a>
+        <a href="cmb.html">- CMB</a>
+        <a href="exoplanet.html">- Exoplanets</a>
+        <a href="voyager1.html">- Voyager 1</a>
+        <a href="multiverse.html">- Multiverse</a>
+        <a href="greatattractor.html">- Great Attractor</a>
+      </div>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
   <div class="container">
-    <h2>Dark Energy: The Mysterious Force Accelerating the Universe</h2>
+    <h2>What is Dark Energy?</h2>
     <p>
-      Dark energy is one of the most <span class="highlight">profound mysteries</span> in modern cosmology. It is a hypothetical form of energy that permeates all of space and tends to accelerate the expansion of the universe.
+      <span class="highlight">Dark energy</span> is one of the greatest mysteries in modern astrophysics. It’s a hypothetical form of energy that permeates all of space and is believed to be responsible for the <span class="highlight">accelerating expansion</span> of the universe.
+    </p>
+    <p>
+      Scientists estimate that nearly <span class="highlight">68% of the universe</span> is made of dark energy. That’s more than double the amount of dark matter and vastly more than ordinary matter. Yet, we know very little about it.
     </p>
     <ul>
-      <li>It accounts for nearly <span class="highlight">70% of the universe</span>'s total energy.</li>
-      <li>Its presence was first discovered in 1998 during studies of <span class="highlight">supernovae</span>.</li>
-      <li>Unlike gravity, dark energy causes a <span class="highlight">repulsive effect</span> on cosmic structures.</li>
-      <li>It is uniformly distributed and does not clump like matter does.</li>
-      <li>We detect its effects indirectly, through the observation of <span class="highlight">cosmic expansion rates</span>.</li>
+      <li>Discovered in 1998 through supernova observations.</li>
+      <li>Challenges Einstein's original theory of gravity.</li>
+      <li>Possibly connected to the cosmological constant he introduced.</li>
     </ul>
     <p>
-      Scientists are still unsure whether dark energy is a constant, like Einstein’s <span class="highlight">cosmological constant (Λ)</span>, or whether it varies over time and space. This energy shapes the ultimate fate of the universe, possibly leading to a scenario known as the <span class="highlight">Big Freeze</span> or even a <span class="highlight">Big Rip</span>.
+      Some theories suggest that dark energy might be a new kind of dynamic energy field. Others believe it's simply a property of space. Either way, it causes a repulsive force that counteracts gravity on cosmic scales.
     </p>
     <p>
-      The study of dark energy is pushing the boundaries of theoretical physics, and new missions like <span class="highlight">Euclid</span> and <span class="highlight">Roman Space Telescope</span> are being prepared to solve this cosmic puzzle.
+      Observations of the cosmic microwave background, baryon acoustic oscillations, and large-scale structure all support the existence of dark energy. It's like a mysterious pressure that pushes galaxies apart faster and faster over time.
+    </p>
+    <p>
+      If dark energy continues to dominate, the universe may expand forever—ending in a cold, empty state known as the <span class="highlight">Big Freeze</span>. But if it behaves differently over time, other fates like the <span class="highlight">Big Rip</span> or <span class="highlight">cosmic bounce</span> are also possible.
+    </p>
+    <p>
+      Understanding dark energy isn’t just a science goal—it’s a quest to unlock the destiny of the universe. Missions like ESA’s <span class="highlight">Euclid</span> and NASA’s <span class="highlight">Nancy Grace Roman Space Telescope</span> are being designed to probe this enigma with precision.
     </p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
+
+

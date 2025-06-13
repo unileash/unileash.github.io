@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>White Holes - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,162 +13,178 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>White Holes - UNILEASH</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       background-color: black;
       color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      background-color: black;
       border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
     }
+
     header h1 {
-      background-color: #001f3f;
-      padding: 10px;
       display: inline-block;
+      background-color: #001f3f;
+      padding: 10px 20px;
+      color: #00ffff;
       border: 2px solid #00ffff;
       box-shadow: 0 0 10px white;
-      color: #00ffff;
     }
+
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
       background-color: #111;
-      padding-top: 60px;
+      width: 100%;
+      overflow: hidden;
       box-shadow: 0 0 10px white;
     }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
+
+    .sidebar {
       display: none;
+      flex-direction: column;
       padding-left: 20px;
+      background-color: #000;
     }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
-      padding: 10px 20px;
+
+    .menu-button {
       background-color: #00ffff;
       color: black;
+      padding: 10px 15px;
       font-weight: bold;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
-      box-shadow: 0 0 10px white;
+      width: 100%;
     }
-    .space-button:hover {
+
+    .menu-button:hover {
       background-color: #00cccc;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 20px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .container {
+      padding: 25px;
+      margin: 20px;
+      border: 2px solid white;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        display: block !important;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      .container {
+        margin-left: 270px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
-    </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
 
   <header>
     <h1>UNILEASH</h1>
   </header>
 
+  <nav>
+    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
+    <div id="sidebar" class="sidebar">
+      <a href="index.html">HOME</a>
+      <a href="space.html">SPACE</a>
+      <div style="padding-left: 20px;">
+        <a href="darkenergy.html">- Dark Energy</a>
+        <a href="antimatter.html">- Antimatter</a>
+        <a href="wormholes.html">- Wormholes</a>
+        <a href="whiteholes.html">- White Holes</a>
+        <a href="cmb.html">- CMB</a>
+        <a href="exoplanet.html">- Exoplanets</a>
+        <a href="voyager1.html">- Voyager 1</a>
+        <a href="multiverse.html">- Multiverse</a>
+        <a href="greatattractor.html">- Great Attractor</a>
+      </div>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
   <div class="container">
-    <h2>White Holes</h2>
-
+    <h2>The Mystery of White Holes</h2>
     <p>
-      A <span class="highlight">white hole</span> is a hypothetical region of space-time which cannot be entered from the outside, although matter and light can escape from it. In many ways, it's the theoretical reverse of a black hole.
+      White holes are the theoretical opposites of black holes. While black holes pull everything inward—even light—<span class="highlight">white holes eject matter and energy</span> and do not allow anything to enter them. They represent an unproven but fascinating solution to Einstein's equations of general relativity.
     </p>
 
     <p>
-      Where black holes pull everything in, including light, <span class="highlight">white holes push everything away</span>. They are predicted by general relativity and appear as solutions to Einstein’s field equations. But unlike black holes, they are not yet observed in reality.
-    </p>
-
-    <p>
-      White holes may offer clues about the origin of the universe. Some theories propose that the Big Bang itself could have been a white hole — a burst of energy and matter emerging from a singularity in reverse.
+      No white hole has ever been observed. They exist only in theory, proposed as time-reversed versions of black holes. This means, mathematically, a white hole could be a black hole viewed in reverse time. Some scientists believe <span class="highlight">white holes might explain certain cosmic phenomena</span> like high-energy gamma-ray bursts.
     </p>
 
     <ul>
-      <li>White holes could be time-reversed black holes.</li>
-      <li>Nothing can enter a white hole, not even light.</li>
-      <li>The concept links deeply with <span class="highlight">wormholes</span> and even multiverse theories.</li>
+      <li><span class="highlight">White holes</span> are predicted to explosively eject matter.</li>
+      <li>They may form the exit to a wormhole—if wormholes exist at all.</li>
+      <li>Theoretically <span class="highlight">connected to black holes</span> by bridges through spacetime.</li>
     </ul>
 
     <p>
-      Physicists like Stephen Hawking and Igor Novikov have explored whether a black hole might transition into a white hole at the end of its life cycle. According to the <span class="highlight">loop quantum gravity theory</span>, black holes may “bounce back” and become white holes.
+      White holes are highly unstable in classical physics. Any matter approaching them would increase gravitational distortion, which contradicts the idea of a non-interactive object. This is one reason they are thought to be physically unrealistic in a classical setting.
     </p>
 
     <p>
-      This idea raises mind-bending possibilities, like <span class="highlight">information escaping</span> black holes instead of being lost forever. It could solve the black hole information paradox, one of the greatest puzzles in modern physics.
+      However, quantum gravity or loop theory may permit their existence. The real mystery remains whether black holes could evolve into white holes over time. In such a case, the matter consumed might be returned to the universe—possibly solving the <span class="highlight">information paradox</span>.
     </p>
 
     <p>
-      Some computer simulations suggest short-lived white holes might appear as unexplained cosmic explosions — sudden ejections of matter that we currently mistake for other phenomena like gamma-ray bursts or quasars.
+      Until observational evidence is found, white holes will remain a mathematical curiosity—one that still captivates cosmologists and theorists exploring the limits of space-time.
     </p>
-
-    <p>
-      Despite the excitement, no white hole has yet been observed. It remains one of the most fascinating ideas in theoretical physics. But just like black holes were once “impossible,” new tools like the Event Horizon Telescope may someday prove their existence.
-    </p>
-
-    <p>
-      The search continues, as white holes represent the edge of what we know about time, entropy, and the very structure of space. In many ways, they challenge our understanding of <span class="highlight">what is possible</span> in this universe — and maybe others.
-    </p>
-
-    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
 
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
-
-

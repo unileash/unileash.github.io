@@ -1,11 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Multiverse Theory - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -16,155 +13,169 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Multiverse | Unileash</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       background-color: black;
+      font-family: Arial, sans-serif;
       color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
     header {
       background-color: black;
       color: #00ffff;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
-    header h1 {
-      background-color: #001f3f;
-      padding: 10px;
-      display: inline-block;
+    .logo {
       border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
-      background-color: #111;
-      padding-top: 60px;
-      box-shadow: 0 0 10px white;
-    }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
+      display: inline-block;
       padding: 10px 20px;
+      font-weight: bold;
+      font-size: 24px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .menu-toggle {
+      display: none;
       background-color: #00ffff;
       color: black;
-      font-weight: bold;
       border: none;
-      cursor: pointer;
-      border-radius: 5px;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+    }
+    nav {
+      background-color: #111;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 2px 0 5px white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 15px 0;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    nav .submenu {
+      margin-left: 15px;
+    }
+    .container {
+      display: flex;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      border-left: 2px solid white;
+    }
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
       box-shadow: 0 0 10px white;
     }
-    .space-button:hover {
-      background-color: #00cccc;
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        width: 100%;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .container {
+        flex-direction: column;
+      }
+      nav.active {
+        display: block;
+      }
+      .content {
+        border-left: none;
+      }
+    }
+    h1 {
+      color: #00ffff;
+    }
+    strong, u {
+      color: white;
+      text-decoration: underline;
+    }
+    li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
+  <header>
+    <div class="logo">UNILEASH</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+  </header>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">SPACE</a>
+          <ul class="submenu">
+            <li><a href="darkenergy.html">- Dark Energy</a></li>
+            <li><a href="antimatter.html">- Antimatter</a></li>
+            <li><a href="wormholes.html">- Wormholes</a></li>
+            <li><a href="whiteholes.html">- White Holes</a></li>
+            <li><a href="cmb.html">- CMB</a></li>
+            <li><a href="exoplanet.html">- Exoplanets</a></li>
+            <li><a href="voyager1.html">- Voyager 1</a></li>
+            <li><a href="multiverse.html">- Multiverse</a></li>
+            <li><a href="greatattractor.html">- Great Attractor</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="content-box">
+        <h1>What is the Multiverse?</h1>
+        <p>
+          The <strong>Multiverse</strong> is the concept that our universe might not be the only one. Instead, there could be a vast number of <u>parallel universes</u>, each with its own set of physical laws, dimensions, and histories. These universes collectively make up the multiverse.
+        </p>
+        <p>
+          This idea is more than just science fiction. Some <u>cosmological models</u> and <u>quantum theories</u> suggest that the multiverse is a real and inevitable consequence of fundamental physics.
+        </p>
+        <p>
+          <strong>Types of Multiverse Theories:</strong>
+          <ul>
+            <li><strong>Bubble Universes:</strong> Our universe is just one bubble in a cosmic foam of countless others.</li>
+            <li><strong>Quantum Multiverse:</strong> Every quantum decision creates a new branching universe.</li>
+            <li><strong>Brane Multiverse:</strong> Extra dimensions hold multiple universes like slices of bread.</li>
+            <li><strong>Mathematical Universe:</strong> Every logically possible universe exists mathematically.</li>
+          </ul>
+        </p>
+        <p>
+          The multiverse remains a <u>hypothesis</u> because it is nearly impossible to test or observe other universes. However, its implications are profound:
+        </p>
+        <ul>
+          <li>Could explain the fine-tuning of universal constants.</li>
+          <li>Suggests an infinite number of alternate realities.</li>
+          <li>Challenges our understanding of existence and uniqueness.</li>
+          <li>Heavily explored in science fiction, philosophy, and theoretical physics.</li>
+        </ul>
+        <p>
+          Whether or not the multiverse is real, studying it pushes the boundaries of our imagination and our understanding of the cosmos.
+        </p>
       </div>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-
-  <header>
-    <h1>UNILEASH</h1>
-  </header>
-
-  <div class="container">
-    <h2>Multiverse Theory</h2>
-
-    <p>
-      The concept of the <span class="highlight">Multiverse</span> proposes something astonishing — that our universe is just one of many. This idea challenges the notion that our cosmos is all there is and suggests an infinite number of parallel realms, each governed by its own unique physical laws.
-    </p>
-
-    <p>
-      In some of these universes, gravity may be stronger or weaker. In others, stars might never form. And in some, <span class="highlight">you may exist but have made entirely different choices</span>. These are not just wild speculations but logical extensions of theories like quantum mechanics and cosmic inflation.
-    </p>
-
-    <ul>
-      <li><span class="highlight">Quantum Multiverse:</span> Every time a particle moves or a decision is made, the universe could split, creating multiple realities.</li>
-      <li><span class="highlight">Inflationary Multiverse:</span> Rapid expansion after the Big Bang could have created bubble universes, each isolated from the others.</li>
-      <li><span class="highlight">Brane Theory:</span> According to string theory, our universe could be a membrane (“brane”) floating in a higher-dimensional space with many other branes.</li>
-    </ul>
-
-    <p>
-      Scientists use the term "<span class="highlight">Level I to IV multiverses</span>" to classify these ideas. Level I includes universes like ours but far away. Level II involves universes with different constants. Level III is from quantum interpretations. Level IV includes every mathematically possible universe.
-    </p>
-
-    <p>
-      While we currently have no direct proof of other universes, some evidence may lie in anomalies of the <span class="highlight">Cosmic Microwave Background (CMB)</span>. If two universes collided, it could leave a subtle imprint in the sky — a telltale fingerprint of a neighboring reality.
-    </p>
-
-    <p>
-      The idea of multiple universes forces us to rethink everything — from our origins to our purpose. What if we're just a tiny fragment in an eternal multiverse? What if every choice we make spawns a new world?
-    </p>
-
-    <p>
-      <span class="highlight">Multiverse theory</span> has become deeply embedded in science fiction, literature, and now, even mainstream physics. Though still debated, it's a symbol of how boundless and wild the universe might be.
-    </p>
-
-    <p>
-      Whether or not we ever detect another universe, the very possibility reminds us that <span class="highlight">our understanding of existence is still very limited</span>. The multiverse inspires us to keep pushing boundaries and seeking the unknown.
-    </p>
-
-    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
+
+
+

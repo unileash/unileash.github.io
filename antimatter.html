@@ -1,11 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Antimatter - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -16,128 +13,174 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>Antimatter - UNILEASH</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       background-color: black;
       color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      background-color: black;
       border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
     }
+
     header h1 {
-      background-color: #001f3f;
-      padding: 10px;
       display: inline-block;
+      background-color: #001f3f;
+      padding: 10px 20px;
+      color: #00ffff;
       border: 2px solid #00ffff;
       box-shadow: 0 0 10px white;
-      color: #00ffff;
     }
+
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
       background-color: #111;
-      padding-top: 60px;
+      width: 100%;
+      overflow: hidden;
       box-shadow: 0 0 10px white;
     }
+
+    .sidebar {
+      display: none;
+      flex-direction: column;
+      padding-left: 20px;
+      background-color: #000;
+    }
+
+    .menu-button {
+      background-color: #00ffff;
+      color: black;
+      padding: 10px 15px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .menu-button:hover {
+      background-color: #00cccc;
+    }
+
     nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
       display: block;
+      padding: 10px 20px;
+      color: #00ffff;
+      text-decoration: none;
       transition: 0.3s;
     }
+
     nav a:hover {
       background-color: #333;
     }
-    .submenu {
-      display: none;
-      padding-left: 20px;
-    }
-    .dropdown:hover .submenu {
-      display: block;
-    }
+
     .container {
-      padding: 30px;
+      padding: 25px;
+      margin: 20px;
       border: 2px solid white;
-      margin: 30px;
       box-shadow: 0 0 15px white;
       background-color: black;
     }
+
     ul {
-      margin-left: 20px;
+      padding-left: 20px;
     }
-    ul li {
-      margin: 10px 0;
+
+    li {
+      margin: 8px 0;
     }
+
     .highlight {
-      text-decoration: underline;
       color: white;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        display: block !important;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      .container {
+        margin-left: 270px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
-    </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
 
   <header>
     <h1>UNILEASH</h1>
   </header>
 
+  <nav>
+    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
+    <div id="sidebar" class="sidebar">
+      <a href="index.html">HOME</a>
+      <a href="space.html">SPACE</a>
+      <div style="padding-left: 20px;">
+        <a href="darkenergy.html">- Dark Energy</a>
+        <a href="antimatter.html">- Antimatter</a>
+        <a href="wormholes.html">- Wormholes</a>
+        <a href="whiteholes.html">- White Holes</a>
+        <a href="cmb.html">- CMB</a>
+        <a href="exoplanet.html">- Exoplanets</a>
+        <a href="voyager1.html">- Voyager 1</a>
+        <a href="multiverse.html">- Multiverse</a>
+        <a href="greatattractor.html">- Great Attractor</a>
+      </div>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
   <div class="container">
-    <h2>The Antimatter Enigma: Mirror Opposite of the Universe</h2>
-    <p>
-      <span class="highlight">Antimatter</span> is the exotic counterpart of regular matter, where every particle has an identical twin with opposite charge. While electrons are negative, <span class="highlight">positrons</span> — their antimatter versions — are positive.
-    </p>
+    <h2>What is Antimatter?</h2>
+    <p>Antimatter is the mirror image of ordinary matter. For every particle, there exists an antiparticle with the same mass but <span class="highlight">opposite charge</span>. When matter and antimatter meet, they annihilate each other, releasing massive amounts of energy.</p>
+
+    <p>Scientists have observed antimatter in particle accelerators and cosmic rays, but naturally occurring antimatter is extremely rare. The <span class="highlight">Big Bang</span> should have produced equal amounts of matter and antimatter — yet here we are, living in a universe dominated by matter. This is one of the <span class="highlight">greatest mysteries</span> of cosmology.</p>
+
     <ul>
-      <li>Each matter particle has an <span class="highlight">antiparticle</span>: proton ↔ antiproton, electron ↔ positron.</li>
-      <li>When matter and antimatter meet, they <span class="highlight">annihilate</span>, releasing pure energy (E = mc²).</li>
-      <li>Despite the Big Bang producing equal amounts of both, the universe is dominated by matter — a <span class="highlight">cosmic mystery</span>.</li>
-      <li>Antimatter is real: it's used in <span class="highlight">PET scans</span> and created in particle accelerators like CERN.</li>
-      <li>Scientists theorize that entire <span class="highlight">antimatter galaxies</span> could exist in distant space.</li>
+      <li><span class="highlight">Antielectrons</span> are known as positrons.</li>
+      <li><span class="highlight">Antiprotons</span> carry a negative charge instead of positive.</li>
+      <li>Antimatter has been proposed for use in <span class="highlight">future space travel</span>.</li>
+      <li>Medical imaging techniques like PET scans use antimatter reactions.</li>
     </ul>
-    <p>
-      Antimatter challenges our understanding of <span class="highlight">symmetry</span> and physics itself. Experiments like those at the <span class="highlight">Large Hadron Collider</span> are exploring why the observable universe is made of matter, despite quantum laws predicting perfect balance.
-    </p>
-    <p>
-      Harnessing antimatter for energy could be revolutionary. A single gram could release as much energy as an atomic bomb. However, storing and producing it is currently <span class="highlight">extremely expensive and unstable</span>.
-    </p>
-    <p>
-      In science fiction, antimatter fuels spacecraft and powers weapons, but in real science, it's a key to unlocking the secrets of <span class="highlight">our universe’s origin</span>.
-    </p>
+
+    <p>NASA and other agencies have looked into using antimatter as a <span class="highlight">propulsion fuel</span> due to its energy potential. One gram of antimatter reacting with matter could yield energy equivalent to several kilotons of TNT.</p>
+
+    <p>Though it's incredibly powerful, antimatter is also incredibly hard to produce and store. Creating just a few atoms of antimatter takes <span class="highlight">billions of dollars</span> and vast resources. For now, antimatter remains one of science’s most exciting frontiers.</p>
   </div>
+
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      if (sidebar.style.display === "block") {
+        sidebar.style.display = "none";
+      } else {
+        sidebar.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
+
+
+

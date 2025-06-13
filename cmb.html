@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cosmic Microwave Background - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -15,160 +13,175 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
+  <title>CMB - UNILEASH</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
       background-color: black;
       color: #00ffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      background-color: black;
       border-bottom: 2px solid white;
       box-shadow: 0 0 10px white;
     }
+
     header h1 {
-      background-color: #001f3f;
-      padding: 10px;
       display: inline-block;
+      background-color: #001f3f;
+      padding: 10px 20px;
+      color: #00ffff;
       border: 2px solid #00ffff;
       box-shadow: 0 0 10px white;
-      color: #00ffff;
     }
+
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 250px;
       background-color: #111;
-      padding-top: 60px;
+      width: 100%;
+      overflow: hidden;
       box-shadow: 0 0 10px white;
     }
-    nav a {
-      padding: 12px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffff;
-      display: block;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #333;
-    }
-    .submenu {
+
+    .sidebar {
       display: none;
+      flex-direction: column;
       padding-left: 20px;
+      background-color: #000;
     }
-    .dropdown:hover .submenu {
-      display: block;
-    }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin: 10px 0;
-    }
-    .highlight {
-      text-decoration: underline;
-      color: white;
-    }
-    .space-button {
-      margin-top: 20px;
-      padding: 10px 20px;
+
+    .menu-button {
       background-color: #00ffff;
       color: black;
+      padding: 10px 15px;
       font-weight: bold;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
-      box-shadow: 0 0 10px white;
+      width: 100%;
     }
-    .space-button:hover {
+
+    .menu-button:hover {
       background-color: #00cccc;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 20px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .container {
+      padding: 25px;
+      margin: 20px;
+      border: 2px solid white;
+      box-shadow: 0 0 15px white;
+      background-color: black;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        display: block !important;
+      }
+
+      .menu-button {
+        display: none;
+      }
+
+      nav {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      .container {
+        margin-left: 270px;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
-    </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
 
   <header>
     <h1>UNILEASH</h1>
   </header>
 
+  <nav>
+    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
+    <div id="sidebar" class="sidebar">
+      <a href="index.html">HOME</a>
+      <a href="space.html">SPACE</a>
+      <div style="padding-left: 20px;">
+        <a href="darkenergy.html">- Dark Energy</a>
+        <a href="antimatter.html">- Antimatter</a>
+        <a href="wormholes.html">- Wormholes</a>
+        <a href="whiteholes.html">- White Holes</a>
+        <a href="cmb.html">- CMB</a>
+        <a href="exoplanet.html">- Exoplanets</a>
+        <a href="voyager1.html">- Voyager 1</a>
+        <a href="multiverse.html">- Multiverse</a>
+        <a href="greatattractor.html">- Great Attractor</a>
+      </div>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
   <div class="container">
-    <h2>Cosmic Microwave Background (CMB)</h2>
-
+    <h2>The Cosmic Microwave Background (CMB)</h2>
     <p>
-      The <span class="highlight">Cosmic Microwave Background</span> is the oldest light in the universe, often called the "afterglow" of the Big Bang. Discovered accidentally in 1965 by Arno Penzias and Robert Wilson, this radiation fills the universe and carries secrets of the early cosmos.
+      The <span class="highlight">Cosmic Microwave Background (CMB)</span> is the afterglow of the Big Bang, a faint microwave radiation that fills the entire universe. It is one of the most crucial pieces of evidence supporting the Big Bang theory.
     </p>
-
     <p>
-      About <span class="highlight">380,000 years</span> after the Big Bang, the universe cooled enough for atoms to form. Before this, it was too hot and dense, and photons couldn’t travel freely. As soon as atoms formed, light was released — and that’s what we now see as the CMB.
+      Discovered in 1965 by Arno Penzias and Robert Wilson, the CMB represents the oldest light we can observe—dating back nearly 13.8 billion years. It is a snapshot of the universe when it was just 380,000 years old, providing an extraordinary glimpse into the early cosmos.
     </p>
-
     <ul>
-      <li>The CMB is uniform in all directions, yet has tiny fluctuations.</li>
-      <li>These fluctuations are <span class="highlight">quantum imprints</span> that grew into galaxies and stars.</li>
-      <li>It’s visible in the microwave part of the spectrum.</li>
+      <li>The CMB is almost perfectly uniform, with slight temperature fluctuations.</li>
+      <li><span class="highlight">These fluctuations are the seeds of galaxy formation</span>.</li>
+      <li>Its uniformity provides strong support for cosmic inflation.</li>
     </ul>
-
     <p>
-      Satellites like COBE, WMAP, and Planck have measured the CMB with extreme precision. These measurements have given us accurate estimates for the <span class="highlight">age of the universe</span> (~13.8 billion years), its composition, and its rate of expansion.
+      The tiny differences in temperature (just a few microkelvin) tell us about the density variations in the early universe. Over billions of years, gravity pulled denser regions together to form galaxies, stars, and planets.
     </p>
-
     <p>
-      One of the most fascinating things about the CMB is its near-perfect blackbody spectrum. This confirms that the universe was once in thermal equilibrium — a hot, dense soup of particles that eventually cooled down into the cosmos we see today.
+      The CMB is studied by satellites like COBE, WMAP, and Planck. These missions have mapped its temperature variations in exquisite detail, leading to a precise measurement of the age, composition, and curvature of the universe.
     </p>
-
     <p>
-      The small temperature differences in the CMB (just 1 part in 100,000) are like a baby photo of the universe — showing the seeds of structure that gravity later shaped into galaxies and clusters.
+      Understanding the CMB not only reveals how the universe began but also informs theories of its fate. As we peer deeper into the CMB's secrets, we get closer to answering the fundamental question: <span class="highlight">Why does the universe look the way it does?</span>
     </p>
-
-    <p>
-      Some scientists study anomalies in the CMB, like the “Cold Spot” — a mysterious area that could hint at a <span class="highlight">collision with another universe</span> or something even stranger.
-    </p>
-
-    <p>
-      The CMB is one of the strongest pillars of modern cosmology. It supports the Big Bang theory and helps answer fundamental questions like: What is the shape of the universe? Is it infinite? How will it end?
-    </p>
-
-    <p>
-      As we improve our tools, we might uncover even more hidden messages in this ancient light — possibly even signatures from before the Big Bang or hints of a larger multiverse.
-    </p>
-
-    <button class="space-button" onclick="location.href='space.html'">← Back to Space</button>
   </div>
 
+  <script>
+    function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
+
+
