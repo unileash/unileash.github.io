@@ -1,173 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog - Unileash</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MDY4XF90ZF');
-</script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unileash Blog - Latest Space News</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: black;
-      color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-left: 250px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #00ffe7;
     }
-    header {
-      background-color: black;
-      color: #00ffff;
-      padding: 20px;
+    .top-bar {
+      background-color: #000;
+      border: 2px solid #00ffe7;
       text-align: center;
-      border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
-    }
-    header h1 {
-      background-color: #001f3f;
       padding: 10px;
-      display: inline-block;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffe7;
+      margin-bottom: 20px;
     }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
+    .sidebar {
       height: 100%;
       width: 250px;
+      position: fixed;
       background-color: #111;
-      padding-top: 60px;
-      box-shadow: 0 0 10px white;
+      padding-top: 20px;
+      overflow-y: auto;
     }
-    nav a {
-      padding: 12px 20px;
+    .sidebar a, .dropdown-btn {
+      padding: 10px 15px;
       text-decoration: none;
       font-size: 18px;
-      color: #00ffff;
+      color: #00ffe7;
       display: block;
-      transition: 0.3s;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
     }
-    nav a:hover {
+    .sidebar a:hover, .dropdown-btn:hover {
       background-color: #333;
     }
-    .submenu {
+    .dropdown-container {
       display: none;
-      padding-left: 20px;
+      background-color: #222;
+      padding-left: 15px;
     }
-    .dropdown:hover .submenu {
-      display: block;
+    .main {
+      margin-left: 270px;
+      padding: 20px;
+      border: 2px solid #00ffe7;
+      margin-right: 20px;
     }
-    .container {
-      padding: 30px;
-      border: 2px solid white;
-      margin: 30px;
-      box-shadow: 0 0 15px white;
-      background-color: black;
+    .blog-entry {
+      margin-bottom: 25px;
     }
-    .highlight {
-      text-decoration: underline;
-      color: white;
+    .blog-entry h3 {
+      margin: 0 0 5px 0;
+      color: #00ffe7;
     }
-    .blog-post {
-      margin-bottom: 30px;
-    }
-    .blog-post h3 {
-      margin-bottom: 10px;
-    }
-    .blog-post p {
-      line-height: 1.6;
+    .blog-entry p {
+      margin: 0;
+      color: #cceeff;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">HOME</a>
-    <div class="dropdown">
-      <a href="#">SPACE ▾</a>
-      <div class="submenu">
-        <a href="space.html">Overview</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="cmb.html">CMB</a>
-        <a href="exoplanet.html">Exoplanets</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
+  <div class="top-bar">UNILEASH</div> <div class="sidebar" id="mySidebar">
+    <a href="index.html">🏠 Home</a>
+    <button class="dropdown-btn">🌌 SPACE ▼</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="multiverse.html">Multiverse</a>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-
-  <header>
-    <h1>UNILEASH</h1>
-  </header>
-
-  <div class="container">
-    <h2>Latest Space Bulletins</h2>
-
-    <div class="blog-post">
-      <h3>🚀 NASA Plans Manned Mars Mission for 2030</h3>
-      <p>The space agency outlines a step-by-step plan to send astronauts to Mars, including tests of sustainable habitats on the Moon.</p>
+    <button class="dropdown-btn">🔮 MYSTERIES ▼</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mystery Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
     </div>
+    <a href="blog.html">📝 Blog</a>
+    <a href="contact.html">📬 Contact</a>
+  </div> <div class="main">
+    <h2>📡 Latest Space Bulletins</h2><div class="blog-entry">
+  <h3>🚀 NASA Plans Manned Mars Mission for 2030</h3>
+  <p>The space agency outlines a step-by-step plan to send astronauts to Mars, including sustainable habitats on the Moon.</p>
+</div>
 
-    <div class="blog-post">
-      <h3>🛰️ India Launches Gaganyaan Test Module</h3>
-      <p>ISRO successfully launches a crew module test flight, bringing India closer to its first manned space mission.</p>
-    </div>
+<div class="blog-entry">
+  <h3>🛰️ India Launches Gaganyaan Test Module</h3>
+  <p>ISRO successfully launches a crew module test flight, bringing India closer to its first manned space mission.</p>
+</div>
 
-    <div class="blog-post">
-      <h3>🪐 James Webb Discovers Water Vapor on Distant Exoplanet</h3>
-      <p>A new exoplanet shows evidence of atmospheric water vapor, hinting at the potential for life.</p>
-    </div>
+<div class="blog-entry">
+  <h3>🔭 James Webb Discovers Water Vapor on Distant Exoplanet</h3>
+  <p>A new exoplanet shows atmospheric water vapor, hinting at potential for life.</p>
+</div>
 
-    <div class="blog-post">
-      <h3>🌌 Dark Energy May Be Changing Over Time</h3>
-      <p>New cosmological models suggest that dark energy's strength might not be constant, reshaping our understanding of the universe’s expansion.</p>
-    </div>
+<div class="blog-entry">
+  <h3>🌌 Dark Energy May Be Changing Over Time</h3>
+  <p>New models suggest dark energy's strength might not be constant, reshaping our understanding of the universe.</p>
+</div>
 
-    <div class="blog-post">
-      <h3>🛸 Pentagon Releases UAP Research Update</h3>
-      <p>U.S. Department of Defense shares latest reports on Unidentified Aerial Phenomena, sparking fresh interest in alien technology theories.</p>
-    </div>
+<!-- Add 16 more blog entries below -->
+<!-- Placeholder for more news -->
 
-    <div class="blog-post">
-      <h3>🔭 China's Lunar Base Prototype Begins Testing</h3>
-      <p>China is actively testing moon base technologies on Earth with the goal of permanent lunar presence by 2035.</p>
-    </div>
+  </div> <script>
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
 
-    <div class="blog-post">
-      <h3>☄️ Asteroid Sample from Bennu Returns to Earth</h3>
-      <p>NASA’s OSIRIS-REx capsule delivers a pristine asteroid sample, helping scientists understand the solar system’s formation.</p>
-    </div>
+<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
+  <p style="font-size: 14px; color: #FFD700;">
+    🔭 UNILEASH: Exploring the Universe & Beyond
+  </p>
+  <p style="font-size: 13px;">
+    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
+  </p>
+</footer>
 
-    <div class="blog-post">
-      <h3>🌠 Hubble Spots Mysterious Blue Arc in Deep Space</h3>
-      <p>A bizarre blue arc captured by the Hubble Telescope could represent a galactic collision or an unknown lensing effect.</p>
-    </div>
-
-    <div class="blog-post">
-      <h3>🌍 Earth's Magnetic Field Weakens Further</h3>
-      <p>New data reveals a rapid weakening of the magnetic field near the South Atlantic Anomaly, worrying geophysicists.</p>
-    </div>
-
-    <div class="blog-post">
-      <h3>🧠 Elon Musk Predicts AI Astronauts by 2040</h3>
-      <p>SpaceX CEO says future missions may involve AI-controlled astronauts, combining robotics with human strategy.</p>
-    </div>
-  </div>
 </body>
 </html>
-
 

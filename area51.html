@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Area 51 | Unileash Mysteries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MDY4XF90ZF');
+</script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      font-family: Arial, sans-serif;
+      color: #FFD700;
+    }
+
+    .top-bar {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #FFD700;
+      margin: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 0 0 5px white;
+      box-shadow: 0 0 10px #FFD700;
+    }
+
+    .menu-button {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #FFD700;
+      border: none;
+      padding: 10px 15px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 6px;
+      z-index: 2;
+      color: black;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 2px 0 8px #FFD700;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #FFD700;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #333;
+    }
+
+    .main {
+      padding: 20px;
+      margin: 20px;
+      border: 2px solid #FFD700;
+      color: #FFD700;
+      box-shadow: 0 0 10px #FFD700;
+    }
+
+    h1, h2 {
+      color: white;
+      text-shadow: 0 0 10px #FFD700;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar Button -->
+<button class="menu-button" onclick="toggleSidebar()">☰</button>
+
+<!-- Top Bar -->
+<div id="mySidebar" class="sidebar">
+  <a href="index.html">🏠 Home</a>
+
+  <button class="dropdown-btn">🌌 SPACE ▼</button>
+  <div class="dropdown-container">
+    <a href="space.html">Overview</a>
+    <a href="wormholes.html">Wormholes</a>
+    <a href="voyager1.html">Voyager 1</a>
+    <a href="multiverse.html">Multiverse Theory</a>
+    <a href="cmb.html">Cosmic Microwave Background</a>
+    <a href="antimatter.html">Antimatter</a>
+    <a href="exoplanet.html">Exoplanets</a>
+    <a href="darkenergy.html">Dark Energy</a>
+    <a href="whiteholes.html">White Holes</a>
+    <a href="greatattractor.html">The Great Attractor</a>
+  </div>
+
+  <button class="dropdown-btn">🔮 MYSTERIES ▼</button>
+  <div class="dropdown-container">
+    <a href="mysteries.html">Mystery Overview</a>
+    <a href="area51.html">Area 51</a>
+    <a href="nazca.html">Nazca Lines</a>
+    <a href="bermudatriangle.html">Bermuda Triangle</a>
+    <a href="voynich.html">Voynich Manuscript</a>
+    <a href="moonsecrets.html">Moon Secrets</a>
+  </div>
+
+  <a href="blog.html">📝 Blog</a>
+</div>
+
+<!-- Dropdown Style -->
+<style>
+  .dropdown-btn {
+    background-color: #111;
+    color: #FFD700;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .dropdown-btn:hover {
+    background-color: #333;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: #222;
+    padding-left: 10px;
+  }
+
+  .dropdown-container a {
+    padding-left: 30px;
+    font-size: 16px;
+  }
+</style>
+
+<!-- Dropdown Script -->
+<script>
+  const dropdowns = document.getElementsByClassName("dropdown-btn");
+  for (let i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const dropdownContent = this.nextElementSibling;
+      dropdownContent.style.display =
+        dropdownContent.style.display === "block" ? "none" : "block";
+    });
+  }
+</script>
+
+
+<!-- Main Content -->
+<div class="main">
+  <h1>🛸 Area 51: The Forbidden Zone</h1>
+  <p>
+    Tucked deep in the Nevada desert lies a facility that has fascinated the world for decades — Area 51. Officially, it's a U.S. Air Force base. Unofficially? It's a vault of secrets, shrouded in government silence and public suspicion.
+  </p>
+
+  <h2>👀 Eyes in the Desert</h2>
+  <p>
+    Satellite images show a vast complex expanding over time. High-tech hangars, runways, underground bunkers — all surrounded by armed guards and surveillance. But no civilian is allowed within miles of its perimeter.
+  </p>
+
+  <h2>🚨 The Secrecy</h2>
+  <p>
+    For decades, the U.S. government denied its existence. It wasn’t until 2013 that the CIA even admitted Area 51 existed — fueling theories that something extraordinary is being hidden from the public.
+  </p>
+
+  <h2>🛸 UFOs & Alien Tech?</h2>
+  <p>
+    Some believe that alien spacecraft from the Roswell crash of 1947 were transported here. Witnesses claim to have seen:
+    <ul>
+      <li>Flying saucers being tested</li>
+      <li>Extraterrestrial biological entities (EBEs)</li>
+      <li>Reverse-engineering of alien propulsion systems</li>
+    </ul>
+    Whistleblowers like Bob Lazar allege that alien technology is not only real — but actively studied at Area 51.
+  </p>
+
+  <h2>👨‍🔬 Secret Experiments?</h2>
+  <p>
+    Rumors persist of:
+    <ul>
+      <li>Time travel projects</li>
+      <li>Teleportation trials</li>
+      <li>Cloning and psychic warfare experiments</li>
+    </ul>
+    None of it confirmed. None of it denied.
+  </p>
+
+  <h2>👽 The 2019 “Storm Area 51” Movement</h2>
+  <p>
+    A viral Facebook event jokingly encouraged millions to “storm” Area 51 — to "see them aliens." While the event remained peaceful, it showed the massive public interest and deep distrust in official narratives.
+  </p>
+
+  <h2>🧠 What’s Really There?</h2>
+  <p>
+    • Top-secret aircraft like the U-2 and SR-71 were developed here.<br>
+    • New generations of stealth technology may be in testing.<br>
+    • Or... maybe something beyond human is stored in vaults we can never see.
+  </p>
+
+  <p style="margin-top: 40px; font-style: italic;">
+    Whatever lies beyond those gates — it’s guarded by silence, shadows, and speculation. Area 51 may be the key to one of Earth’s greatest mysteries.
+  </p>
+</div>
+
+<!-- Sidebar Script -->
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+  }
+</script>
+
+<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
+  <p style="font-size: 14px; color: #FFD700;">
+    🔭 UNILEASH: Exploring the Universe & Beyond
+  </p>
+  <p style="font-size: 13px;">
+    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
