@@ -188,6 +188,7 @@
 
   <div class="footer">
     &copy; 2025 UNILEASH. The past hides messages we still can’t read.
+<a href="//www.dmca.com/Protection/Status.aspx?ID=8b0e9198-e484-4eaa-bb45-caa5a4406eff" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8b0e9198-e484-4eaa-bb45-caa5a4406eff"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
   </div>
 
   <script>
@@ -208,7 +209,19 @@
         sidebar.style.width = "250px";
       }
     }
-  </script>
 
+// Anti-Copy Code
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.onkeydown = function(e) {
+  if (
+    e.keyCode === 123 || // F12
+    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I/J
+    (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+  ) {
+    return false;
+  }
+};
+  </script>
 </body>
 </html>

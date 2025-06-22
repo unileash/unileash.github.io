@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- Main Pages -->
+  <url>
+    <loc>https://unileash.github.io/</loc>
+  </url>
   <url>
     <loc>https://unileash.github.io/index.html</loc>
-    <priority>1.0</priority>
   </url>
-
-  <!-- Space section -->
   <url>
     <loc>https://unileash.github.io/space.html</loc>
-    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://unileash.github.io/darkenergy.html</loc>
+    <loc>https://unileash.github.io/mysteries.html</loc>
   </url>
   <url>
-    <loc>https://unileash.github.io/antimatter.html</loc>
+    <loc>https://unileash.github.io/blog.html</loc>
   </url>
+  <url>
+    <loc>https://unileash.github.io/contact.html</loc>
+  </url>
+
+  <!-- Space Topics -->
   <url>
     <loc>https://unileash.github.io/wormholes.html</loc>
   </url>
@@ -26,31 +29,43 @@
     <loc>https://unileash.github.io/whiteholes.html</loc>
   </url>
   <url>
-    <loc>https://unileash.github.io/cmb.html</loc>
+    <loc>https://unileash.github.io/darkenergy.html</loc>
   </url>
   <url>
-    <loc>https://unileash.github.io/exoplanet.html</loc>
-  </url>
-  <url>
-    <loc>https://unileash.github.io/voyager1.html</loc>
+    <loc>https://unileash.github.io/greatattractor.html</loc>
   </url>
   <url>
     <loc>https://unileash.github.io/multiverse.html</loc>
   </url>
   <url>
-    <loc>https://unileash.github.io/greatattractor.html</loc>
+    <loc>https://unileash.github.io/exoplanet.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/antimatter.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/cmb.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/voyager1.html</loc>
   </url>
 
-  <!-- Blog -->
+  <!-- Mysteries Topics -->
   <url>
-    <loc>https://unileash.github.io/blog.html</loc>
-    <priority>0.8</priority>
+    <loc>https://unileash.github.io/area51.html</loc>
   </url>
-
-  <!-- Contact -->
   <url>
-    <loc>https://unileash.github.io/contact.html</loc>
-    <priority>0.5</priority>
+    <loc>https://unileash.github.io/nazca.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/voynich.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/bermuda.html</loc>
+  </url>
+  <url>
+    <loc>https://unileash.github.io/moonsecrets.html</loc>
   </url>
 
 </urlset>
+

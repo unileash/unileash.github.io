@@ -167,7 +167,14 @@
 <article><h3>14. Voyager 1 Sends Signal After Months of Silence</h3><p>After months in the dark, Voyager 1 responded with telemetry, showing it's still alive.</p></article>
 <article><h3>15. Mysterious Object Near Black Hole Resists Destruction</h3><p>An unknown object orbiting a black hole remains intact despite intense tidal forces.</p></article>
 
-  </div> <script>
+  </div>
+
+<div class="footer" style="text-align: center; padding: 20px; color: white; font-size: 14px; background-color: black;">
+  <p>© 2025 UNILEASH. All Rights Reserved.</p>
+<a href="//www.dmca.com/Protection/Status.aspx?ID=8b0e9198-e484-4eaa-bb45-caa5a4406eff" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8b0e9198-e484-4eaa-bb45-caa5a4406eff"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+</div>
+
+ <script>
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("active");
     }
@@ -184,6 +191,19 @@
         }
       });
     }
+
+// Anti-Copy Code
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.onkeydown = function(e) {
+  if (
+    e.keyCode === 123 || // F12
+    (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I/J
+    (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+  ) {
+    return false;
+  }
+};
   </script></body>
 </html>
 
