@@ -1,6 +1,9 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unileash - Unlock the Cosmos</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -11,184 +14,208 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Unileash | Home</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: black;
-      color: #00ffff;
-    }.topbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: black;
-  border-bottom: 2px solid #00ffff;
-}
+      background-color: #000;
+      color: #00bfff;
+      font-family: Arial, sans-serif;
+    }
 
-.topbar h1 {
-  color: #00ffff;
-  border: 2px solid #00ffff;
-  padding: 5px 20px;
-  border-radius: 10px;
-  font-size: 24px;
-}
+    header {
+      text-align: center;
+      padding: 20px;
+    }
 
-.sidebar {
-  background-color: black;
-  border-right: 2px solid #00ffff;
-  padding: 20px;
-  width: 250px;
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
+    .title-box {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 2.5em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
+      background-color: #000;
+    }
 
-.sidebar a, .dropdown-btn {
-  display: block;
-  color: #00ffff;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    /* Sidebar styles */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
+    }
 
-.dropdown-container {
-  display: none;
-  padding-left: 15px;
-}
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
+    }
 
-.content {
-  margin-left: 270px;
-  padding: 20px;
-}
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
+    }
 
-.toggle-btn {
-  display: none;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 26px;
-  background-color: #00ffff;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 12px;
-  z-index: 1001;
-}
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+    }
 
-footer {
-  margin-top: 50px;
-  border-top: 1px solid white;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  background-color: black;
-  box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);
-}
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      transition: margin-left 0.4s;
+    }
 
-footer p:first-child {
-  font-size: 14px;
-  color: #FFD700;
-}
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
+    }
 
-footer p:last-child {
-  font-size: 13px;
-}
+    .underline {
+      text-decoration: underline;
+      text-decoration-color: white;
+    }
 
-@media screen and (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-  }
+    .footer {
+      background-color: #000;
+      color: #00bfff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
+    }
 
-  .sidebar.show {
-    transform: translateX(0);
-  }
+    /* Hide sidebar by default on small screens */
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding-top: 60px;
+        overflow-x: hidden;
+      }
 
-  .content {
-    margin-left: 0;
-    padding: 70px 20px;
-  }
-
-  .toggle-btn {
-    display: block;
-  }
-}
-
+      .content {
+        margin-left: 0;
+      }
+    }
   </style>
-</head><body>
-  <button class="toggle-btn" onclick="toggleSidebar()">☰</button> <div class="sidebar" id="sidebar">
-    <a href="index.html">HOME</a>
-    <div>
-      <span class="dropdown-btn" onclick="toggleDropdown('spaceDropdown')">SPACE ▼</span>
-      <div class="dropdown-container" id="spaceDropdown">
-        <a href="space.html">Overview</a>
-        <a href="wormholes.html">Wormholes</a>
-        <a href="whiteholes.html">White Holes</a>
-        <a href="voyager1.html">Voyager 1</a>
-        <a href="multiverse.html">Multiverse</a>
-        <a href="cmb.html">CMB</a>
-        <a href="antimatter.html">Antimatter</a>
-        <a href="exoplanet.html">Exoplanet</a>
-        <a href="darkenergy.html">Dark Energy</a>
-        <a href="greatattractor.html">Great Attractor</a>
-      </div>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <header>
+    <div class="title-box">UNILEASH</div>
+  </header>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
     </div>
-    <div>
-      <span class="dropdown-btn" onclick="toggleDropdown('mysteryDropdown')">MYSTERIES ▼</span>
-      <div class="dropdown-container" id="mysteryDropdown">
-        <a href="mysteries.html">Mystery Overview</a>
-        <a href="area51.html">Area 51</a>
-        <a href="nazca.html">Nazca Lines</a>
-        <a href="bermudatriangle.html">Bermuda Triangle</a>
-        <a href="voynich.html">Voynich Manuscript</a>
-        <a href="moonsecrets.html">Moon Secrets</a>
-      </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
     </div>
-    <a href="blog.html">BLOG</a>
-    <a href="contact.html">CONTACT</a>
-  </div> <div class="topbar">
-    <h1>UNILEASH</h1>
-  </div> <div class="content">
-    <h2>🌌 Welcome to the Vast Cosmos of Unileash</h2>
-    <p>
-      Dive into the most epic and mysterious universe ever uncovered. At Unileash, we’re not just delivering facts — we’re unleashing mysteries, space wonders, cosmic phenomena, and ancient enigmas. Want to know how white holes differ from black holes? Curious about the true story of Area 51 or the baffling Nazca Lines? This is the hub of the unknown.
-    </p>
-    <p>
-      🚀 Space is not just above us — it’s beyond imagination. We bring you:
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">Welcome to Unileash</h2>
+      <p><span class="underline">Unileash</span> is your launchpad into the mysteries of the cosmos. We cover everything from quantum particles to galaxy collisions, from ancient unknowns to the modern space race.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">About Unileash</h2>
+      <p>Our mission is to unravel what lies beyond. Powered by research, theory, and curiosity, we dive into <span class="underline">space facts</span>, paradoxes, and true mysteries that make you question everything.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Cosmic Facts</h2>
       <ul>
-        <li>🔥 Deep dives into wormholes and multiverse theories</li>
-        <li>🛰️ Real missions like Voyager 1’s epic journey</li>
-        <li>🪐 Stunning mysteries behind exoplanets and cosmic microwave background</li>
-        <li>🌀 Energy forms like antimatter and dark energy decoded</li>
+        <li><span class="underline">Neutron stars</span> are so dense, a sugar cube of their material weighs more than all of Mount Everest.</li>
+        <li><span class="underline">Time dilation</span> near black holes can slow time drastically compared to Earth.</li>
+        <li><span class="underline">Dark energy</span> makes up about 68% of the universe, yet remains a complete mystery.</li>
+        <li><span class="underline">Voyager 1</span> is over 20 billion km away and still sending data to Earth.</li>
+        <li><span class="underline">The CMB</span> is the afterglow of the Big Bang—visible in every direction.</li>
+        <li><span class="underline">The Great Attractor</span> is pulling galaxies, including ours, toward it at unimaginable speed.</li>
       </ul>
-    </p>
-    <p>
-      🕵️‍♂️ Don’t miss our **Mysteries** section:
-      <ul>
-        <li>🛸 Area 51 — what’s really hidden in the desert?</li>
-        <li>✏️ Nazca Lines — why did ancient people carve gigantic shapes?</li>
-        <li>👁️‍🗨️ Upcoming: Lost Cities, Ancient Tech, Time Portals</li>
-      </ul>
-    </p>
-    <p>
-      🌠 We are continuously expanding. Our dream? To build a universe that fuels your curiosity.
-      Stay tuned. Stay unleashed.
-    </p>
-  </div> <footer>
-    <p>🔭 UNILEASH: Exploring the Universe & Beyond</p>
-    <p>© 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.</p>
-  </footer> <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("show");
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 UNILEASH. Exploring the unknown. 
+  </div>
+
+  <script>
+    // Collapsible dropdowns
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+      });
     }
 
-    function toggleDropdown(id) {
-      var dropdown = document.getElementById(id);
-      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    // Sidebar toggle
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+      } else {
+        sidebar.style.width = "250px";
+      }
     }
-  </script></body></html>
+  </script>
+</body>
+</html>
+

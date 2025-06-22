@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wormholes - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -14,189 +14,201 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Wormholes - UNILEASH</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
-      color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #00bfff;
+      font-family: Arial, sans-serif;
     }
 
     header {
       text-align: center;
       padding: 20px;
-      background-color: black;
-      border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
 
-    header h1 {
+    .title-box {
       display: inline-block;
-      background-color: #001f3f;
-      padding: 10px 20px;
-      color: #00ffff;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-    }
-
-    nav {
-      background-color: #111;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 0 10px white;
-    }
-
-    .sidebar {
-      display: none;
-      flex-direction: column;
-      padding-left: 20px;
+      padding: 10px 25px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
       background-color: #000;
     }
 
-    .menu-button {
-      background-color: #00ffff;
-      color: black;
-      padding: 10px 15px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      width: 100%;
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
     }
 
-    .menu-button:hover {
-      background-color: #00cccc;
-    }
-
-    nav a {
-      display: block;
+    .sidebar a,
+    .dropdown-btn {
       padding: 10px 20px;
-      color: #00ffff;
       text-decoration: none;
-      transition: 0.3s;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
     }
 
-    nav a:hover {
-      background-color: #333;
-    }
-
-    .container {
-      padding: 25px;
-      margin: 20px;
-      border: 2px solid white;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-
-    ul {
+    .dropdown-container {
+      display: none;
       padding-left: 20px;
     }
 
-    li {
-      margin: 8px 0;
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
     }
 
-    .highlight {
-      color: white;
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      transition: margin-left 0.4s;
+    }
+
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
 
-    @media (min-width: 768px) {
+    .footer {
+      background-color: #000;
+      color: #00bfff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
       .sidebar {
-        display: block !important;
-      }
-
-      .menu-button {
-        display: none;
-      }
-
-      nav {
-        width: 250px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
+        width: 0;
         padding-top: 60px;
+        overflow-x: hidden;
       }
 
-      .container {
-        margin-left: 270px;
+      .content {
+        margin-left: 0;
       }
     }
   </style>
 </head>
 <body>
 
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
   <header>
-    <h1>UNILEASH</h1>
+    <div class="title-box">WORMHOLES</div>
   </header>
 
-  <nav>
-    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
-    <div id="sidebar" class="sidebar">
-      <a href="index.html">HOME</a>
-      <a href="space.html">SPACE</a>
-      <div style="padding-left: 20px;">
-        <a href="darkenergy.html">- Dark Energy</a>
-        <a href="antimatter.html">- Antimatter</a>
-        <a href="wormholes.html">- Wormholes</a>
-        <a href="whiteholes.html">- White Holes</a>
-        <a href="cmb.html">- CMB</a>
-        <a href="exoplanet.html">- Exoplanets</a>
-        <a href="voyager1.html">- Voyager 1</a>
-        <a href="multiverse.html">- Multiverse</a>
-        <a href="greatattractor.html">- Great Attractor</a>
-      </div>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
     </div>
-  </nav>
 
-  <div class="container">
-    <h2>The Enigma of Wormholes</h2>
-    <p>
-      Wormholes are theoretical tunnels in the fabric of space-time, predicted by Einstein's general theory of relativity. These exotic structures could, in theory, allow matter or information to travel across vast distances in space—or even time—in a fraction of the time it would take through normal space.
-    </p>
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
 
-    <p>
-      A wormhole is like a bridge connecting two separate points in spacetime. Imagine folding a piece of paper so two ends touch, and poking a hole through—it creates a shortcut. That’s essentially the idea behind a wormhole.
-    </p>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <ul>
-      <li><span class="highlight">Einstein-Rosen bridges</span> are early theoretical wormholes proposed by Einstein and physicist Nathan Rosen.</li>
-      <li><span class="highlight">Traversable wormholes</span> would allow safe passage of objects or humans, though none have been observed.</li>
-      <li>They might connect distant galaxies, different universes, or even allow <span class="highlight">time travel</span>.</li>
-    </ul>
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What is a Wormhole?</h2>
+      <p>A <span class="underline">wormhole</span> is a theoretical tunnel in spacetime that could connect distant parts of the universe. It is like a cosmic shortcut, folding space to reduce the time it takes to travel between two points.</p>
+    </div>
 
-    <p>
-      The biggest issue with wormholes is stability. Wormholes, if they exist, would collapse instantly unless held open by something exotic—like <span class="highlight">negative energy</span>. This is purely hypothetical, as such materials haven’t been discovered or created yet.
-    </p>
+    <div class="content-box">
+      <h2 class="underline">How Wormholes Might Work</h2>
+      <p>Wormholes arise as solutions to the <span class="underline">Einstein field equations</span> of general relativity. A traversable wormhole would need <span class="underline">exotic matter</span>—a form of matter with negative energy density—to keep it open and stable.</p>
+    </div>
 
-    <p>
-      In science fiction, wormholes are commonly used as plot devices for faster-than-light travel. From *Interstellar* to *Stargate*, wormholes capture our imagination as the ultimate shortcuts through space and time.
-    </p>
+    <div class="content-box">
+      <h2 class="underline">Wormhole Facts</h2>
+      <ul>
+        <li><span class="underline">Wormholes</span> are often called Einstein-Rosen bridges.</li>
+        <li>No physical evidence of wormholes has ever been found.</li>
+        <li>They could, in theory, allow faster-than-light travel—without violating relativity.</li>
+        <li>Some wormholes may connect distant galaxies or even different universes.</li>
+        <li>Wormholes might be microscopic and exist at quantum scales.</li>
+        <li><span class="underline">Time travel</span> through wormholes is theoretically possible, but not practically achievable with our current understanding.</li>
+      </ul>
+    </div>
+  </div>
 
-    <p>
-      Whether wormholes are real or not, they raise deep questions about the nature of reality, time, and causality. Could one manipulate a wormhole to travel to the past? What would happen to cause-and-effect? These are still open questions in modern physics.
-    </p>
+  <div class="footer">
+    &copy; 2025 UNILEASH. Tunnels through reality begin here.
   </div>
 
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById("sidebar");
-      sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
-
 </body>
 </html>
+
 

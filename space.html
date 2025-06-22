@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unileash Space Center</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -13,178 +14,204 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Unileash - Space</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
-      color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    header {
-      background-color: black;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
-    }
-    header h1 {
-      background-color: #001f3f;
-      padding: 10px;
-      display: inline-block;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-      color: #00ffff;
-    }
-    nav {
-      background-color: #111;
-      padding: 10px;
-      border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
-    }
-    .nav-links {
-      display: none;
-      flex-direction: column;
-    }
-    .nav-links a {
-      color: #00ffff;
-      text-decoration: none;
-      padding: 10px;
-      border-bottom: 1px solid #333;
-    }
-    .nav-links a:hover {
-      background-color: #333;
-    }
-    .menu-btn {
-      background-color: #00ffff;
-      color: black;
-      padding: 10px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-    .dropdown {
-      cursor: pointer;
-      padding: 10px;
-      background-color: #222;
-      color: #00ffff;
-      border: none;
-      text-align: left;
-      font-weight: bold;
-    }
-    .submenu {
-      display: none;
-      flex-direction: column;
-      padding-left: 20px;
-    }
-    .submenu a {
-      padding: 8px 0;
-    }
-    .container {
-      padding: 20px;
-      margin: 20px;
-      border: 2px solid white;
-      box-shadow: 0 0 10px white;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    .highlight {
-      color: white;
-      text-decoration: underline;
+      background-color: #000;
+      color: #c770ff;
+      font-family: Arial, sans-serif;
     }
 
-    @media(min-width: 768px) {
-      .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title-box {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #c770ff;
+      color: #c770ff;
+      background-color: #000;
+      text-shadow: 0 0 10px #c770ff;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px white;
+    }
+
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #c770ff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #c770ff;
+    }
+
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #c770ff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px white;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      transition: margin-left 0.4s;
+    }
+
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px white;
+    }
+
+    .underline {
+      text-decoration: underline;
+      text-decoration-color: white;
+    }
+
+    .footer {
+      background-color: #000;
+      color: #c770ff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px white;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding-top: 60px;
+        overflow-x: hidden;
       }
-      .menu-btn, .dropdown {
-        display: none;
-      }
-      .submenu {
-        display: none !important;
+
+      .content {
+        margin-left: 0;
       }
     }
   </style>
 </head>
 <body>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
   <header>
-    <h1>UNILEASH</h1>
+    <div class="title-box">UNILEASH SPACE CENTER</div>
   </header>
 
-  <nav>
-    <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">HOME</a>
-      <div>
-        <button class="dropdown" onclick="toggleSubmenu()">SPACE ▼</button>
-        <div class="submenu" id="spaceSubmenu">
-          <a href="space.html">Overview</a>
-          <a href="darkenergy.html">Dark Energy</a>
-          <a href="antimatter.html">Antimatter</a>
-          <a href="wormholes.html">Wormholes</a>
-          <a href="whiteholes.html">White Holes</a>
-          <a href="cmb.html">CMB</a>
-          <a href="exoplanet.html">Exoplanets</a>
-          <a href="voyager1.html">Voyager 1</a>
-          <a href="multiverse.html">Multiverse</a>
-          <a href="greatattractor.html">Great Attractor</a>
-        </div>
-      </div>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
-    </div>
-  </nav>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
 
-  <div class="container">
-    <h2>SPACE: The Final Frontier</h2>
-    <p>
-      Welcome to the <span class="highlight">Space Section</span> of Unileash — where reality expands and the impossible becomes possible. 
-      Dive into the deepest realms of our universe and beyond, exploring secrets that challenge the limits of science and imagination.
-    </p>
-    <ul>
-      <li>The <span class="highlight">universe</span> is estimated to be 13.8 billion years old, yet we’ve only explored a fraction of it.</li>
-      <li><span class="highlight">Neutron stars</span> are so dense that a single teaspoon would weigh over a billion tons on Earth.</li>
-      <li><span class="highlight">Black holes</span> can warp time, space, and reality itself.</li>
-      <li>Light from the most distant galaxies takes <span class="highlight">billions of years</span> to reach us — we’re looking into the past.</li>
-      <li>The <span class="highlight">cosmic microwave background</span> is the oldest light we can detect, from just after the Big Bang.</li>
-      <li>New <span class="highlight">exoplanets</span> are being discovered constantly, many potentially habitable.</li>
-      <li>According to the <span class="highlight">multiverse theory</span>, this might be just one of infinite realities.</li>
-      <li>Our universe is expanding faster and faster due to a mysterious force: <span class="highlight">Dark Energy</span>.</li>
-      <li>Despite our efforts, <span class="highlight">95% of the universe</span> remains invisible and unexplained.</li>
-      <li>Wormholes, though hypothetical, could one day allow <span class="highlight">instant space travel</span> across galaxies.</li>
-    </ul>
-    <p>
-      This is not just space — it’s a vast, living mystery, waiting for explorers like you to unleash its secrets.
-    </p>
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">Welcome to Space</h2>
+      <p><span class="underline">Space</span> is not just a void — it's an ever-expanding cosmic ocean, filled with wonders that defy imagination. From dazzling stars and massive black holes to invisible dark energy and parallel universes, space holds everything and yet nothing. It's where time bends, gravity dances, and matter floats in silence.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Scale of the Universe</h2>
+      <p>The universe spans over <span class="underline">93 billion light-years</span> in diameter, yet it's still expanding. Galaxies are racing away, time is stretched, and distances are beyond comprehension. Earth is but a speck — a dust mote hanging in a sunbeam.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Stars, Planets & Galaxies</h2>
+      <p>Our universe hosts over <span class="underline">2 trillion galaxies</span>, each filled with billions of stars and countless planets. Among them, exoplanets may harbor life, and quasars beam energy brighter than entire galaxies.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">The Great Unknown</h2>
+      <p>We’ve mapped only a fraction of space. What lies beyond the cosmic horizon? What dark forces shape galaxies? The more we discover, the more mysteries arise. Space remains a puzzle with infinite pieces — from <span class="underline">dark matter</span> to the edges of the multiverse.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Unileash's Mission</h2>
+      <p><span class="underline">Unileash</span> is your gateway to the stars. We unveil cosmic secrets and dive deep into the mechanics of the universe. Through science, visuals, and mysteries, we connect humanity to the cosmos — one fact, one theory, one journey at a time.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 UNILEASH. The journey through the stars has just begun.
   </div>
 
   <script>
-    function toggleMenu() {
-      var nav = document.getElementById('navLinks');
-      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
     }
-    function toggleSubmenu() {
-      var submenu = document.getElementById('spaceSubmenu');
-      submenu.style.display = (submenu.style.display === 'flex') ? 'none' : 'flex';
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
 
 </body>
 </html>

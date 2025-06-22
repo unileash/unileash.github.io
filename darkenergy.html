@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Energy - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -13,188 +14,209 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Dark Energy - UNILEASH</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
-      color: #00ffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #00bfff;
+      font-family: Arial, sans-serif;
     }
 
     header {
       text-align: center;
       padding: 20px;
-      background-color: black;
-      border-bottom: 2px solid white;
-      box-shadow: 0 0 10px white;
     }
 
-    header h1 {
+    .title-box {
       display: inline-block;
-      background-color: #001f3f;
-      padding: 10px 20px;
-      color: #00ffff;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 10px white;
-    }
-
-    nav {
-      background-color: #111;
-      width: 100%;
-      overflow: hidden;
-      box-shadow: 0 0 10px white;
-    }
-
-    .sidebar {
-      display: none;
-      flex-direction: column;
-      padding-left: 20px;
+      padding: 10px 25px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
       background-color: #000;
     }
 
-    .menu-button {
-      background-color: #00ffff;
-      color: black;
-      padding: 10px 15px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      width: 100%;
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
     }
 
-    .menu-button:hover {
-      background-color: #00cccc;
-    }
-
-    nav a {
-      display: block;
+    .sidebar a,
+    .dropdown-btn {
       padding: 10px 20px;
-      color: #00ffff;
       text-decoration: none;
-      transition: 0.3s;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
     }
 
-    nav a:hover {
-      background-color: #333;
-    }
-
-    .container {
-      padding: 25px;
-      margin: 20px;
-      border: 2px solid white;
-      box-shadow: 0 0 15px white;
-      background-color: black;
-    }
-
-    ul {
+    .dropdown-container {
+      display: none;
       padding-left: 20px;
     }
 
-    li {
-      margin: 8px 0;
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
     }
 
-    .highlight {
-      color: white;
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+      transition: margin-left 0.4s;
+    }
+
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
 
-    @media (min-width: 768px) {
+    .footer {
+      background-color: #000;
+      color: #00bfff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
       .sidebar {
-        display: block !important;
-      }
-
-      .menu-button {
-        display: none;
-      }
-
-      nav {
-        width: 250px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
+        width: 0;
         padding-top: 60px;
+        overflow-x: hidden;
       }
 
-      .container {
-        margin-left: 270px;
+      .content {
+        margin-left: 0;
       }
     }
   </style>
 </head>
 <body>
 
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
   <header>
-    <h1>UNILEASH</h1>
+    <div class="title-box">DARK ENERGY</div>
   </header>
 
-  <nav>
-    <button class="menu-button" onclick="toggleMenu()">☰ MENU</button>
-    <div id="sidebar" class="sidebar">
-      <a href="index.html">HOME</a>
-      <a href="space.html">SPACE</a>
-      <div style="padding-left: 20px;">
-        <a href="darkenergy.html">- Dark Energy</a>
-        <a href="antimatter.html">- Antimatter</a>
-        <a href="wormholes.html">- Wormholes</a>
-        <a href="whiteholes.html">- White Holes</a>
-        <a href="cmb.html">- CMB</a>
-        <a href="exoplanet.html">- Exoplanets</a>
-        <a href="voyager1.html">- Voyager 1</a>
-        <a href="multiverse.html">- Multiverse</a>
-        <a href="greatattractor.html">- Great Attractor</a>
-      </div>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
-    </div>
-  </nav>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
 
-  <div class="container">
-    <h2>What is Dark Energy?</h2>
-    <p>
-      <span class="highlight">Dark energy</span> is one of the greatest mysteries in modern astrophysics. It’s a hypothetical form of energy that permeates all of space and is believed to be responsible for the <span class="highlight">accelerating expansion</span> of the universe.
-    </p>
-    <p>
-      Scientists estimate that nearly <span class="highlight">68% of the universe</span> is made of dark energy. That’s more than double the amount of dark matter and vastly more than ordinary matter. Yet, we know very little about it.
-    </p>
-    <ul>
-      <li>Discovered in 1998 through supernova observations.</li>
-      <li>Challenges Einstein's original theory of gravity.</li>
-      <li>Possibly connected to the cosmological constant he introduced.</li>
-    </ul>
-    <p>
-      Some theories suggest that dark energy might be a new kind of dynamic energy field. Others believe it's simply a property of space. Either way, it causes a repulsive force that counteracts gravity on cosmic scales.
-    </p>
-    <p>
-      Observations of the cosmic microwave background, baryon acoustic oscillations, and large-scale structure all support the existence of dark energy. It's like a mysterious pressure that pushes galaxies apart faster and faster over time.
-    </p>
-    <p>
-      If dark energy continues to dominate, the universe may expand forever—ending in a cold, empty state known as the <span class="highlight">Big Freeze</span>. But if it behaves differently over time, other fates like the <span class="highlight">Big Rip</span> or <span class="highlight">cosmic bounce</span> are also possible.
-    </p>
-    <p>
-      Understanding dark energy isn’t just a science goal—it’s a quest to unlock the destiny of the universe. Missions like ESA’s <span class="highlight">Euclid</span> and NASA’s <span class="highlight">Nancy Grace Roman Space Telescope</span> are being designed to probe this enigma with precision.
-    </p>
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What is Dark Energy?</h2>
+      <p><span class="underline">Dark energy</span> is a mysterious force that drives the accelerated expansion of the universe. While we can measure its effects, it remains one of the biggest unsolved puzzles in cosmology. It is thought to make up about <span class="underline">68%</span> of the total energy content of the universe.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">The Discovery of Dark Energy</h2>
+      <p>Dark energy was first discovered in 1998 when two independent teams of astronomers observed that distant supernovae were moving away from us faster than expected. This discovery indicated that the universe's expansion was not slowing down, as previously believed, but actually speeding up. This mysterious force, which was later named dark energy, was theorized to counteract the effects of gravity.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">How Does Dark Energy Work?</h2>
+      <p>Dark energy is thought to work in opposition to gravity. While gravity pulls matter together, dark energy seems to push space apart, causing the universe to expand at an accelerating rate. This suggests that dark energy has a repulsive effect on the fabric of space itself. The true nature of dark energy remains unknown, but its influence on the cosmos is undeniable.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Dark Energy and the Fate of the Universe</h2>
+      <p>Dark energy will play a crucial role in determining the ultimate fate of the universe. If its effects continue to dominate, the universe may continue expanding forever, growing colder and more diffuse in the process. This scenario is known as the <span class="underline">Big Freeze</span> theory. Alternatively, some models suggest that dark energy could change over time, leading to a possible <span class="underline">Big Crunch</span> or other catastrophic events.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Facts About Dark Energy</h2>
+      <ul>
+        <li>Dark energy is the most dominant force in the universe, yet we know very little about it.</li>
+        <li>It was discovered in the late 1990s through observations of distant galaxies.</li>
+        <li>Approximately 68% of the universe’s energy density is dark energy.</li>
+        <li>Dark energy is responsible for the accelerated expansion of the universe.</li>
+        <li>It has a repulsive effect, pushing galaxies apart and making space itself stretch.</li>
+        <li>The true nature of dark energy is still a mystery — it could be a property of space itself or a form of energy we have yet to understand.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 UNILEASH. Unlocking the secrets of the universe.
   </div>
 
   <script>
-    function toggleMenu() {
-      var sidebar = document.getElementById("sidebar");
-      sidebar.style.display = sidebar.style.display === "block" ? "none" : "block";
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
-
 </body>
 </html>
-
-

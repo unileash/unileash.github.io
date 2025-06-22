@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Voynich Manuscript | Unileash Mysteries</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unileash Mystery File: Voynich Manuscript</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -17,207 +17,195 @@
   <style>
     body {
       margin: 0;
-      background-color: black;
-      font-family: Arial, sans-serif;
+      background-color: #000;
       color: #FFD700;
+      font-family: Arial, sans-serif;
     }
 
-    .top-bar {
+    header {
       text-align: center;
       padding: 20px;
-      border: 2px solid #FFD700;
-      margin: 10px;
-      font-size: 28px;
-      font-weight: bold;
-      color: #FFD700;
-      text-shadow: 0 0 5px white;
-      box-shadow: 0 0 10px #FFD700;
     }
 
-    .menu-button {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      background-color: #FFD700;
-      border: none;
-      padding: 10px 15px;
-      font-size: 24px;
-      cursor: pointer;
-      border-radius: 6px;
-      z-index: 2;
-      color: black;
-      font-weight: bold;
+    .title-box {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #FFD700;
+      color: #FFD700;
+      background-color: #000;
+      text-shadow: 0 0 10px #FFD700;
     }
 
     .sidebar {
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111;
+      background-color: #000;
+      border-right: 2px solid white;
       overflow-x: hidden;
-      transition: 0.5s;
       padding-top: 60px;
-      box-shadow: 2px 0 8px #FFD700;
+      transition: 0.4s;
+      z-index: 1000;
+      box-shadow: 0 0 10px white;
     }
 
-    .sidebar a {
-      padding: 12px 20px;
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 1.1em;
       color: #FFD700;
       display: block;
-      transition: 0.3s;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #FFD700;
     }
 
-    .sidebar a:hover {
-      background-color: #333;
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
     }
 
-    .main {
-      padding: 20px;
-      margin: 20px;
-      border: 2px solid #FFD700;
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
       color: #FFD700;
-      box-shadow: 0 0 10px #FFD700;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px white;
     }
 
-    h1, h2 {
-      color: white;
-      text-shadow: 0 0 10px #FFD700;
+    .content {
+      padding: 20px;
+      transition: margin-left 0.4s;
     }
 
-    a {
-      color: white;
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px white;
+    }
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
 
-    ul {
-      margin-left: 20px;
+    .footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px white;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-<!-- Sidebar Button -->
-<button class="menu-button" onclick="toggleSidebar()">☰</button>
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<!-- Top Bar -->
-<div class="top-bar">UNILEASH</div>
+  <header>
+    <div class="title-box">UNILEASH MYSTERY FILE: VOYNICH MANUSCRIPT</div>
+  </header>
 
-<!-- Sidebar with dropdowns -->
-<div id="mySidebar" class="sidebar">
-  <a href="index.html">🏠 Home</a>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
 
-  <button class="dropdown-btn">🌌 SPACE ▼</button>
-  <div class="dropdown-container">
-    <a href="space.html">Overview</a>
-    <a href="wormholes.html">Wormholes</a>
-    <a href="voyager1.html">Voyager 1</a>
-    <a href="multiverse.html">Multiverse Theory</a>
-    <a href="cmb.html">Cosmic Microwave Background</a>
-    <a href="antimatter.html">Antimatter</a>
-    <a href="exoplanet.html">Exoplanets</a>
-    <a href="darkenergy.html">Dark Energy</a>
-    <a href="whiteholes.html">White Holes</a>
-    <a href="greatattractor.html">The Great Attractor</a>
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <button class="dropdown-btn">🔮 MYSTERIES ▼</button>
-  <div class="dropdown-container">
-    <a href="mysteries.html">Mystery Overview</a>
-    <a href="area51.html">Area 51</a>
-    <a href="nazca.html">Nazca Lines</a>
-    <a href="bermudatriangle.html">Bermuda Triangle</a>
-    <a href="voynich.html">Voynich Manuscript</a>
-    <a href="moonsecrets.html">Moon Secrets</a>
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What Is the Voynich Manuscript?</h2>
+      <p>The <span class="underline">Voynich Manuscript</span> is a mysterious book written in an unknown language that has defied all attempts at decoding. Filled with bizarre illustrations, plants that don’t exist, and astrological diagrams, it is one of the most mysterious and debated artifacts in history. No one knows who wrote it — or why.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">History & Discovery</h2>
+      <p>The manuscript is named after Wilfrid Voynich, a Polish book dealer who purchased it in 1912. However, carbon dating suggests it was written between 1404 and 1438. It may have passed through the hands of emperors and alchemists — yet its origins remain a complete enigma.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Untranslated Language & Symbols</h2>
+      <p>The text of the Voynich Manuscript is written in an unknown script referred to as <span class="underline">"Voynichese"</span>. Despite decades of effort by professional codebreakers, linguists, and AI, the language has never been decoded. Some believe it’s a hoax. Others say it hides a forgotten or alien language.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Mysterious Diagrams & Plants</h2>
+      <p>The manuscript contains hundreds of detailed botanical drawings, none of which match any known plant species. Some pages are filled with <span class="underline">astrological charts</span>, while others show naked women bathing in strange pools, connected by pipes and stars. What do they represent — healing, alchemy, or something cosmic?</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Theories: Alien, Alchemy, Time Travel</h2>
+      <p>Some believe the book is a guide from an <span class="underline">extraterrestrial civilization</span>. Others think it was written by a time traveler or a lost society with knowledge we no longer understand. More grounded theories propose it was a medieval alchemical notebook or a mental creation of a genius or madman.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Why It Still Baffles Experts</h2>
+      <p>Despite modern AI, no one has cracked the Voynich Manuscript. The writing style shows real language-like patterns, suggesting it's not random. Yet without a key, translation remains impossible. Its origins, authorship, and purpose make it one of the <span class="underline">greatest unsolved mysteries</span> of all time.</p>
+    </div>
   </div>
 
-  <a href="blog.html">📝 Blog</a>
-</div>
+  <div class="footer">
+    &copy; 2025 UNILEASH. Some books whisper secrets only the stars can read.
+  </div>
 
-<!-- Main Content -->
-<div class="main">
-  <h1>📜 Voynich Manuscript: The Book No One Can Read</h1>
-  <p>
-    In a secure vault of Yale University sits a manuscript that has defied human understanding for over 600 years. Written in an unknown language, filled with bizarre illustrations, the Voynich Manuscript remains one of the most cryptic documents ever discovered.
-  </p>
+  <script>
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
 
-  <h2>📖 What Is It?</h2>
-  <p>
-    Discovered in 1912 by book dealer Wilfrid Voynich, the manuscript is believed to date back to the 15th century. It contains:
-    <ul>
-      <li>Over 240 parchment pages</li>
-      <li>Strange looping script no one can decode</li>
-      <li>Drawings of unknown plants</li>
-      <li>Astrological and biological diagrams</li>
-      <li>Human figures in surreal poses</li>
-    </ul>
-  </p>
-
-  <h2>🔐 Unbreakable Code?</h2>
-  <p>
-    Linguists, cryptographers, and even NSA experts have attempted to decode the script — all failed. The characters don’t match any known alphabet. Word patterns appear logical, yet the text is unreadable.
-  </p>
-
-  <h2>👽 Alien Origin?</h2>
-  <p>
-    Some believe the book was not written by a human at all. The theories include:
-    <ul>
-      <li>Encoded extraterrestrial knowledge</li>
-      <li>A message from a parallel civilization</li>
-      <li>An ancient alien botanist's manual</li>
-    </ul>
-    No scientific proof, but the mystery only grows with time.
-  </p>
-
-  <h2>🧠 Human Hoax?</h2>
-  <p>
-    Could it be a genius-level prank from the Middle Ages? Skeptics argue it was a fabricated text designed to confuse or impress royalty — yet the structure and consistency of the script say otherwise.
-  </p>
-
-  <h2>🌐 Modern Analysis</h2>
-  <p>
-    In recent years, AI has attempted to analyze the patterns — even suggesting it may be based on Hebrew or Latin roots. Still, no translation exists. The purpose of the book, its author, and its message remain unknown.
-  </p>
-
-  <p style="margin-top: 30px;">
-    This isn't just a book — it's a portal into something forgotten, or forbidden. Whether alien, encrypted, or hallucinated — the Voynich Manuscript holds secrets we may never unlock.
-  </p>
-
-  <p style="margin-top: 40px; font-style: italic;">
-    A book that cannot be read... is a book that was never meant for us.
-  </p>
-</div>
-
-<!-- Sidebar Script -->
-<script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById("mySidebar");
-    sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
-  }
-
-  const dropdowns = document.getElementsByClassName("dropdown-btn");
-  for (let i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      const dropdownContent = this.nextElementSibling;
-      dropdownContent.style.display =
-        dropdownContent.style.display === "block" ? "none" : "block";
-    });
-  }
-</script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+  </script>
 
 </body>
 </html>
+

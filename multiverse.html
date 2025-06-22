@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiverse Theory - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -13,179 +14,219 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Multiverse | Unileash</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
+      background-color: #000;
+      color: #00bfff;
       font-family: Arial, sans-serif;
-      color: #00ffff;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 10px;
       text-align: center;
-      border-bottom: 2px solid white;
+      padding: 20px;
     }
-    .logo {
-      border: 2px solid #00ffff;
+
+    .title-box {
       display: inline-block;
-      padding: 10px 20px;
-      font-weight: bold;
-      font-size: 24px;
-      box-shadow: 0 0 10px #00ffff;
+      padding: 10px 25px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
+      background-color: #000;
     }
-    .menu-toggle {
-      display: none;
-      background-color: #00ffff;
-      color: black;
-      border: none;
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-    }
-    nav {
-      background-color: #111;
+
+    .sidebar {
+      height: 100%;
       width: 250px;
-      padding: 20px;
-      box-shadow: 2px 0 5px white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
     }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    nav li {
-      margin: 15px 0;
-    }
-    nav a {
-      color: #00ffff;
+
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
       text-decoration: none;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
     }
-    nav .submenu {
-      margin-left: 15px;
+
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
     }
-    .container {
-      display: flex;
+
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
     }
+
     .content {
-      flex: 1;
+      margin-left: 260px;
       padding: 20px;
-      border-left: 2px solid white;
+      transition: margin-left 0.4s;
     }
+
     .content-box {
       border: 2px solid white;
       padding: 20px;
-      box-shadow: 0 0 10px white;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
     }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        width: 100%;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .container {
-        flex-direction: column;
-      }
-      nav.active {
-        display: block;
-      }
-      .content {
-        border-left: none;
-      }
-    }
-    h1 {
-      color: #00ffff;
-    }
-    strong, u {
-      color: white;
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
-    li {
-      margin-bottom: 10px;
+
+    .footer {
+      background-color: #000;
+      color: #00bfff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding-top: 60px;
+        overflow-x: hidden;
+      }
+
+      .content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
   <header>
-    <div class="logo">UNILEASH</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+    <div class="title-box">MULTIVERSE THEORY</div>
   </header>
-  <div class="container">
-    <nav id="sidebar">
+
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What is the Multiverse?</h2>
+      <p>The <span class="underline">multiverse</span> is a hypothetical group of multiple universes, including the one we live in. Each universe within the multiverse is called a <span class="underline">parallel universe</span> or "alternate universe." The idea suggests that our known universe is just one bubble in a vast cosmic foam — with others potentially having different physics, constants, and realities.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Types of Multiverses</h2>
+      <p>Physicists have theorized several kinds of multiverses:</p>
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li>
-          <a href="#">SPACE</a>
-          <ul class="submenu">
-            <li><a href="darkenergy.html">- Dark Energy</a></li>
-            <li><a href="antimatter.html">- Antimatter</a></li>
-            <li><a href="wormholes.html">- Wormholes</a></li>
-            <li><a href="whiteholes.html">- White Holes</a></li>
-            <li><a href="cmb.html">- CMB</a></li>
-            <li><a href="exoplanet.html">- Exoplanets</a></li>
-            <li><a href="voyager1.html">- Voyager 1</a></li>
-            <li><a href="multiverse.html">- Multiverse</a></li>
-            <li><a href="greatattractor.html">- Great Attractor</a></li>
-          </ul>
-        </li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><span class="underline">Quantum Multiverse</span> – Arising from quantum mechanics, where every possible outcome exists in a separate universe.</li>
+        <li><span class="underline">Bubble Multiverse</span> – Based on inflation theory, where different regions stop inflating at different times, creating "bubbles" with unique laws of physics.</li>
+        <li><span class="underline">Brane Multiverse</span> – From string theory; universes are 3D branes floating in higher-dimensional space, occasionally colliding.</li>
+        <li><span class="underline">Mathematical Multiverse</span> – Every mathematically possible universe exists somewhere.</li>
       </ul>
-    </nav>
-    <div class="content">
-      <div class="content-box">
-        <h1>What is the Multiverse?</h1>
-        <p>
-          The <strong>Multiverse</strong> is the concept that our universe might not be the only one. Instead, there could be a vast number of <u>parallel universes</u>, each with its own set of physical laws, dimensions, and histories. These universes collectively make up the multiverse.
-        </p>
-        <p>
-          This idea is more than just science fiction. Some <u>cosmological models</u> and <u>quantum theories</u> suggest that the multiverse is a real and inevitable consequence of fundamental physics.
-        </p>
-        <p>
-          <strong>Types of Multiverse Theories:</strong>
-          <ul>
-            <li><strong>Bubble Universes:</strong> Our universe is just one bubble in a cosmic foam of countless others.</li>
-            <li><strong>Quantum Multiverse:</strong> Every quantum decision creates a new branching universe.</li>
-            <li><strong>Brane Multiverse:</strong> Extra dimensions hold multiple universes like slices of bread.</li>
-            <li><strong>Mathematical Universe:</strong> Every logically possible universe exists mathematically.</li>
-          </ul>
-        </p>
-        <p>
-          The multiverse remains a <u>hypothesis</u> because it is nearly impossible to test or observe other universes. However, its implications are profound:
-        </p>
-        <ul>
-          <li>Could explain the fine-tuning of universal constants.</li>
-          <li>Suggests an infinite number of alternate realities.</li>
-          <li>Challenges our understanding of existence and uniqueness.</li>
-          <li>Heavily explored in science fiction, philosophy, and theoretical physics.</li>
-        </ul>
-        <p>
-          Whether or not the multiverse is real, studying it pushes the boundaries of our imagination and our understanding of the cosmos.
-        </p>
-      </div>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Scientific Basis</h2>
+      <p>While there is no direct evidence of the multiverse, some theories in modern physics naturally lead to it. <span class="underline">Cosmic inflation</span>, quantum mechanics, and string theory all allow — or even require — the existence of other universes. Observations of the <span class="underline">Cosmic Microwave Background</span> (CMB) have revealed strange cold spots that some scientists believe could be signs of another universe’s influence on ours.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Mind-Bending Possibilities</h2>
+      <ul>
+        <li>You might exist in another universe — with a different life, decisions, or even laws of nature.</li>
+        <li>Some universes might have no gravity or time.</li>
+        <li>Our entire universe might be inside a black hole in a parent universe.</li>
+        <li>Parallel universes may collide, causing cataclysmic events or even new Big Bangs.</li>
+      </ul>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Multiverse Facts</h2>
+      <ul>
+        <li>The idea of the multiverse dates back to ancient Hindu texts and modern cosmology.</li>
+        <li>It could explain unresolved paradoxes like fine-tuning or quantum weirdness.</li>
+        <li>Many scientists remain skeptical due to its untestability — but it remains one of the most fascinating theories ever proposed.</li>
+        <li>There are even attempts in quantum computing and cosmology to find indirect traces of other universes.</li>
+      </ul>
     </div>
   </div>
+
+  <div class="footer">
+    &copy; 2025 UNILEASH. Reality is just one layer of infinite truth.
+  </div>
+
   <script>
-    function toggleMenu() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('active');
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
-
 </body>
 </html>
-
-
 

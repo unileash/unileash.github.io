@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exoplanets - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -13,186 +14,224 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Exoplanets - Unileash</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: black;
-      color: #00f7ff;
+      background-color: #000;
+      color: #00bfff;
+      font-family: Arial, sans-serif;
     }
 
-    .header {
-      background-color: black;
-      color: #00f7ff;
-      padding: 10px;
+    header {
       text-align: center;
-      border-bottom: 2px solid white;
+      padding: 20px;
     }
 
-    .header h1 {
-      border: 2px solid #00f7ff;
+    .title-box {
       display: inline-block;
-      padding: 5px 20px;
-      font-size: 24px;
-    }
-
-    .menu-btn {
-      background-color: #00f7ff;
-      border: none;
-      color: black;
-      padding: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      display: none;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 1000;
+      padding: 10px 25px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
+      background-color: #000;
     }
 
     .sidebar {
+      height: 100%;
       width: 250px;
-      background-color: black;
-      border-right: 2px solid white;
       position: fixed;
-      top: 60px;
-      bottom: 0;
-      overflow-y: auto;
-      padding-top: 20px;
-      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
     }
 
-    .sidebar a {
-      display: block;
-      color: #00f7ff;
-      text-decoration: none;
+    .sidebar a,
+    .dropdown-btn {
       padding: 10px 20px;
-      border-bottom: 1px solid #333;
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
     }
 
-    .sidebar a:hover {
-      background-color: #111;
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
     }
 
     .content {
       margin-left: 260px;
       padding: 20px;
+      transition: margin-left 0.4s;
+    }
+
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .underline {
+      text-decoration: underline;
+      text-decoration-color: white;
     }
 
     .footer {
-      margin-top: 40px;
+      background-color: #000;
+      color: #00bfff;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       border-top: 2px solid white;
-      font-size: 14px;
-      color: #888;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
     }
 
     @media screen and (max-width: 768px) {
-      .menu-btn {
-        display: block;
-      }
-
       .sidebar {
-        display: none;
-        width: 100%;
-        position: static;
-        border-right: none;
-      }
-
-      .sidebar.show {
-        display: block;
+        width: 0;
+        padding-top: 60px;
+        overflow-x: hidden;
       }
 
       .content {
         margin-left: 0;
       }
     }
-
-    h2 {
-      color: #00f7ff;
-    }
-
-    u {
-      color: white;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
-    <h1>UNILEASH</h1>
-  </div>
 
-  <div class="sidebar" id="sidebar">
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <header>
+    <div class="title-box">EXOPLANETS</div>
+  </header>
+
+  <div id="mySidebar" class="sidebar">
     <a href="index.html">Home</a>
-    <a href="space.html">Space</a>
-    <a href="darkenergy.html">- Dark Energy</a>
-    <a href="antimatter.html">- Antimatter</a>
-    <a href="wormholes.html">- Wormholes</a>
-    <a href="whiteholes.html">- White Holes</a>
-    <a href="cmb.html">- CMB</a>
-    <a href="exoplanet.html">- Exoplanets</a>
-    <a href="voyager1.html">- Voyager 1</a>
-    <a href="multiverse.html">- Multiverse</a>
-    <a href="greatattractor.html">- Great Attractor</a>
-    <a href="mysteries.html">Mysteries</a>
-    <a href="area51.html">- Area 51</a>
-    <a href="bermuda.html">- Bermuda Triangle</a>
-    <a href="nazca.html">- Nazca Lines</a>
-    <a href="moonsecrets.html">- Moon Secrets</a>
-    <a href="voynich.html">- Voynich Manuscript</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <div class="content">
-    <h2>🌍 What Are Exoplanets?</h2>
-    <p><u>Exoplanets</u> are planets that orbit stars outside our solar system. These distant worlds have sparked curiosity and imagination, especially with the discovery of Earth-like planets that could potentially harbor life.</p>
+    <div class="content-box">
+      <h2 class="underline">What Are Exoplanets?</h2>
+      <p><span class="underline">Exoplanets</span>, or extrasolar planets, are planets that orbit stars outside our solar system. These worlds vary dramatically — some are giant gas planets like Jupiter, while others may be rocky like Earth or completely alien in composition. The study of exoplanets helps us understand how planets form, how common they are, and whether we are alone in the universe.</p>
+    </div>
 
-    <h3>🔭 Discovery of Exoplanets</h3>
-    <p>The first confirmed exoplanet, <u>51 Pegasi b</u>, was discovered in 1995. Since then, thousands have been identified, thanks to telescopes like Kepler and TESS.</p>
+    <div class="content-box">
+      <h2 class="underline">The Discovery Era</h2>
+      <p>In 1992, astronomers discovered the first confirmed exoplanets orbiting a pulsar. Then in 1995, the first exoplanet around a Sun-like star — 51 Pegasi b — was found. Since then, over <span class="underline">5,000 exoplanets</span> have been detected, with NASA’s Kepler and TESS missions leading the search.</p>
+    </div>
 
-    <ul>
-      <li>🌟 Over <u>5,000</u> confirmed exoplanets discovered so far.</li>
-      <li>🛰️ Methods include <u>transit method</u>, <u>radial velocity</u>, and <u>direct imaging</u>.</li>
-      <li>🌐 Many exoplanets are part of <u>multi-planet systems</u>.</li>
-    </ul>
+    <div class="content-box">
+      <h2 class="underline">How Are Exoplanets Found?</h2>
+      <p>Because they are dim and distant, exoplanets are found using indirect methods:</p>
+      <ul>
+        <li><span class="underline">Transit Method</span>: Observing a dip in a star’s brightness when a planet passes in front of it.</li>
+        <li><span class="underline">Radial Velocity</span>: Detecting star "wobbles" caused by gravitational pulls from orbiting planets.</li>
+        <li><span class="underline">Direct Imaging</span>: Rare but powerful, using infrared to block starlight and capture planets directly.</li>
+        <li><span class="underline">Gravitational Microlensing</span>: A distant planet’s gravity magnifies light from a background star.</li>
+      </ul>
+    </div>
 
-    <h3>🌌 Types of Exoplanets</h3>
-    <ul>
-      <li>🌍 <b>Terrestrial:</b> Rocky and similar to Earth.</li>
-      <li>🪐 <b>Gas Giants:</b> Like Jupiter or Saturn.</li>
-      <li>🔥 <b>Hot Jupiters:</b> Large planets orbiting very close to their stars.</li>
-      <li>❄️ <b>Ice Giants:</b> Uranus-like planets with icy compositions.</li>
-    </ul>
+    <div class="content-box">
+      <h2 class="underline">Habitable Zones</h2>
+      <p>The <span class="underline">habitable zone</span> is the region around a star where conditions might support liquid water — essential for life as we know it. Earth lies within our Sun’s habitable zone. Finding Earth-like planets in this zone is a key goal of exoplanet exploration. Some exoplanets, like Kepler-442b and TOI-700d, are considered promising candidates.</p>
+    </div>
 
-    <h3>🌱 Possibility of Life</h3>
-    <p>Some exoplanets lie in the <u>habitable zone</u> — the right distance from their star to allow liquid water. These worlds are top candidates in the search for extraterrestrial life.</p>
+    <div class="content-box">
+      <h2 class="underline">Bizarre Exoplanets Discovered</h2>
+      <ul>
+        <li><span class="underline">HD 189733b</span> – Rains molten glass sideways in 7,000 km/h winds.</li>
+        <li><span class="underline">Kepler-16b</span> – A real-life Tatooine that orbits two stars.</li>
+        <li><span class="underline">WASP-12b</span> – So close to its star it’s being torn apart.</li>
+        <li><span class="underline">Gliese 581c</span> – Once thought habitable, now likely a hot greenhouse.</li>
+        <li><span class="underline">55 Cancri e</span> – Possibly made of diamond.</li>
+      </ul>
+    </div>
 
-    <h3>🧠 Mind-Blowing Facts</h3>
-    <ul>
-      <li>🌡️ Some exoplanets are hotter than stars!</li>
-      <li>🌈 A planet named <u>HD 189733b</u> rains glass sideways in 7,000 km/h winds!</li>
-      <li>🌊 <u>GJ 1214 b</u> is a water world — possibly an entire planet covered by an ocean.</li>
-    </ul>
-
-    <h3>🚀 Future of Exploration</h3>
-    <p>With missions like the James Webb Space Telescope, scientists are analyzing exoplanet <u>atmospheres</u> for signs of life, oxygen, methane, and even industrial pollutants!</p>
-
-    <p>Exploring exoplanets may one day help us find a <u>second Earth</u> or understand how unique our planet truly is.</p>
+    <div class="content-box">
+      <h2 class="underline">Fascinating Facts</h2>
+      <ul>
+        <li>Over 5,000 confirmed exoplanets have been discovered to date.</li>
+        <li>Planets outnumber stars in the galaxy — nearly every star has at least one planet.</li>
+        <li>Some exoplanets orbit pulsars, white dwarfs, and even rogue — starless — paths.</li>
+        <li>Future telescopes may soon analyze their atmospheres for signs of life.</li>
+        <li>The James Webb Space Telescope is already probing exoplanet skies for water, methane, and alien chemistry.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="footer">
-    &copy; 2025 Unileash. All rights reserved.
+    &copy; 2025 UNILEASH. Beyond our world, infinite possibilities orbit.
   </div>
 
   <script>
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
+
     function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("show");
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
 </body>

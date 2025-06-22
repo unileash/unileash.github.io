@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mysteries | Unileash</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unileash Mystery Realm</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -17,224 +17,199 @@
   <style>
     body {
       margin: 0;
-      background-color: black;
-      font-family: Arial, sans-serif;
+      background-color: #000;
       color: #FFD700;
+      font-family: Arial, sans-serif;
     }
 
-    .top-bar {
+    header {
       text-align: center;
       padding: 20px;
-      border: 2px solid #FFD700;
-      margin: 10px;
-      font-size: 28px;
-      font-weight: bold;
-      color: #FFD700;
-      text-shadow: 0 0 5px white;
-      box-shadow: 0 0 10px #FFD700;
     }
 
-    .menu-button {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      background-color: #FFD700;
-      border: none;
-      padding: 10px 15px;
-      font-size: 24px;
-      cursor: pointer;
-      border-radius: 6px;
-      z-index: 2;
-      color: black;
-      font-weight: bold;
+    .title-box {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #FFD700;
+      color: #FFD700;
+      background-color: #000;
+      text-shadow: 0 0 10px #FFD700;
     }
 
     .sidebar {
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 1;
       top: 0;
       left: 0;
-      background-color: #111;
+      background-color: #000;
+      border-right: 2px solid white;
       overflow-x: hidden;
-      transition: 0.5s;
       padding-top: 60px;
-      box-shadow: 2px 0 8px #FFD700;
+      transition: 0.4s;
+      z-index: 1000;
+      box-shadow: 0 0 10px white;
     }
 
-    .sidebar a {
-      padding: 12px 20px;
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 1.1em;
       color: #FFD700;
       display: block;
-      transition: 0.3s;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #FFD700;
     }
 
-    .sidebar a:hover {
-      background-color: #333;
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
     }
 
-    .main {
-      padding: 20px;
-      margin: 20px;
-      border: 2px solid #FFD700;
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
       color: #FFD700;
-      box-shadow: 0 0 10px #FFD700;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px white;
     }
 
-    h2 {
-      color: white;
-      margin-top: 30px;
-      text-shadow: 0 0 5px #FFD700;
+    .content {
+      padding: 20px;
+      transition: margin-left 0.4s;
     }
 
-    a {
-      color: white;
+    .content-box {
+      border: 2px solid white;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px white;
+    }
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
 
-    h1 {
+    .footer {
+      background-color: #000;
       color: white;
-      text-shadow: 0 0 10px #FFD700;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px white;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-<!-- Sidebar Button -->
-<button class="menu-button" onclick="toggleSidebar()">☰</button>
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<!-- Top Bar -->
-<div id="mySidebar" class="sidebar">
-  <a href="index.html">🏠 Home</a>
+  <header>
+    <div class="title-box">UNILEASH MYSTERY REALM</div>
+  </header>
 
-  <button class="dropdown-btn">🌌 SPACE ▼</button>
-  <div class="dropdown-container">
-    <a href="space.html">Overview</a>
-    <a href="wormholes.html">Wormholes</a>
-    <a href="voyager1.html">Voyager 1</a>
-    <a href="multiverse.html">Multiverse Theory</a>
-    <a href="cmb.html">Cosmic Microwave Background</a>
-    <a href="antimatter.html">Antimatter</a>
-    <a href="exoplanet.html">Exoplanets</a>
-    <a href="darkenergy.html">Dark Energy</a>
-    <a href="whiteholes.html">White Holes</a>
-    <a href="greatattractor.html">The Great Attractor</a>
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <button class="dropdown-btn">🔮 MYSTERIES ▼</button>
-  <div class="dropdown-container">
-    <a href="mysteries.html">Mystery Overview</a>
-    <a href="area51.html">Area 51</a>
-    <a href="nazca.html">Nazca Lines</a>
-    <a href="bermudatriangle.html">Bermuda Triangle</a>
-    <a href="voynich.html">Voynich Manuscript</a>
-    <a href="moonsecrets.html">Moon Secrets</a>
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What Is the Mystery Realm?</h2>
+      <p>The <span class="underline">mystery realm</span> is a domain beyond ordinary knowledge — where ancient secrets, cosmic riddles, and unexplained forces collide. From alien encounters and lost civilizations to interdimensional signals and black site experiments, this section of Unileash is where reality bends and the unknown whispers.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Ancient Sites of Power</h2>
+      <p>Structures like the <span class="underline">Nazca Lines</span> or <span class="underline">Stonehenge</span> were built with no modern technology, yet align perfectly with stars. Who created them, and why? Some believe they are energy channels, others claim they're landing maps for ancient visitors from beyond the stars.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Alien Theories</h2>
+      <p>From the <span class="underline">UFO crash at Roswell</span> to leaked footage of tic-tac shaped crafts, the idea that we're not alone is gaining momentum. Government programs like AATIP have studied them secretly. What truths lie buried beneath decades of denial?</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Unexplained Cosmic Signals</h2>
+      <p>In 1977, the <span class="underline">WOW! Signal</span> hit our telescopes from deep space — a transmission like none before or since. Is it natural, or was someone trying to contact us? Fast Radio Bursts (FRBs) continue to spark curiosity and confusion among astrophysicists worldwide.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Government Secrets</h2>
+      <p>Facilities like <span class="underline">Area 51</span> and CIA black projects are wrapped in secrecy. Whistleblowers have hinted at reverse-engineering non-human crafts. If the truth were revealed, would humanity be ready — or would society collapse under the weight of revelation?</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">The Cosmic Unknown</h2>
+      <p>Science explains a lot — but not everything. There are <span class="underline">unexplored voids</span> in our universe where light doesn’t travel. There are particles that pass through solid matter. There are dreams that echo cosmic truths. Unileash explores these gaps — with logic and imagination hand in hand.</p>
+    </div>
   </div>
 
-  <a href="blog.html">📝 Blog</a>
-</div>
+  <div class="footer">
+    &copy; 2025 UNILEASH. Truth hides in shadow.
+  </div>
 
-<!-- Dropdown Style -->
-<style>
-  .dropdown-btn {
-    background-color: #111;
-    color: #FFD700;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-  }
+  <script>
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
 
-  .dropdown-btn:hover {
-    background-color: #333;
-  }
-
-  .dropdown-container {
-    display: none;
-    background-color: #222;
-    padding-left: 10px;
-  }
-
-  .dropdown-container a {
-    padding-left: 30px;
-    font-size: 16px;
-  }
-</style>
-
-<!-- Dropdown Script -->
-<script>
-  const dropdowns = document.getElementsByClassName("dropdown-btn");
-  for (let i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      const dropdownContent = this.nextElementSibling;
-      dropdownContent.style.display =
-        dropdownContent.style.display === "block" ? "none" : "block";
-    });
-  }
-</script>
-<!-- Main Content -->
-<div class="main">
-  <h1>🔮 Welcome to the World of Mysteries</h1>
-  <p>
-    Beyond science and space, some truths remain hidden — beyond logic, beyond discovery. This page is your portal to the greatest unknowns that continue to baffle humanity.
-  </p>
-
-  <h2>1. 🌀 Bermuda Triangle</h2>
-  <p>
-    A zone of vanishing vessels, lost aircraft, and electromagnetic secrets. Is it a vortex? A time rift? Or something far older? 
-    <br><a href="bermudatriangle.html">Read More →</a>
-  </p>
-
-  <h2>2. 🛸 Area 51</h2>
-  <p>
-    Restricted and silent. Claims of alien technology and secret experiments continue. What really happened in Roswell? Are they hiding extraterrestrial visitors?
-  </p>
-
-  <h2>3. ✍️ Voynich Manuscript</h2>
-  <p>
-    A 15th-century book written in an unknown script. Scholars and codebreakers have failed. Some believe it’s a message from beyond Earth.
-  </p>
-
-  <h2>4. 🗿 Nazca Lines</h2>
-  <p>
-    Etched into the earth, these massive geoglyphs of animals and symbols can only be seen from above. Were they celestial messages? Or landing guides for ancient sky gods?
-  </p>
-
-  <h2>5. 🌕 Moon Secrets</h2>
-  <p>
-    Why does the Moon ring like a bell when struck? Why do some images from Apollo missions go missing? Is our closest neighbor more artificial than we think?
-  </p>
-
-  <p style="margin-top: 40px; font-style: italic;">
-    ⚠️ Keep exploring — the universe is watching.
-  </p>
-</div>
-
-<!-- Sidebar Script -->
-<script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById("mySidebar");
-    sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
-  }
-</script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      if (sidebar.style.width === "250px") {
+        sidebar.style.width = "0";
+      } else {
+        sidebar.style.width = "250px";
+      }
+    }
+  </script>
 
 </body>
 </html>
 
-   

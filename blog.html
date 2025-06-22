@@ -2,133 +2,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unileash Blog - Latest Space News</title>
+  <title>Blog Center / Unileash</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MDY4XF90ZF');
+</script>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #00ffe7;
+      background-color: black;
+      color: white;
     }
-    .top-bar {
-      background-color: #000;
-      border: 2px solid #00ffe7;
-      text-align: center;
+    header {
+      background-color: black;
+      border-bottom: 2px solid white;
       padding: 10px;
+      text-align: center;
       font-size: 24px;
-      font-weight: bold;
-      color: #00ffe7;
-      margin-bottom: 20px;
+      color: white;
+      box-shadow: 0 0 10px white;
     }
     .sidebar {
-      height: 100%;
+      height: 100vh;
       width: 250px;
+      background-color: black;
+      border-right: 2px solid white;
       position: fixed;
-      background-color: #111;
-      padding-top: 20px;
+      top: 0;
+      left: 0;
       overflow-y: auto;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px white;
     }
-    .sidebar a, .dropdown-btn {
-      padding: 10px 15px;
-      text-decoration: none;
-      font-size: 18px;
-      color: #00ffe7;
+    .sidebar a {
       display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid white;
+    }
+    .sidebar a:hover {
+      background-color: #111;
+    }
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    .dropdown-btn {
       background: none;
       border: none;
+      color: white;
+      padding: 10px 20px;
       text-align: left;
+      width: 100%;
       cursor: pointer;
-      outline: none;
-    }
-    .sidebar a:hover, .dropdown-btn:hover {
-      background-color: #333;
+      border-bottom: 1px solid white;
     }
     .dropdown-container {
       display: none;
-      background-color: #222;
+      background-color: #111;
+    }
+    .dropdown-container a {
+      padding-left: 40px;
+    }
+    .toggle-btn {
+      display: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+      .sidebar.active {
+        transform: translateX(0);
+      }
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+      .toggle-btn {
+        display: block;
+      }
+    }
+    h2 {
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
+    }
+    article {
+      margin-bottom: 30px;
+      border-left: 4px solid white;
       padding-left: 15px;
-    }
-    .main {
-      margin-left: 270px;
-      padding: 20px;
-      border: 2px solid #00ffe7;
-      margin-right: 20px;
-    }
-    .blog-entry {
-      margin-bottom: 25px;
-    }
-    .blog-entry h3 {
-      margin: 0 0 5px 0;
-      color: #00ffe7;
-    }
-    .blog-entry p {
-      margin: 0;
-      color: #cceeff;
     }
   </style>
 </head>
 <body>
-  <div class="top-bar">UNILEASH</div> <div class="sidebar" id="mySidebar">
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button> <div class="sidebar" id="sidebar">
     <a href="index.html">🏠 Home</a>
-    <button class="dropdown-btn">🌌 SPACE ▼</button>
+    <button class="dropdown-btn">🪐 Space ▾</button>
     <div class="dropdown-container">
-      <a href="space.html">Space Overview</a>
-      <a href="antimatter.html">Antimatter</a>
+      <a href="wormholes.html">Wormholes</a>
       <a href="voyager1.html">Voyager 1</a>
-      <a href="multiverse.html">Multiverse</a>
+      <a href="multiverse.html">Multiverse Theory</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="exoplanet.html">Exoplanet</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="whiteholes.html">White Holes</a>
+      <a href="greatattractor.html">The Great Attractor</a>
     </div>
-    <button class="dropdown-btn">🔮 MYSTERIES ▼</button>
+    <button class="dropdown-btn">🌌 Mysteries ▾</button>
     <div class="dropdown-container">
       <a href="mysteries.html">Mystery Overview</a>
       <a href="area51.html">Area 51</a>
       <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
     </div>
-    <a href="blog.html">📝 Blog</a>
-    <a href="contact.html">📬 Contact</a>
-  </div> <div class="main">
-    <h2>📡 Latest Space Bulletins</h2><div class="blog-entry">
-  <h3>🚀 NASA Plans Manned Mars Mission for 2030</h3>
-  <p>The space agency outlines a step-by-step plan to send astronauts to Mars, including sustainable habitats on the Moon.</p>
-</div>
+    <a href="blog.html">📄 Blog</a>
+   <a href="contact.html"> Contact</a>
+  </div> <header>Blog Center / Unileash</header> <div class="content">
+    <h2>Latest Posts</h2><!-- Repeat this section for 15 blog posts -->
+<article>
+  <h3>1. NASA Confirms Discovery of 5,000+ Exoplanets</h3>
+  <p>NASA's exoplanet archive just passed the 5,000 mark. These alien worlds offer new hope in finding Earth-like conditions elsewhere in the universe.</p>
+</article>
 
-<div class="blog-entry">
-  <h3>🛰️ India Launches Gaganyaan Test Module</h3>
-  <p>ISRO successfully launches a crew module test flight, bringing India closer to its first manned space mission.</p>
-</div>
+<article>
+  <h3>2. James Webb Telescope Captures First Full Galaxy Cluster</h3>
+  <p>The JWST has revealed unseen structures in a galaxy cluster over 4 billion light-years away, hinting at the complexity of cosmic evolution.</p>
+</article>
 
-<div class="blog-entry">
-  <h3>🔭 James Webb Discovers Water Vapor on Distant Exoplanet</h3>
-  <p>A new exoplanet shows atmospheric water vapor, hinting at potential for life.</p>
-</div>
+<article>
+  <h3>3. Black Hole Burps Out Light Years After Eating Star</h3>
+  <p>Years after devouring a star, a distant black hole released a massive flare of energy, leaving scientists baffled at the delay.</p>
+</article>
 
-<div class="blog-entry">
-  <h3>🌌 Dark Energy May Be Changing Over Time</h3>
-  <p>New models suggest dark energy's strength might not be constant, reshaping our understanding of the universe.</p>
-</div>
-
-<!-- Add 16 more blog entries below -->
-<!-- Placeholder for more news -->
+<!-- Add 12 more similar entries below -->
+<article><h3>4. Earth’s Core May Be Reversing</h3><p>Scientists detect unusual changes suggesting Earth’s inner core might be slowing or reversing rotation.</p></article>
+<article><h3>5. India’s Chandrayaan-3 Makes Historic South Pole Landing</h3><p>India becomes the first to land on the Moon’s south pole, opening new lunar exploration paths.</p></article>
+<article><h3>6. Hubble Spots Galaxy That Shouldn't Exist</h3><p>A perfectly formed spiral galaxy seen in the early universe challenges known theories.</p></article>
+<article><h3>7. Alien Signal? Fast Radio Burst Repeats from Deep Space</h3><p>A mysterious repeating FRB baffles astronomers. The origin? Still unknown.</p></article>
+<article><h3>8. Dark Matter Map Doubles in Detail</h3><p>Using weak lensing, researchers created the most detailed map of dark matter distribution ever.</p></article>
+<article><h3>9. Asteroid Bennu Holds Building Blocks of Life</h3><p>Samples from OSIRIS-REx show organic molecules, strengthening panspermia theories.</p></article>
+<article><h3>10. Solar Storms to Peak in 2025</h3><p>Experts warn of increased geomagnetic activity, possibly affecting satellites and power grids.</p></article>
+<article><h3>11. Jupiter’s Moon Europa May Have Carbon</h3><p>Carbon dioxide discovered on Europa suggests potential for life-supporting chemistry.</p></article>
+<article><h3>12. Galactic Cannibalism Observed</h3><p>For the first time, a galaxy has been seen eating a smaller one, validating models of galactic growth.</p></article>
+<article><h3>13. The Sun is Singing</h3><p>Solar oscillations reveal new insights into the sun’s internal structure and dynamics.</p></article>
+<article><h3>14. Voyager 1 Sends Signal After Months of Silence</h3><p>After months in the dark, Voyager 1 responded with telemetry, showing it's still alive.</p></article>
+<article><h3>15. Mysterious Object Near Black Hole Resists Destruction</h3><p>An unknown object orbiting a black hole remains intact despite intense tidal forces.</p></article>
 
   </div> <script>
-    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    var dropdowns = document.getElementsByClassName("dropdown-btn");
     for (let i = 0; i < dropdowns.length; i++) {
       dropdowns[i].addEventListener("click", function () {
         this.classList.toggle("active");
-        const dropdownContent = this.nextElementSibling;
-        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
       });
     }
-  </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
-
-</body>
+  </script></body>
 </html>
 

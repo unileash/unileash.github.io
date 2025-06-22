@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voyager 1 - Unileash</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDY4XF90ZF"></script>
@@ -13,170 +14,218 @@
   gtag('config', 'G-MDY4XF90ZF');
 </script>
 
-  <title>Voyager 1 | Unileash</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
+      background-color: #000;
+      color: #00bfff;
       font-family: Arial, sans-serif;
-      color: #00ffff;
     }
+
     header {
-      background-color: black;
-      color: #00ffff;
-      padding: 10px;
       text-align: center;
-      border-bottom: 2px solid white;
+      padding: 20px;
     }
-    .logo {
-      border: 2px solid #00ffff;
+
+    .title-box {
       display: inline-block;
-      padding: 10px 20px;
-      font-weight: bold;
-      font-size: 24px;
-      box-shadow: 0 0 10px #00ffff;
+      padding: 10px 25px;
+      font-size: 2em;
+      border: 2px solid white;
+      box-shadow: 0 0 15px #00bfff;
+      color: #00bfff;
+      background-color: #000;
     }
-    .menu-toggle {
-      display: none;
-      background-color: #00ffff;
-      color: black;
-      border: none;
-      width: 100%;
-      padding: 10px;
-      font-size: 18px;
-    }
-    nav {
-      background-color: #111;
+
+    .sidebar {
+      height: 100%;
       width: 250px;
-      padding: 20px;
-      box-shadow: 2px 0 5px white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      border-right: 2px solid white;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.4s;
+      box-shadow: 0 0 10px #fff;
     }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    nav li {
-      margin: 15px 0;
-    }
-    nav a {
-      color: #00ffff;
+
+    .sidebar a,
+    .dropdown-btn {
+      padding: 10px 20px;
       text-decoration: none;
+      font-size: 1.1em;
+      color: #00bfff;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      border-bottom: 1px solid #00bfff;
     }
-    nav .submenu {
-      margin-left: 15px;
+
+    .dropdown-container {
+      display: none;
+      padding-left: 20px;
     }
-    .container {
-      display: flex;
+
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000;
+      color: #00bfff;
+      border: 2px solid white;
+      padding: 8px 12px;
+      font-size: 1.2em;
+      z-index: 1001;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
     }
+
     .content {
-      flex: 1;
+      margin-left: 260px;
       padding: 20px;
-      border-left: 2px solid white;
+      transition: margin-left 0.4s;
     }
+
     .content-box {
       border: 2px solid white;
       padding: 20px;
-      box-shadow: 0 0 10px white;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #fff;
     }
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        width: 100%;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .container {
-        flex-direction: column;
-      }
-      nav.active {
-        display: block;
-      }
-      .content {
-        border-left: none;
-      }
-    }
-    h1 {
-      color: #00ffff;
-    }
-    strong, u {
-      color: white;
+
+    .underline {
       text-decoration: underline;
+      text-decoration-color: white;
     }
-    li {
-      margin-bottom: 10px;
+
+    .footer {
+      background-color: #000;
+      color: #00bfff;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 10px #fff;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sidebar {
+        width: 0;
+        padding-top: 60px;
+        overflow-x: hidden;
+      }
+
+      .content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
   <header>
-    <div class="logo">UNILEASH</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰ MENU</button>
+    <div class="title-box">VOYAGER 1</div>
   </header>
-  <div class="container">
-    <nav id="sidebar">
+
+  <div id="mySidebar" class="sidebar">
+    <a href="index.html">Home</a>
+
+    <button class="dropdown-btn">SPACE ⯆</button>
+    <div class="dropdown-container">
+      <a href="space.html">Space Overview</a>
+      <a href="wormholes.html">Wormholes</a>
+      <a href="darkenergy.html">Dark Energy</a>
+      <a href="antimatter.html">Antimatter</a>
+      <a href="voyager1.html">Voyager 1</a>
+      <a href="exoplanet.html">Exoplanets</a>
+      <a href="greatattractor.html">The Great Attractor</a>
+      <a href="multiverse.html">Multiverse</a>
+      <a href="cmb.html">Cosmic Microwave Background</a>
+      <a href="whiteholes.html">White Holes</a>
+    </div>
+
+    <button class="dropdown-btn">MYSTERIES ⯆</button>
+    <div class="dropdown-container">
+      <a href="mysteries.html">Mysteries Overview</a>
+      <a href="area51.html">Area 51</a>
+      <a href="nazca.html">Nazca Lines</a>
+      <a href="bermuda.html">Bermuda Triangle</a>
+      <a href="voynich.html">Voynich Manuscript</a>
+      <a href="moonsecrets.html">Moon Secrets</a>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="content">
+    <div class="content-box">
+      <h2 class="underline">What is Voyager 1?</h2>
+      <p><span class="underline">Voyager 1</span> is a space probe launched by NASA in 1977 to explore the outer planets and journey beyond our solar system. It is now the most distant human-made object in existence, silently flying through interstellar space over 24 billion kilometers from Earth.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Launch & Mission</h2>
+      <p>Voyager 1 was launched on <span class="underline">September 5, 1977</span>, just weeks after its twin Voyager 2. It used gravity assists from Jupiter and Saturn to gain immense speed. After capturing historic images and data from these gas giants, it set course for deep space, carrying humanity’s message to the stars.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Major Discoveries</h2>
       <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li>
-          <a href="#">SPACE</a>
-          <ul class="submenu">
-            <li><a href="darkenergy.html">- Dark Energy</a></li>
-            <li><a href="antimatter.html">- Antimatter</a></li>
-            <li><a href="wormholes.html">- Wormholes</a></li>
-            <li><a href="whiteholes.html">- White Holes</a></li>
-            <li><a href="cmb.html">- CMB</a></li>
-            <li><a href="exoplanet.html">- Exoplanets</a></li>
-            <li><a href="voyager1.html">- Voyager 1</a></li>
-            <li><a href="multiverse.html">- Multiverse</a></li>
-            <li><a href="greatattractor.html">- Great Attractor</a></li>
-          </ul>
-        </li>
-        <li><a href="blog.html">BLOG</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><span class="underline">Jupiter</span>: Captured images of its turbulent atmosphere and discovered volcanic activity on its moon Io — the first known beyond Earth.</li>
+        <li><span class="underline">Saturn</span>: Revealed detailed ring structures and discovered several new moons.</li>
+        <li><span class="underline">Heliosphere boundary</span>: First probe to cross into interstellar space in 2012.</li>
       </ul>
-    </nav>
-    <div class="content">
-      <div class="content-box">
-        <h1>What is Voyager 1?</h1>
-        <p>
-          <strong>Voyager 1</strong> is a space probe launched by NASA on <u>September 5, 1977</u>, to explore the outer planets and eventually interstellar space. It is the farthest human-made object from Earth, traveling at over 61,000 km/h.
-        </p>
-        <p>
-          Voyager 1 has provided groundbreaking data about the gas giants and is now in the region of space beyond our solar system known as <u>interstellar space</u>.
-        </p>
-        <ul>
-          <li>Flew by Jupiter in 1979 and Saturn in 1980.</li>
-          <li>Captured the famous <u>“Pale Blue Dot”</u> image of Earth in 1990.</li>
-          <li>Entered interstellar space on <strong>August 25, 2012</strong>.</li>
-          <li>Currently over <u>24 billion kilometers</u> from Earth.</li>
-          <li>Still sending data back to NASA through the Deep Space Network.</li>
-        </ul>
-        <p>
-          Voyager 1 carries a <u>Golden Record</u> containing sounds, images, and greetings from Earth, intended for any extraterrestrial life that might find it. This makes Voyager 1 not just a scientific instrument, but a <strong>cultural ambassador of humanity</strong>.
-        </p>
-        <p>
-          It continues to operate on limited power and will eventually go silent around <u>2025–2030</u>, but it will keep drifting through the galaxy for billions of years.
-        </p>
-      </div>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">The Golden Record</h2>
+      <p>Voyager 1 carries a <span class="underline">Golden Record</span> — a time capsule of Earth. It contains greetings in 55 languages, music from around the world, natural sounds, and images of life on Earth. If intelligent alien life finds it, they’ll learn about us through this interstellar message.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Where is Voyager 1 Now?</h2>
+      <p>Voyager 1 is currently traveling through the <span class="underline">interstellar medium</span>, beyond the Sun’s influence. It sends data back to Earth via its low-power transmitter — though contact may end in the 2030s. Even after it goes silent, it will continue drifting among the stars for billions of years.</p>
+    </div>
+
+    <div class="content-box">
+      <h2 class="underline">Insane Voyager 1 Facts</h2>
+      <ul>
+        <li>It travels at over 61,000 km/h relative to the Sun.</li>
+        <li>It’s the first spacecraft to enter interstellar space.</li>
+        <li>Power comes from decaying plutonium — no solar panels.</li>
+        <li>The famous “Pale Blue Dot” photo was taken by Voyager 1 in 1990, showing Earth from 6 billion km away.</li>
+        <li>Even now, its 8-track data recorder stores and sends ancient bytes of deep space data.</li>
+      </ul>
     </div>
   </div>
+
+  <div class="footer">
+    &copy; 2025 UNILEASH. Voyager 1 — our voice beyond the stars.
+  </div>
+
   <script>
-    function toggleMenu() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('active');
+    const dropdowns = document.getElementsByClassName("dropdown-btn");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
     }
   </script>
-
-<footer style="margin-top: 50px; border-top: 1px solid white; padding: 20px; text-align: center; color: white; background-color: black; box-shadow: 0 -1px 15px rgba(255, 255, 255, 0.1);">
-  <p style="font-size: 14px; color: #FFD700;">
-    🔭 UNILEASH: Exploring the Universe & Beyond
-  </p>
-  <p style="font-size: 13px;">
-    © 2025 <span style="color: #00FFFF;">Unileash</span>. All rights reserved.
-  </p>
-</footer>
-
 </body>
 </html>
-
 
